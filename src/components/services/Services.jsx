@@ -35,27 +35,57 @@ const Services = () => {
       animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
-        <p>
+        {/* <p>
           I focus on helping your brand grow
           <br /> and move forward
-        </p>
+        </p> */}
         <hr />
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/people.webp" alt="" />
+          {/* <img src="/people.webp" alt="" /> */}
           <h1>
-            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
+            I'm a <motion.b whileHover={{ color: "orange" }}>software engineer</motion.b> with  
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
+          a unique blend of filmmaking expertise
           </h1>
-          <button>WHAT WE DO?</button>
+        </div>
+        <div className="title">
+          <h1>
+          and a passion for <motion.b whileHover={{ color: "orange" }}>problem solving.</motion.b> 
+          </h1>
+        </div>
+        <div className="title">
+          <h1>
+          My attention to detail fuels my 
+          </h1>
+        </div>
+        <div className="title">
+          <h1>
+          work in creating robust applications,
+          </h1>
+        </div>
+        <div className="title">
+          <h1>
+          and my experience has instilled resilience,
+          </h1>
+        </div>
+        <div className="title">
+          <h1>
+          helping me <motion.b whileHover={{ color: "orange" }}>overcome challenges</motion.b> 
+            
+          </h1>
+        </div>
+        <div className="title">
+          <h1>
+          in both life and work.
+          </h1>
         </div>
       </motion.div>
-      <motion.div className="listContainer" variants={variants}>
+      {/* <motion.div className="listContainer" variants={variants}>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
@@ -108,7 +138,7 @@ const Services = () => {
           </p>
           <button>Go</button>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };

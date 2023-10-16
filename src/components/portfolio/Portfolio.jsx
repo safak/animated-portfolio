@@ -1,31 +1,45 @@
 import { useRef } from "react";
 import "./portfolio.scss";
+
+
+
+
+
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Test Drive",
+    img: 'src/assets/Screenshot 2023-10-15 at 6.05.00 PM.png',
+    desc: "The goal of this project was to pretend A client has requested that we add a page to their website for scheduling a test drive. This was built over 3 days for a frontend engineering interview using React.js",
+    demoUrl: 'https://beautiful-frangollo-547a96.netlify.app/',
+
   },
   {
     id: 2,
-    title: "Next.js Blog",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "The Door",
+    img: 'src/assets/Screenshot 2023-10-15 at 6.11.46 PM.png',
+    desc: "The goal of this project was to faithfully recreate a UX teams designs in a fully-functioning format. The Get Involved dropdown allows the user to select Volunteer, which will lead them to a page where they fill out a form to volunteer. Upon creating a submission, the user will have a chance to read their information and confirm, edit, or delete their volunteer registration.",
+    demoUrl: 'https://the-door-nyc.netlify.app/',
+
+  
   },
   {
     id: 3,
-    title: "Vanilla JS App",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Fork Over Spoon",
+    img: 'src/assets/Screenshot 2023-10-15 at 6.07.49 PM.png',
+    desc: "Fork over spoon is a food app that lets you search recipes by food names. After you find a recipe you like you can click a link and be redirected to a detailed recipe. This app pulls data from the Edamam API.",
+    demoUrl: 'https://pages.git.generalassemb.ly/Rico/Forkoverspoon/',
+
   },
   {
     id: 4,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Everycent",
+    img: 'src/assets/Screenshot 2023-10-15 at 6.10.20 PM.png',
+    desc: "Everycent is a personal expense tracker. Everycent allow users to track their expenses and to analyze them. The core functionality here is adding records of the cash flow. Expenses will be divided by categories and the users will be able to create and delete expenses.",
+    demoUrl: 'https://frosty-borg-1a49b1.netlify.app/',
+
   },
 ];
 
@@ -48,7 +62,10 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <a href={item.demoUrl} target="_blank" rel="noopener noreferrer">
+              <button>See Demo</button>
+            </a>
+
           </motion.div>
         </div>
       </div>
