@@ -8,13 +8,13 @@ const Navbar = ()=>{
             <div className="wrapper">
                 <span>Harsh</span>
                 <div className="social">
-                    <a href = "#"><img src = "/facebook" alt = ""/></a>
-                    <a href = "#"><img src = "/instagram" alt = ""/></a>
-                    <a href = "#"><img src = "/youtube" alt = ""/></a>
-                    <a href = "#"><img src = "/dribble" alt = ""/></a>
+                    <a href = "#"><img src = "/facebook.png" alt = ""/></a>
+                    <a href = "#"><img src = "/instagram.png" alt = ""/></a>
+                    <a href = "#"><img src = "/youtube.png" alt = ""/></a>
+                    <a href = "#"><img src = "/dribbble.png" alt = ""/></a>
                 </div>
             </div>
-        </div>
+        </div> 
     )
 }
 
