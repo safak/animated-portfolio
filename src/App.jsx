@@ -1,10 +1,10 @@
 import Test from "./Test";
 import "./app.scss"
 import Navbar from "./components/navbar/Navbar";
-
+import {motion} from "framer-motion";
 const App = () => {
   return <div> 
-    {/* <section>
+    <section>
       <Navbar />
    
     </section>
@@ -14,9 +14,9 @@ const App = () => {
     <section>Portfolio1</section>
     <section>Portfolio2</section>
     <section>Portfolio3</section>
-    <section>Contact</section> */}
+    <section>Contact</section>
 
-    <Test/>
+    {/* <Test/> */}
 
   </div>;
 };
