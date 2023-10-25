@@ -1,14 +1,29 @@
-import "./navbar.scss"
+import Sidebar from "../sidebar/Sidebar";
+import "./navbar.scss";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
 return (
     <div className="navbar">
-        {/* Sidebar */}
+        < Sidebar />
         <div className="wrapper">
-            <span>Digital Navas</span>
+            <motion.span
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+            >Digital Navas</motion.span>
             <div className="social">
                 <a href="#">
-                    <img src="" alt="" />
+                    <img src="/facebook.png" alt="facebook" />
+                </a>
+                <a href="#">
+                    <img src="/instagram.png" alt="instagram" />
+                </a>
+                <a href="#">
+                    <img src="/youtube.png" alt="youtube" />
+                </a>
+                <a href="#">
+                    <img src="/dribbble.png" alt="dribble" />
                 </a>
             </div>
         </div>
