@@ -13,9 +13,10 @@ html {
 body {
     // background-color: #0c0c1d;
     // color: lightgray;
-    background-color: rgb(216 255 0);
-    color: rgb(94 111 0);
+    background-color: #004953;
+    color: white;
     font-weight: 300;
+    
     
 }
 
@@ -23,6 +24,7 @@ a {
     text-decoration: none;
     // inherits takes the color from his parent
     color: inherit;
+    color: rgb(94 111 0);
 }
 
 section {

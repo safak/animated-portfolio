@@ -3,6 +3,7 @@
 
     .wrapper {
         max-width: 1366px;
+        width: 80%;
         margin: auto;
         display: flex;
         align-items: center;
@@ -16,10 +17,9 @@
         .social {
             display: flex;
             gap: 20px;
-
             img {
-                width: 38px;
-                height: 38x;
+                width: 28px;
+                height: 28x;
             }
         }
     }
