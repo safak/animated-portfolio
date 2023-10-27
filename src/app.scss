@@ -25,16 +25,4 @@ section {
   scroll-snap-align: center;
 }
 
-.course {
-  height: 100vh;  
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  .box {
-    width: 200px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 10px;
-  }
-}
