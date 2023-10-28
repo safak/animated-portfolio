@@ -1,16 +1,20 @@
 .contact {
     height: 100%;
     max-width: 1366px;
-    margin: auto;
+    // margin: auto;
     display: flex;
     align-items: center;
     gap: 50px;
+    background-image: url("/stars.png");
+    background-size: cover;
   
   
     .textContainer {
       flex: 1;
       display: flex;
       flex-direction: column;
+      justify-content: left;
+      margin: 50px;
       gap: 40px;
   
   
@@ -33,7 +37,7 @@
       
   
       .phoneSvg {
-        stroke: orange;
+        stroke: rgb(162, 255, 0, 0.9);
         position: absolute;
         margin: auto;
         z-index: -1;
@@ -66,3 +70,15 @@
       }
     }
   }
+  .social{
+    display: flex;
+    gap: 20px;
+
+    img{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        margin-top: 5px;
+    }
+
+}

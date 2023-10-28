@@ -1,11 +1,11 @@
 import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-//import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 
 const variants = {
   initial: {
-    y: 500,
+    y: -500,
     opacity: 0,
   },
   animate: {
@@ -26,25 +26,25 @@ const Contact = () => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
-//   const sendEmail = (e) => {
-//     e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-//     emailjs
-//       .sendForm(
-//         "service_94y20xo",
-//         "template_v10u2oh",
-//         formRef.current,
-//         "pX_2hasGmGcuvjXIW"
-//       )
-//       .then(
-//         (result) => {
-//           setSuccess(true)
-//         },
-//         (error) => {
-//           setError(true);
-//         }
-//       );
-//   };
+  //   emailjs
+  //     .sendForm(
+  //       "service_94y20xo",
+  //       "template_v10u2oh",
+  //       formRef.current,
+  //       "pX_2hasGmGcuvjXIW"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         setSuccess(true)
+  //       },
+  //       (error) => {
+  //         setError(true);
+  //       }
+  //     );
+  // };
 
   return (
     <motion.div
@@ -56,18 +56,24 @@ const Contact = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
-        <motion.div className="item" variants={variants}>
+        {/* <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
           <span>hello@react.dev</span>
-        </motion.div>
+        </motion.div> */}
         <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
-          <span>Hello street New York</span>
+            <div className="social">
+                <a href="#"><img src="/linkedin.png" alt=""/></a>
+                <a href="#"><img src="/github.png" alt=""/></a>
+                {/* <a href="#"><img src="/youtube.png" alt=""/></a>
+                <a href="#"><img src="/dribbble.png" alt=""/></a> */}
+            </div>
+          {/* <h2>Address</h2>
+          <span>Hello street New York</span> */}
         </motion.div>
-        <motion.div className="item" variants={variants}>
+        {/* <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
           <span>+1 234 5678</span>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
       <div className="formContainer">
         <motion.div

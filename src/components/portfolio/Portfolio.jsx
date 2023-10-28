@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import "./portfolio.scss";
+import Parallax from "../parallax/Parallax";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
@@ -36,7 +37,7 @@ const Single = ({ item }) => {
     target: ref,
   });
   // console.log("Scroll Y Progress:", scrollYProgress.get());
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 0]);
 
   return (
     <section >
@@ -73,13 +74,16 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio" ref={ref}>
-      <div className="progress">
-        <h1>Projects</h1>
-        <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+      <Parallax type="services" />
+        <div className="content">
+          <div className="progress">
+            <h1>Projects</h1>
+            <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+          </div>
+        {items.map((item) => (
+          <Single item={item} key={item.id} />
+        ))}
       </div>
-      {items.map((item) => (
-        <Single item={item} key={item.id} />
-      ))}
     </div>
   );
 };

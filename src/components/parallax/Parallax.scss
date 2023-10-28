@@ -12,30 +12,66 @@
     }
 }
 
+// .rocket {
+//     background-image: url("/rocket_3d.png");
+//     background-size: cover;
+//     background-position: bottom;
+//     width: 30%;
+//     height: 30%;
+//     position: absolute;
+//     bottom: 30px;
+//     z-index: 3;
+// }
+
+// .planets {
+//     background-size: cover;
+//     background-position: bottom;
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     z-index: 2;
+// }
+
+// .stars {
+//     background-image: url("/stars.png");
+//     background-size: cover;
+//     background-repeat: repeat;
+//     background-position: bottom;
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     z-index: 1;
+// }
+
 .rocket {
     background-image: url("/rocket_3d.png");
-    background-size: cover;
-    background-position: bottom;
-    width: 30%;
-    height: 30%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
-    bottom: 30px;
+    width: 100%;
+    height: 100%;
+    background-size: 30% auto;
+    // bottom: 30px;
     z-index: 3;
 }
 
 .planets {
-    background-size: cover;
-    background-position: bottom;
+    // background-position: bottom;
+    background-repeat: repeat;
+    background-size: contain;
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 2;
+    margin-top: 300px;
 }
 
 .stars {
     background-image: url("/stars.png");
-    background-size: cover;
-    background-position: bottom;
+    background-repeat: repeat;
+    background-size: contain;
+    // background-position: bottom;
     width: 100%;
     height: 100%;
     position: absolute;
