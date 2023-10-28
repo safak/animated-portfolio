@@ -1,7 +1,7 @@
 .hero{
-    height: calc(100vh - 100px);
+    height: calc(100vh - 50px);
     overflow: hidden;
-    background: linear-gradient(180deg, black, rgb(93, 47, 190));
+    // background: linear-gradient(180deg, rgb(1, 197, 168), rgb(14, 10, 136));
     position: relative;
     .wrapper{
         max-width: 1366px;
@@ -14,12 +14,13 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 40px;
+            gap: 25px;
+            margin-left: 50px;
             
 
             h2{
                 font-size: 30px;
-                color: rebeccapurple;
+                color: rgb(54, 210, 18);
 
             }
 
@@ -39,9 +40,9 @@
                     background-color: transparent;
                     color: white;
                     border-radius: 10px;
-                    cursor: pointer;
                     font-weight: 300;
                     margin-right: 20px;
+                    cursor: pointer;
                 }
             }
         }
@@ -54,6 +55,7 @@
         white-space: nowrap;
         color: #ffffff09;
         width: 50%;
+        font-weight: bold;
     }
 
 
@@ -61,7 +63,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 100px;
 
 
         img{

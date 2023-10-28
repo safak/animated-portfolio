@@ -1,5 +1,5 @@
 .services{
-    background: linear-gradient(180deg, black, rgb(93, 47, 190));
+    // background: linear-gradient(180deg, rgb(1, 197, 168), rgb(14, 10, 136));
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
     hr{
         width: 500px;
         border: none;
-        border-top: 0.5px solid gray;
+        border-top: 0.5px solid rgb(229, 229, 229);
     }
 }
 .titleContainer{
@@ -31,7 +31,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    margin-left: 50px;
+    gap:10px;
 
     .title{
         display: flex;
@@ -39,26 +40,26 @@
         gap: 50px;
 
         img{
-            width: 300px;
-            height: 100px;
+            width: 250px;
+            height: 90px;
             border-radius: 50px;
             object-fit: cover;
         }
 
         h1{
-            font-size: 96px;
+            font-size: 70px;
             font-weight: 100;
         }
 
         button{
-            width: 300px;
-            height: 100px;
-            background-color: orange;
+            width: 250px;
+            height: 90px;
+            background-color: rgb(162, 255, 0, 0.9);
             color: black;
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            font-size: 24px;
+            font-size: 20px;
 
         }
     }
@@ -68,20 +69,26 @@
     flex:2;
     display: flex;
     max-width: 1366px;
-    margin:auto;
+    margin: 20px;
+    gap: 20px;
 
     .box{
-        padding: 50px;
-        border: 0.5px solid gray;
+        padding: 40px;
+        border-radius: 30px;
+        border: 2px solid rgba(214, 214, 214, 0.218);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         
         button{
+            width: 60px;
+            margin-top: 20px;
             padding: 10px;
-            background-color: orange;
-            color: black;
-            border: none;
+            background-color: transparent;
+            color: white;
+            border: 2px solid rgb(162, 255, 0);
+            border-radius: 20px;
             cursor: pointer;
         }
 

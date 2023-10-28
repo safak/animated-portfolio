@@ -21,16 +21,24 @@ const Parallax = ({type}) => {
              style={{
                 background:
                   type === "services"
-                    ? "linear-gradient(180deg, #111132, #0c0c1d)"
-                    : "linear-gradient(180deg, #111132, #505064)"
+                    ? "linear-gradient(90deg,  rgb(14, 10, 136), rgb(1, 197, 168))"
+                    : "linear-gradient(90deg, rgb(14, 10, 136), rgb(1, 197, 168))"
              }}
         >
             <motion.h1 style={{ y:yText}}>
-                {type === "service" ? "What We Do?" : "What We Did?"}
+                {type === "services" ? "My Journey" : "What I Did?"}
             </motion.h1>
-            <motion.div className="mountains"></motion.div>
-            <motion.div style={{ y:yBg}} className="planets"></motion.div>
-            <motion.div className="stars"></motion.div>
+            <motion.div className="rocket"></motion.div>
+            <motion.div
+                className="planets"
+                style={{
+                y: yBg,
+                backgroundImage: `url(${
+                    type === "services" ? "/plants_3d.png" : "/shooting_3d.png"
+                })`,
+                }}
+            ></motion.div>
+            <motion.div style={{ x:yBg}} className="stars"></motion.div>
 
         
         </motion.div>

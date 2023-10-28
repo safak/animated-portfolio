@@ -1,25 +1,29 @@
 .navbar{
-    height: 100px;
+    height: 50px;
+    background-color: rgba(112, 248, 228, 0);
 
     .wrapper{
         max-width: 1366px;
         margin: auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        height: 100%
+        justify-content: space-start;
+        height: 100%;
 
         span{
             font-weight: bold;
+            font-size: 40px;
 
         }
         .social{
             display: flex;
-            gap: 20px;
+            gap: 5px;
 
             img{
-                width: 18px;
-                height: 18px;
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                margin-top: 5px;
             }
 
         }

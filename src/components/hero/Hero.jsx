@@ -45,13 +45,13 @@ const Hero = () => {
         <div className="hero">
             <div className="wrapper">
                 <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
-                    <motion.h2 variants={textVariants}>CHINYING CHENG</motion.h2>
+                    <motion.h2 variants={textVariants}>Hi, I'm Chinying!</motion.h2>
                     <motion.h1 variants={textVariants}>Web developer and Data Scientist</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
-                        <motion.button  variants={textVariants} className="btn">Hire me</motion.button>
-                        <motion.button  variants={textVariants} className="btn">Portfolio</motion.button>
+                        <motion.button  variants={textVariants} >Hire me</motion.button>
+                        <motion.button  variants={textVariants} >Portfolio</motion.button>
                     </motion.div>
-                    <motion.img variants={textVariants} src="/scroll.png" alt="" />
+                    <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
                 </motion.div>
             </div>
             <motion.div className="slidingtextContainer"

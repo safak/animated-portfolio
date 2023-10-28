@@ -9,11 +9,11 @@
     .bg{
         z-index: 999;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 0px;
+        right: 0;
         bottom: 0;
-        width: 400px;
-        background: white;
+        width: 125px;
+        background: rgba(255, 255, 255, 0.677);
 
         .links{
             position: absolute;
@@ -27,7 +27,7 @@
         }
 
         a{
-            font-size: 40px;
+            font-size: 20px;
 
         }
 
@@ -39,8 +39,9 @@
         height: 50px;
         border-radius: 50%;
         position: fixed;
-        top:25px;
-        left:25px;
+        top:0px;
+        right:5px;
+        color: white;
         background-color: transparent;
         border: none;
         cursor: pointer;

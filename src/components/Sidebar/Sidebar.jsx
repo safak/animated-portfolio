@@ -14,7 +14,8 @@ const variants = {
             stiffness: 20,
     },},
     closed:{
-        clipPath: "circle(30px at 50px 50px)",
+        clipPath: "circle(22px at 50px 50px)",
+        backgroundColor: "transparent",
         transition:{
             delay: 0.5,
             type: "spring",
