@@ -35,16 +35,19 @@
       height: 100%;
       // margin: auto;
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 0px;
 
 
 
       .imageContainer {
-        flex: 1;
+        position: relative;
+        flex: 2;
         height: 50%;
         margin: 50px;
+        top: 30px;
         border-radius: 30px;
         border: 6px solid rgba(214, 214, 214, 0.218);
 
@@ -65,10 +68,11 @@
         flex-direction: column;
         gap: 30px;
         background-color: rgba(255, 255, 255, 0.806);
-        margin: 50px;
+        margin: 20px;
         padding: 40px;
         border-radius: 30px;
         border: 2px solid rgba(214, 214, 214, 0.218);
+        // height: 50%;
 
 
 

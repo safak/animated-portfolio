@@ -27,14 +27,14 @@ const itemVariants = {
 
 
 const Links = () => {
-    const items =["Home","Services","Portfolio","Contact","About"]
+    const items =["Home","Experience","Skills","Projects","Contact"]
     return (
         <motion.div className="links" variants={variants}>
             {items.map(item=>(
                 <motion.a href={`#${item}`} 
                           key={item}
                           variants={itemVariants}
-                          whileHover={{scale: 1.1, color: "blue"}}
+                          whileHover={{scale: 1.1, color: "rgb(54, 210, 18)"}}
                           whileTap={{scale: 0.95}}
                           >
                             {item}

@@ -48,8 +48,8 @@ const Hero = () => {
                     <motion.h2 variants={textVariants}>Hi, I'm Chinying!</motion.h2>
                     <motion.h1 variants={textVariants}>Web developer and Data Scientist</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
-                        <motion.button  variants={textVariants} >Hire me</motion.button>
-                        <motion.button  variants={textVariants} >Portfolio</motion.button>
+                      <a href="#Experience"><motion.button  variants={textVariants} >About me</motion.button></a>
+                        {/* <motion.button  variants={textVariants} >Portfolio</motion.button> */}
                     </motion.div>
                     <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
                 </motion.div>
@@ -58,7 +58,7 @@ const Hero = () => {
                  variants={sliderVariants}
                  initial="initial"
                  animate="animate">
-                hello hello hello the end
+                hello hello hello hello
             </motion.div>
             <div className="imageContainer">
                 <img src="/hero.png" alt="" />

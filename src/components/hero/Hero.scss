@@ -34,7 +34,7 @@
             }
 
             .buttons{
-                button{
+                a {button{
                     padding: 20px;
                     border: 1px solid white;
                     background-color: transparent;
@@ -43,7 +43,10 @@
                     font-weight: 300;
                     margin-right: 20px;
                     cursor: pointer;
+                    position: relative;
+                    z-index:1;
                 }
+            }
             }
         }
     }

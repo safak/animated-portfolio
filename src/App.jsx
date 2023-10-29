@@ -11,24 +11,24 @@ import Skill from "./components/skill/Skill";
 const App = () => {
   return (<div>
     <Cursor />
-    <section id="Homepage">
+    <section id="Home">
       <Navbar/>
       <Hero/>  
     </section>
     {/* <section id="Services">
       <Parallax type="services" />
     </section> */}
-    <section>
+    <section id="Experience">
       <Services/>
       
     </section>
-    <section>
+    <section id="Skills">
       <Skill/>
     </section>
     {/* <section id="Portfolio">
       <Parallax type="portfolio" />
     </section> */}
-      <Portfolio/>
+     <Portfolio/>
     <section id="Contact">
       <Contact/>
     </section>

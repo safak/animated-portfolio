@@ -64,3 +64,15 @@
     text-overflow: ellipsis;
     position: relative;
 }
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+    font-size: 3rem;
+    color: white;
+    // display: flex;
+    // justify-content: bottom;
+    // align-items: bottom left;
+    cursor: pointer;
+  }

@@ -21,25 +21,34 @@ const Skill = () => {
         // Add more bubbles as needed
       ];
     
-const container = {
-hidden: { opacity: 1, scale: 0 },
-visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-    delayChildren: 0.3,
-    staggerChildren: 0.2
-    }
-}
-};
-
-const item = {
-    hidden: { y: 20, opacity: 0 },
+    const container = {
+    hidden: { opacity: 1, scale: 0 },
     visible: {
-      y: 0,
-      opacity: 1
+        opacity: 1,
+        scale: 1,
+        transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+        }
     }
-  };
+    };
+
+    const item = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+        y: 0,
+        opacity: 1
+        }
+    };
+
+    const scrollToProjects = () => {
+        scroller.scrollTo('projects', {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart'
+        });
+      }
+
   return (
     <div className="skill">
       <motion.div className="skill-title" variants={container}
@@ -83,6 +92,7 @@ const item = {
         <img src="/postgregis.png" alt=""/>
         </motion.div>
       </motion.div>
+      <a href="#Projects" className="scroll-arrow">↓</a>
       {bubbles.map((bubble, index) => (
         <Bubble 
           key={index} 
@@ -91,6 +101,8 @@ const item = {
           direction={bubble.direction} 
         />
       ))}
+
+
       
     </div>
   );
