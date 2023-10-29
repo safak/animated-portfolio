@@ -25,7 +25,7 @@ const textVariants = {
   };
 
   const sliderVariants = {
-    initail:{
+    initial:{
         x:0,
     },
     animate:{

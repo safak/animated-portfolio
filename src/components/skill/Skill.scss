@@ -1,0 +1,66 @@
+.skill{
+    // background: linear-gradient(180deg, rgb(1, 197, 168), rgb(14, 10, 136));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    background-image: url("/programmer.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    gap: 20px;
+    // background-size: contain;
+
+    .skill-title{
+        font-size: 70px;
+        padding: 50px;
+        font-weight: 800;
+        color: white;
+    }
+    .skill-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: 50px;
+        background-color: rgba(204, 204, 204, 0.608);
+        border-radius: 30px;
+        padding: 30px;
+        // height: 50%;
+        width: 50%;
+        gap: 20px;
+
+
+        .sk{
+            // background-color: green;
+            border-radius: 30px;
+            // padding: 30px;
+            width: 80px;
+            height: 80px;
+            // text-align: center;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 30px;
+            }
+
+        }
+    }
+}
+
+
+.bubble {
+    background-color: transparent;
+    color: black;
+    border-radius: 50%;
+    // box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+    // position: absolute;
+    // font-size: calc(5px + 2vmin);
+    white-space: nowrap;
+    // overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}

@@ -9,14 +9,15 @@
     top: 0;
     left: 0;
     padding-top: 50px;
-    text-align: center;
+    padding-left: 50px;
+    text-align: left;
     color: white;
     font-size: 36px;
 
 
 
     .progressBar {
-      height: 10px;
+      height: 8px;
       background-color: rgb(162, 255, 0, 0.9);
     }
   }

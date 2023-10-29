@@ -1,6 +1,11 @@
 import "./Services.scss"
 import { motion, useInView } from "framer-motion";
-import { useRef} from "react";
+import { useRef, useState} from "react";
+import Modal from "./Modal";
+
+
+
+
 
 const variants = {
     initial: {
@@ -20,7 +25,7 @@ const variants = {
 }
 
 const Services = () => {
-    
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const ref = useRef();
     const isInView = useInView(ref,{margin: "-100px"});
 
@@ -88,7 +93,13 @@ const Services = () => {
                         animi! Ad nam pariatur assumenda quae mollitia libero repellat
                         explicabo maiores?
                     </p>
-                    <motion.button initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
+                    <motion.button onClick={() => setIsModalOpen(true)} initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
+                    <Modal
+                        isOpen={isModalOpen}
+                        onClose={() => setIsModalOpen(false)}
+                        // trailName={selectedTrailName}
+                    />
+
                 </motion.div>
             </motion.div>
         </motion.div>

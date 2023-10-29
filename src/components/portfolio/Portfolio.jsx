@@ -6,13 +6,13 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "React Commerce",
+    title: "Secure Cyclist",
     img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
   },
   {
     id: 2,
-    title: "Next.js Blog",
+    title: "Taiwan Travel Map",
     img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
   },
@@ -69,6 +69,7 @@ const Portfolio = () => {
     stiffness: 10,
     damping: 30,
   });
+  // const scaleX = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   // console.log("port Scroll Y Progress:", scrollYProgress.get());
 
@@ -78,7 +79,7 @@ const Portfolio = () => {
         <div className="content">
           <div className="progress">
             <h1>Projects</h1>
-            <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+            <motion.div style={{ scaleX, originX: "0%" }} className="progressBar"></motion.div>
           </div>
         {items.map((item) => (
           <Single item={item} key={item.id} />
