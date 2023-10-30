@@ -1,6 +1,6 @@
 // @import "~slick-carousel/slick/slick.css";
 // @import "~slick-carousel/slick/slick-theme.css";
-
+@import "../../app.scss";
 
 .portfolio {
   position: relative;
@@ -15,12 +15,20 @@
     text-align: left;
     color: white;
     font-size: 36px;
-
+    
+    @include mobile{
+      font-size: 18px;
+      padding-left: 10px;
+   }
 
 
     .progressBar {
       height: 8px;
       background-color: rgb(162, 255, 0, 0.9);
+
+      @include mobile{
+        background-color: rgb(162, 255, 0, 0.8);
+     }
     }
   }
 
@@ -44,6 +52,12 @@
       // justify-content: space-between;
       gap: 20px;
 
+      @include mobile{
+        flex-direction: column;
+        padding: 30px;
+        gap: 10px;
+     }
+
 
 
       .imageContainer {
@@ -56,6 +70,15 @@
         // margin: 0 auto;
         border-radius: 30px;
         border: 6px solid rgba(214, 214, 214, 0.218);
+
+        @include mobile{
+          width: 100%;
+          flex: 1;
+          top: 20px;
+          // height: 100px;
+          // bottom: 60px;
+       }
+        
 
         .dots {
           position: absolute;
@@ -103,14 +126,24 @@
         // overflow: scroll;
         // width: 50%;
         // height: 50%;
-
+        @include mobile{
+          // flex-direction: row;
+          padding: 5px;
+          // margin: 0px;
+          gap: 10px;
+          top: 50px;
+          // margin: 20px;
+       }
 
 
         h2 {
           font-size: 40px;
           // color: rgba(44, 61, 15, 0.9);
           color: rgb(162, 255, 0, 0.9);
-
+          
+          @include mobile{
+            font-size: 25px;
+         }
 
         }
 
@@ -118,6 +151,12 @@
           color: white;
           font-size: 20px;
 
+          @include mobile{
+            font-size: 12px;
+            padding: 0px;
+            width: 160px;
+
+         }
 
         }
 
@@ -159,6 +198,10 @@
   cursor: pointer;
   font-size: 30px;
   border-radius: 10px;
+  
+  @include mobile{
+    font-size: 20px;
+ }
 }
 
 .prevButton {
@@ -169,48 +212,3 @@
   right: -50px;
 }
 
-// .prevButton{
-//   position: absolute;
-//   top: 50%;
-//   left: 0;
-//   transform: translateY(-50%);
-//   width: 50px;
-//   height: 50px;
-//   background-color: rgb(162, 255, 0, 0.9);
-//   border: none;
-//   border-radius: 50%;
-//   cursor: pointer;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   color: black;
-//   font-size: 30px;
-//   transition: background-color 0.3s;
-
-//   &:hover {
-//     background-color: rgba(162, 255, 0, 0.9);
-//   }
-// }
-
-// .nextButton{
-//   position: absolute;
-//   top: 50%;
-//   right: 0;
-//   transform: translateY(-50%);
-//   width: 50px;
-//   height: 50px;
-//   background-color: rgb(162, 255, 0, 0.9);
-//   border: none;
-//   border-radius: 50%;
-//   cursor: pointer;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   color: black;
-//   font-size: 30px;
-//   transition: background-color 0.3s;
-
-//   &:hover {
-//     background-color: rgba(162, 255, 0, 0.9);
-//   }
-// }

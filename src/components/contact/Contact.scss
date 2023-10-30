@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .contact {
     position: relative;
     height:100%;
@@ -8,11 +9,14 @@
     gap: 0px;
     background-image: url("/stars.png");
     background-size: cover;
+
+    @include mobile{
+      flex-direction: column;
+  }
   
   
     .textContainer {
       align-self: center;
-      top: 500px;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -20,6 +24,12 @@
       // justify-content: left;
       margin: 50px;
       gap: 40px;
+
+      @include mobile{
+        width: 50%;
+        gap: 20px;
+        text-align: center;
+    }
   
   
       h1 {
@@ -27,6 +37,12 @@
         line-height: 88px;
         font-weight: 500;
         // bottom: 300px;
+
+      @include mobile{
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 500;
+    }
        
       }
   
@@ -40,6 +56,10 @@
       position: relative;
       padding-right: 50px;
       
+      @include mobile{
+        width: 80%;
+        padding-right: 0px;
+    }
       
   
       .phoneSvg {
@@ -54,6 +74,10 @@
         flex-direction: column;
         gap: 20px;
         color: black;
+
+        @include mobile{
+          gap:10px;
+      }
   
         input,
         textarea {
@@ -72,6 +96,10 @@
           background-color: rgb(162, 255, 0);
           cursor: pointer;
           font-weight: 500;
+
+          @include mobile{
+            margin-bottom: 30px;
+        }
           
         }
       }
@@ -86,6 +114,13 @@
         height: 60px;
         object-fit: cover;
         margin-top: 5px;
+
+        @include mobile{
+          width: 40px;
+          height: 40px;
+      }
     }
+
+    
 
 }

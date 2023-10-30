@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .skill{
     // background: linear-gradient(180deg, rgb(1, 197, 168), rgb(14, 10, 136));
     height: 100%;
@@ -19,6 +20,11 @@
         padding: 50px;
         font-weight: 800;
         color: white;
+        
+        @include mobile{
+            font-size: 40px;
+            padding: 20px;
+         }
     }
     .skill-container{
         display: flex;
@@ -31,6 +37,16 @@
         // height: 50%;
         width: 50%;
         gap: 20px;
+        
+
+        @include mobile{
+            width: 90%;
+            height: 60%;
+            margin-left: 10px;
+            padding:  10px;
+            min-height: 350px;
+            overflow-y: scroll;
+         }
 
 
         .sk{
@@ -40,6 +56,14 @@
             width: 80px;
             height: 80px;
             // text-align: center;
+
+            @include mobile{
+                width: 70px;
+                height: 70px;
+                margin-left: 10px;
+                padding:  10px;
+                // overflow: scroll;
+             }
 
             img{
                 width: 100%;
@@ -76,4 +100,13 @@
     // justify-content: bottom;
     // align-items: bottom left;
     cursor: pointer;
+    
+    @include mobile{
+        width: 70px;
+        height: 70px;
+        // margin-left: 10px;
+        padding:  10px;
+        font-size: 1.2rem;
+        // overflow: scroll;
+     }
   }

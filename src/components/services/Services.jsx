@@ -5,56 +5,56 @@ import Modal from "./Modal";
 
 
 const honorsData = {
-    'OCT 2023 Postgraduate Industry Experience Winner': {
+    '1 OCT 2023 Postgraduate Industry Experience Winner': {
       description: 'Student Vote Postgraduate Industry Experience Winner',
-      imageUrl: "/people.webp", // Replace with the actual path to your image
+      imageUrl: "/people.webp", 
     },
-    'OCT 2023 Postgraduate Industry Experience Winner': {
+    '2 OCT 2023 Postgraduate Industry Experience Winner': {
         description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", // Replace with the actual path to your image
+        imageUrl: "/people.webp", 
     },
-    'OCT 2023 Postgraduate Industry Experience Winner': {
+    '3 OCT 2023 Postgraduate Industry Experience Winner': {
         description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", // Replace with the actual path to your image
+        imageUrl: "/people.webp", 
     },
   };
 
   const certData = {
-    'OCT 2023 Postgraduate Industry Experience Winner': {
+    '1 OCT 2023 Postgraduate Industry Experience Winner': {
       description: 'Student Vote Postgraduate Industry Experience Winner',
-      imageUrl: "/people.webp", // Replace with the actual path to your image
+      imageUrl: "/people.webp", 
     },
-    'OCT 2023 Postgraduate Industry Experience Winner': {
+    '2 OCT 2023 Postgraduate Industry Experience Winner': {
         description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", // Replace with the actual path to your image
+        imageUrl: "/people.webp", 
     },
-    'OCT 2023 Postgraduate Industry Experience Winner': {
+    '3 OCT 2023 Postgraduate Industry Experience Winner': {
         description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", // Replace with the actual path to your image
+        imageUrl: "/people.webp", 
     },
   };
 
   const expData = {
-    'OCT 2023 Postgraduate Industry Experience Winner': {
+    '1 OCT 2023 Postgraduate Industry Experience Winner': {
       description: 'Student Vote Postgraduate Industry Experience Winner',
-      imageUrl: "/people.webp", // Replace with the actual path to your image
+      imageUrl: "/people.webp", 
     },
-    'OCT 2023 Postgraduate Industry Experience Winner': {
+    '2 OCT 2023 Postgraduate Industry Experience Winner': {
         description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", // Replace with the actual path to your image
+        imageUrl: "/people.webp",
     },
-    'OCT 2023 Postgraduate Industry Experience Winner': {
+    '3 OCT 2023 Postgraduate Industry Experience Winner': {
         description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", // Replace with the actual path to your image
+        imageUrl: "/people.webp",
     },
   };
 
 const educationData = {
-    '2022-2023 Master of Data Science': {
-        description: 'Details about the Bachelor of Science program',
+    '1 2022-2023 Master of Data Science': {
+        description: 'Details about the Master of Science program',
         imageUrl: "/education.webp", // Replace with the actual path to your image
     },
-    '2022-2023 Master of Data Science': {
+    '2 2022-2023 Bachelor of Data Science': {
         description: 'Details about the Bachelor of Science program',
         imageUrl: "/education.webp", // Replace with the actual path to your image
     },};

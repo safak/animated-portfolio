@@ -33,6 +33,17 @@ function Modal({ isOpen, onClose, category, data }) {
                 <p key={month} onClick={() => handleClick(month)}>
                   {month}
                 </p>
+            // Object.keys(data).map((month) => (
+            //     <div key={month}>
+            //       <p onClick={() => handleClick(month)}>
+            //         {month}
+            //       </p>
+            //       <div className={styles.itemContent}>
+            //         {data[month].description}
+            //       </div>
+            //       {/* <img src={data[month].imageUrl} alt="" /> */}
+            //     </div>
+            
               ))
             )}
             
