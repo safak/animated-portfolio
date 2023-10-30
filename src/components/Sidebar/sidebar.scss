@@ -1,13 +1,43 @@
 .sidebar {
-    display: flex;
-    .bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
 
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    background: #fff;
 
-        .links {
+    .links {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
 
+        a {
+            font-size: 40px;
         }
     }
-    button {
-
-    }
+  }
+  .sidebar_btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 }
