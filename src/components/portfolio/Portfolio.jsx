@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./portfolio.scss";
 import Parallax from "../parallax/Parallax";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
@@ -7,49 +7,76 @@ const items = [
   {
     id: 1,
     title: "Secure Cyclist",
-    img: "/cyclist.png",
+    images: ["/cyclist.png", "/taiwan.jpeg", "/stackover.jpeg", "/person.png"],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
   },
   {
     id: 2,
     title: "Taiwan Travel Map",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    images: ["/taiwan.jpeg","/taiwan.jpeg", "/taiwan.jpeg", "/taiwan.jpeg"],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
   },
   {
     id: 3,
     title: "Stack Overflow Annual Report Analysis",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    images: ["/stackover.jpeg", "/stackover.jpeg","/stackover.jpeg","/stackover.jpeg",],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
   },
   {
     id: 4,
     title: "Personal Portfolio",
-    img: "/person.png",
+    images: ["/person.png", "/person.png","/person.png","/person.png",],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
   },
 ];
 
 const Single = ({ item }) => {
   const ref = useRef();
+  const [currentImage, setCurrentImage] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: ref,
   });
   // console.log("Scroll Y Progress:", scrollYProgress.get());
-  const y = useTransform(scrollYProgress, [0, 1], [-500, 100]);
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % item.images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + item.images.length) % item.images.length);
+  };
+
+  const goToImage = (index) => {
+    setCurrentImage(index);
+  };
 
   return (
     <section id="Projects">
       <div className="container">
         <div className="wrapper">
-          <motion.div className="imageContainer" whileHover={{ scale: 1.1}} ref={ref}>
-            <img src={item.img} alt="" />
-          </motion.div>
-          <motion.div className="textContainer" whileHover={{ scale: 1.1}} style={{y}}>
+          
+          <motion.div className="textContainer" ref={ref}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            {/* <button>See Demo</button> */}
+          </motion.div>
+
+          <motion.div className="imageContainer" style={{y}}>  
+            {/* <img src={item.img} alt="" /> */}
+            <img src={item.images[currentImage]} alt="" />
+            <div className="dots">
+              {item.images.map((_, index) => (
+                <span
+                  key={index}
+                  className={`dot ${index === currentImage ? "active" : ""}`}
+                  onClick={() => goToImage(index)}
+                ></span>
+              ))}
+            </div>
+            <button onClick={prevImage} className="navButton prevButton">&#171;</button>
+            <button onClick={nextImage} className="navButton nextButton">&#187;</button>
           </motion.div>
         </div>
       </div>
@@ -75,7 +102,8 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio" ref={ref}>
-      <Parallax type="services" />
+      <div><Parallax type="services" /></div>
+      
         <div className="content">
           <div className="progress">
             <h1>Projects</h1>

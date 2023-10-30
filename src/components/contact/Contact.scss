@@ -1,19 +1,23 @@
 .contact {
-    height: 100%;
+    position: relative;
+    height:100%;
     max-width: 1366px;
     // margin: auto;
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 0px;
     background-image: url("/stars.png");
     background-size: cover;
   
   
     .textContainer {
+      align-self: center;
+      top: 500px;
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: left;
+      // text-align: center;
+      // justify-content: left;
       margin: 50px;
       gap: 40px;
   
@@ -21,18 +25,20 @@
       h1 {
         font-size: 100px;
         line-height: 88px;
-  
+        font-weight: 500;
+        // bottom: 300px;
        
       }
   
       span {
-        font-weight: 300;
+        font-weight: 900;
       }
     }
   
     .formContainer {
       flex: 1;
       position: relative;
+      padding-right: 50px;
       
       
   
@@ -47,6 +53,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        color: black;
   
         input,
         textarea {
@@ -62,7 +69,7 @@
         button {
           padding: 20px;
           border: none;
-          background-color: orange;
+          background-color: rgb(162, 255, 0);
           cursor: pointer;
           font-weight: 500;
           

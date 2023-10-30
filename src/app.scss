@@ -13,6 +13,8 @@ html{
 body{
     background: linear-gradient(270deg, rgb(1, 197, 168), rgb(14, 10, 136));
     color: white;
+    overflow-x: hidden;
+    // background-image: url("/stars.png");
 }
 
 a{

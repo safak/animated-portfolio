@@ -3,6 +3,26 @@ import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 // import emailjs from "@emailjs/browser";
 
+const line = "Let's work together"
+
+const sentence = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      staggerChildren: 0.15,
+    },
+  },
+}
+
+const letter = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },}
+
 const variants = {
   initial: {
     y: -500,
@@ -12,7 +32,8 @@ const variants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      delay: 1,
+      duration: 3,
       staggerChildren: 0.1,
     },
   },
@@ -55,7 +76,23 @@ const Contact = () => {
       whileInView="animate"
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Let’s work together</motion.h1>
+        <motion.h1 variants={sentence}
+                    initial="hidden"
+                    animate="visible">
+          {/* Let’s work together */}
+          {line.split("").map((char, index) => {
+            return (
+              <motion.span key={char + "-" + index} variants={letter}>
+                {char}
+              </motion.span>
+            );
+
+          })}
+          
+          
+          
+          
+        </motion.h1>
         {/* <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
           <span>hello@react.dev</span>
@@ -105,9 +142,9 @@ const Contact = () => {
             />
           </svg>
         </motion.div>
-        {/* <motion.form
+        <motion.form
           ref={formRef}
-          onSubmit={sendEmail}
+          // onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
@@ -116,9 +153,9 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email"/>
           <textarea rows={8} placeholder="Message" name="message"/>
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
-        </motion.form> */}
+          {/* {error && "Error"} */}
+          {/* {success && "Success"} */}
+        </motion.form>
       </div>
     </motion.div>
   );

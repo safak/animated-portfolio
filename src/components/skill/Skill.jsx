@@ -41,13 +41,34 @@ const Skill = () => {
         }
     };
 
-    const scrollToProjects = () => {
-        scroller.scrollTo('projects', {
-          duration: 800,
-          delay: 0,
-          smooth: 'easeInOutQuart'
-        });
-      }
+    const arrow = {
+        hidden: {
+          y: -100, // Initial position above the view
+          opacity: 0,
+          transition: {
+            duration: 0.5,
+          },
+        },
+        visible: {
+          y: 10, // End position below the view
+          opacity: 1,
+          transition: {
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "loop", // Makes the animation go back and forth
+            repeatDelay: 0.5, // Delay before repeating the animation
+          },
+        },
+      };
+      
+
+    // const scrollToProjects = () => {
+    //     scroller.scrollTo('projects', {
+    //       duration: 800,
+    //       delay: 0,
+    //       smooth: 'easeInOutQuart'
+    //     });
+    //   }
 
   return (
     <div className="skill">
@@ -92,7 +113,8 @@ const Skill = () => {
         <img src="/postgregis.png" alt=""/>
         </motion.div>
       </motion.div>
-      <a href="#Projects" className="scroll-arrow">↓</a>
+      <motion.a href="#Projects" variants={arrow} initial="hidden"
+      animate="visible" className="scroll-arrow">what I did ↓</motion.a>
       {bubbles.map((bubble, index) => (
         <Bubble 
           key={index} 
