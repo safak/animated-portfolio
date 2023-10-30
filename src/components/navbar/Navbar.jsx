@@ -14,7 +14,7 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: .5 }}
         >
-          Steve Crabtree
+          SC DEV
         </motion.span>
 
         <div className='social'>
