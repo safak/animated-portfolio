@@ -1,3 +1,4 @@
+@import "../../app.scss";
 
 .parallax {
   width: 100%;
@@ -11,7 +12,10 @@
   h1 {
     font-size: 70px;
     color: white;
-
+    @include mobile {
+      font-size: 40px;
+      text-align: center;
+    }
       }
 
   .mountains {
@@ -23,6 +27,10 @@
     position: absolute;
     z-index: 3;
     
+    @include mobile {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
   .planets {
     background-size: cover;
@@ -32,6 +40,10 @@
     position: absolute;
     z-index: 2;
     
+    @include mobile {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
   .stars {
     background-image: url("/stars.png");
@@ -41,6 +53,6 @@
     height: 100%;
     position: absolute;
     z-index: 1;
-
+    
   }
 }

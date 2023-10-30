@@ -16,6 +16,9 @@
         bottom: 0;
         width: 400px;
         background:white;
+        @include mobile {
+            width: 200px;
+          }
 
         .links{
             position: absolute;
@@ -29,8 +32,10 @@
 
             a{
                 font-size: 40px;
-                text-decoration: none;
-                color: black;
+               
+                @include mobile {
+                    font-size: 20px;
+                  }
             }
         }
     }
