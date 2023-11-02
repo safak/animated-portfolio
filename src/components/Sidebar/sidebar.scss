@@ -13,6 +13,7 @@
     bottom: 0;
     width: 400px;
     background: #fff;
+    z-index: 999;
 
     .links {
       position: absolute;
@@ -39,5 +40,6 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 999;
   }
 }

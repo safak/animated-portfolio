@@ -1,3 +1,4 @@
+import { initial } from 'underscore';
 import './hero.scss';
 import { motion } from 'framer-motion';
 
@@ -20,6 +21,19 @@ const textVariants = {
     transition: {
       duration: 2,
       repeat: Infinity,
+    },
+  },
+};
+const sliderVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: '-220%',
+    transition: {
+      repeat: Infinity,
+      repeatType: 'mirror',
+      duration: 20,
     },
   },
 };
@@ -52,9 +66,14 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <div className='slidingTextContainer'>
-        Web Developer and Loving Husband
-      </div>
+      <motion.div
+        className='slidingTextContainer'
+        variants={sliderVariants}
+        initial='initial'
+        animate='animate'
+      >
+        Web Developer and UI designer
+      </motion.div>
       <div className='imageContainer'>
         <img src='/hero.png' alt='' />
       </div>
