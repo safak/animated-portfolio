@@ -24,29 +24,29 @@ const items = [
   {
     id: 4,
     title: 'Vanilla JavaScript app',
-    img: 'https://plus.unsplash.com/premium_photo-1661412605204-504ec6726508?auto=format&fit=crop&q=80&w=1332&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://images.unsplash.com/photo-1552255349-450c59a5ec8e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, quam! Cumque aut ipsum incidunt libero, blanditiis, enim velit tempore reiciendis numquam vel cupiditate. Possimus alias, iste in recusandae ullam aliquam.',
   },
 ];
 
 const Single = ({ item }) => {
-  return <section>{item.title}</section>
-  // const ref = useRef();
+  const ref = useRef();
 
   const { scrollYProgress } = useScroll({
     target: ref,
+    // offset: ['start start', 'end start'],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <section ref={ref}>
+    <section>
       <div className='container'>
         <div className='wrapper'>
-          <div className='imageContainer'>
+          <div className='imageContainer' ref={ref}>
             <img src={item.img} alt='' />
           </div>
-          <motion.div className='textContainer'>
+          <motion.div className='textContainer' style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <button>See Demo</button>
