@@ -23,17 +23,33 @@
 
   .formContainer {
     flex: 1;
+    position: relative;
+
+    .phoneSvg {
+      position: absolute;
+      margin: auto;
+    }
 
     form {
       display: flex;
       flex-direction: column;
       gap: 20px;
 
-      input {
+      input,
+      textarea {
         padding: 20px;
         background-color: transparent;
         border: 1px solid #fff;
         color: #fff;
+        border-radius: 5px;
+        border-radius: 5px;
+      }
+      button {
+        padding: 20px;
+        font-weight: 600;
+        border: none;
+        background-color: orange;
+        cursor: pointer;
         border-radius: 5px;
       }
     }
