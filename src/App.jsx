@@ -1,25 +1,29 @@
 import "./app.scss"
 import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/firstpage/Firstpage"
-import Parallax from "./components/parallax/parallax";
-import Services from "./components/services/Services";
-import Portfolio from "./components/portfolio/Portfolio";
+import Parallax from "./components/parallax/Parallax";
+import Services from "./components/myskills/Myskills";
+import Portfolio from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
+import Firstpage from "./components/firstpage/Firstpage";
+
+
+
 const App = () => {
-  return <div> 
+  return ( 
+  <> 
     <section id="Homepage">
-      <Navbar/>
-      <Hero/>
+      <Navbar/> 
+      <Firstpage/>
     </section>
-    <section id= "Services"><Parallax type="services"/></section>
-    <section ><Services/></section>
-    <section id= "Protfolio"><Parallax type="portfolio"/></section>
-    <Portfolio/>
+    <section id= "My Skills"><Parallax type="skills"/></section>
+    <section id= "SkillsL"><Services/></section>
+    <section id= "Projects"><Parallax type="projects"/></section>
+    <div id= "ProjectsL"><Portfolio/></div>
     <section id="Contacts">
     <Contact/>
     </section>
-
-  </div>;
+   </>
+    )
 };
 
 export default App;

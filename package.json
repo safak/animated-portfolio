@@ -14,6 +14,8 @@
     "framer-motion": "^10.16.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "^6.18.0",
+    "react-router-hash-link": "^2.4.3",
     "sass": "^1.68.0",
     "scss": "^0.2.4"
   },

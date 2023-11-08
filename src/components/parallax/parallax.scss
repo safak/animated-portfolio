@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  
 
   h1 {
     font-size: 70px;
@@ -19,11 +20,11 @@
       }
 
   .mountains {
-    background-image: url("/mountains.png");
+    background-image: url("/mountains1.png");
     background-size: cover;
     background-position: bottom;
     width: 100%;
-    height: 100%;
+    height: 110%;
     position: absolute;
     z-index: 3;
     
@@ -46,7 +47,8 @@
     }
   }
   .stars {
-    background-image: url("/stars.png");
+    background: url("/stars.png");
+   
     background-size: cover;
     background-position: bottom;
     width: 100%;
@@ -55,4 +57,19 @@
     z-index: 1;
     
   }
+
+  .imageContainer {
+  
+    position:absolute;
+    top: 60%;
+    left:47%;
+    z-index: 3;
+    
+  img{
+    width: 50px;
+    cursor: pointer;
+   
+  }
+  
+}
 }

@@ -1,6 +1,9 @@
 import "./firstpage.scss"
 import { motion } from "framer-motion";
 
+import { HashLink } from 'react-router-hash-link';
+
+
 const textVariants = {
   initial: {
     x: -500,
@@ -39,8 +42,10 @@ const sliderVariants = {
 };
 
 const Firstpage = () => {
+ 
   return (
     <div className="firstpage">
+      
       <div className="wrapper">
       <motion.div
           className="textContainer"
@@ -50,24 +55,32 @@ const Firstpage = () => {
         >
         <motion.h2 variants={textVariants}>ZAINAB AL-MASOODI</motion.h2>
         <motion.h1 variants={textVariants}>Web Developer</motion.h1>
+        <motion.p variants={textVariants}>I design and code beautifully simple things, and I love what I do.
+        <br/><br/>I’m currently learning about anything and everything around JavaScript.
+        <br/><br/>I'm open to Job opportunities where I can contribute, learn and grow.
+         If you have a good opportunity that matches my skills and experience then do not hesitate to contact me.</motion.p>
         <motion.div variants={textVariants} className="buttons">
-          <motion.button variants={textVariants}>See the latest Works</motion.button>
-          <motion.button variants={textVariants}>Contact</motion.button>
+          {/*<motion.button variants={textVariants}><HashLink to={"#Protfolio"}>My projects</HashLink></motion.button>*/}
+          <motion.button  variants={textVariants} ><HashLink to={"#Contacts"}>Contacts</HashLink></motion.button>
         </motion.div>
-        <motion.img  variants={textVariants}animate="scrollButton" src="/scroll.png" alt=""/>
+        <motion.a variants={textVariants}animate="scrollButton" href="#My Skills"><img src="/scroll.png" alt="" /></motion.a>
+       
       </motion.div>
       </div>
+      
       <motion.div
         className="slidingTextContainer"
         variants={sliderVariants}
         initial="initial"
         animate="animate"
       >
-        zaad dgg jmx ffsss
+        Welcome to my Protfolio
       </motion.div>
+      
         <div className="imageContainer">
             <img src="/p1.png" alt=""/>
         </div>
+
     </div>
   )
 }

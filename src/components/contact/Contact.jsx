@@ -27,15 +27,15 @@ const Contact = () => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
-  /*const sendEmail = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
+        "service_hzii7ch",
+        "template_3zwwm3v",
         formRef.current,
-        "pX_2hasGmGcuvjXIW"
+        "ExlpV4G8sYkd2yETX"
       )
       .then(
         (result) => {
@@ -45,7 +45,7 @@ const Contact = () => {
           setError(true);
         }
       );
-  };*/
+  };
 
   return (
     <motion.div
@@ -59,15 +59,15 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <span>zainab_almasoodi@yahoo.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Hello street New York</span>
+          <span>Kitchener, Canada</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>+1 234 5678</span>
+          <span>+1 </span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -102,7 +102,7 @@ const Contact = () => {
         </motion.div>
         <motion.form
           ref={formRef}
-          //onSubmit={sendEmail}
+          onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}

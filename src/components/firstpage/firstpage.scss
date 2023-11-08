@@ -3,7 +3,7 @@
 .firstpage {
   height: calc(100vh - 100px);
   overflow: hidden;
-  background: linear-gradient(180deg, #0c0c1d, #111132);
+  background: linear-gradient(180deg, #0a0420, rgb(30, 30, 74));
   position: relative;
 
   .wrapper {
@@ -12,12 +12,12 @@
     margin: auto;
 
     .textContainer {
-      width: 50%;
+      width: 40%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 40px;
+      gap: 30px;
 
       @include mobile {
         height: 60%;
@@ -28,7 +28,7 @@
       }
 
       h2 {
-        font-size: 30px;
+        font-size: 25px;
         color: rebeccapurple;
         letter-spacing: 10px;
 
@@ -39,11 +39,15 @@
       }
 
       h1 {
-        font-size: 88px;
+        font-size: 40px;
 
         @include mobile {
           font-size: 25px;
         }
+      }
+      p{
+        
+        font-size: 15px;
       }
 
       .buttons {
@@ -57,19 +61,29 @@
           cursor: pointer;
           font-weight: 300;
         }
+        z-index: 1;
       }
 
       img {
         width: 50px;
+        cursor: pointer;
+        z-index: 1;
+       
+      }
+      a{
+        z-index: 1;
       }
     }
   }
 
   .imageContainer {
     height: 100%;
+    
     position: absolute;
     top: 0;
     right: 0;
+    padding-right: 10%;
+    
 
     @include mobile {
       height: 50%;
@@ -83,16 +97,19 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      z-index: 2;
     }
   }
 
   .slidingTextContainer {
     position: absolute;
-    font-size: 50vh;
+    font-size: 40vh;
     bottom: -25px;
     white-space: nowrap;
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+   
+   
   }
 }

@@ -2,34 +2,31 @@
 
 .navbar{
 height: 100px;
-background: #0c0c1d;
+background: #0a0420;
 
  .wrapper{
-    max-width: 1300px;
+    
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 100%;
     
-    @include mobile {
-        justify-content: flex-end;
-        padding: 20px;
-      }
-
+   width: 80%;
     span{
         font-weight: bold;
-        @include mobile {
-            display: none;
-          }
+        
     }
      .social{
         display: flex;
         gap: 20px;
-
+       
         img{
-            width: 18px;
-            height: 18px;
+            width: 25px;
+            height: 25px;
+        }
+        @include mobile {
+          gap: 10px;
         }
      }
  }
