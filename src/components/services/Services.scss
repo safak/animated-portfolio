@@ -133,6 +133,7 @@
         flex-direction:column;
         justify-content: space-between;
         align-items: center;
+        //min-width: 300px;
 
         @include mobile{
             padding: 10px;

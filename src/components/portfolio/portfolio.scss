@@ -69,7 +69,7 @@
         top: 80px;
         // margin: 0 auto;
         border-radius: 30px;
-        border: 6px solid rgba(214, 214, 214, 0.218);
+        // border: 6px solid rgba(214, 214, 214, 0.218);
 
         @include mobile{
           width: 100%;
@@ -107,7 +107,7 @@
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           border-radius: 30px;
 
         }

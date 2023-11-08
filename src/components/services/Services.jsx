@@ -5,58 +5,54 @@ import Modal from "./Modal";
 
 
 const honorsData = {
-    '1 OCT 2023 Postgraduate Industry Experience Winner': {
+    '2023 Monash University Postgraduate Industry Experience Winner': {
       description: 'Student Vote Postgraduate Industry Experience Winner',
-      imageUrl: "/people.webp", 
+      imageUrl: "/expo_win.png", 
     },
-    '2 OCT 2023 Postgraduate Industry Experience Winner': {
-        description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", 
-    },
-    '3 OCT 2023 Postgraduate Industry Experience Winner': {
-        description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", 
-    },
+    '2022 Commendation of academic performance': {
+        description: 'Receiving High Distinctions in all Semester 1, 2022 units. Issued by Dr Lan Du, Director, Postgraduate Studies Faculty of Information Technology.',
+        imageUrl: "/honor_s1.png", 
+    }
   };
 
   const certData = {
-    '1 OCT 2023 Postgraduate Industry Experience Winner': {
-      description: 'Student Vote Postgraduate Industry Experience Winner',
-      imageUrl: "/people.webp", 
+    'Monash Postgraduate Expo Participation': {
+      description: '',
+      imageUrl: "/expo_cert.png", 
     },
-    '2 OCT 2023 Postgraduate Industry Experience Winner': {
-        description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", 
+    'Data Analytics and Visualization Virtual Experience Program': {
+        description: '',
+        imageUrl: "/cert_acc.png", 
     },
-    '3 OCT 2023 Postgraduate Industry Experience Winner': {
-        description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp", 
+    'Introduction to Programming Using Python': {
+        description: '',
+        imageUrl: "/cert_python.png", 
     },
   };
 
   const expData = {
-    '1 OCT 2023 Postgraduate Industry Experience Winner': {
+    'Data Analyst': {
       description: 'Student Vote Postgraduate Industry Experience Winner',
-      imageUrl: "/people.webp", 
+      imageUrl: "/exp_formosa.webp", 
     },
-    '2 OCT 2023 Postgraduate Industry Experience Winner': {
+    'Administrative Assistant': {
         description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp",
+        imageUrl: "/exp_airoha.webp",
     },
-    '3 OCT 2023 Postgraduate Industry Experience Winner': {
+    'Office Assistant': {
         description: 'Student Vote Postgraduate Industry Experience Winner',
-        imageUrl: "/people.webp",
+        imageUrl: "/exp_nia.png",
     },
   };
 
 const educationData = {
-    '1 2022-2023 Master of Data Science': {
+    'Administrative Assistant': {
         description: 'Details about the Master of Science program',
-        imageUrl: "/education.webp", // Replace with the actual path to your image
+        imageUrl: "/edu_monash.png", // Replace with the actual path to your image
     },
     '2 2022-2023 Bachelor of Data Science': {
         description: 'Details about the Bachelor of Science program',
-        imageUrl: "/education.webp", // Replace with the actual path to your image
+        imageUrl: "/edu_fju.png", // Replace with the actual path to your image
     },};
     
 
@@ -125,48 +121,42 @@ const Services = () => {
                     <h1>
                         <motion.b whileHover={{color:"orange"}}>Building</motion.b> Success with.
                     </h1>
-                    <a href="#Projects"><button>What I do?</button></a>
+                    <a href="#Projects"><button>View My Projects</button></a>
                 </div>
             </motion.div>
             <motion.div className="listContainer">
                 <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgba(255, 255, 255, 0.6)", color: "black"}}>
                     <h2>Education</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                        libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-                        animi! Ad nam pariatur assumenda quae mollitia libero repellat
-                        explicabo maiores?
-                    </p>
+                    <ul>
+                        <li>Master of Data Science</li>
+                        <li>Bachelor of English Language and Literature</li>
+                    </ul>
                     <motion.button  onClick={() => handleButtonClick("Education")} initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
                 <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgba(255, 255, 255, 0.6)", color: "black"}}>
                     <h2>Experience</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                        libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-                        animi! Ad nam pariatur assumenda quae mollitia libero repellat
-                        explicabo maiores?
-                    </p>
+                    <ul>
+                        <li>Data Engineer @ Formosa Massage Therapy</li>
+                        <li>Administrative Assistant @ Airoha Technology Corp.</li>
+                        <li>Office Assistant @ NIA Taiwan</li>
+                    </ul>
                     <motion.button  onClick={() => handleButtonClick("Experience")} initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
                 <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgba(255, 255, 255, 0.6)", color: "black"}}>
                     <h2>Certificates</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                        libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-                        animi! Ad nam pariatur assumenda quae mollitia libero repellat
-                        explicabo maiores?
-                    </p>
+                    <ul>
+                        <li>Monash Postgraduate Expo</li>
+                        <li>Accenture Data Analytics and Visualization Virtual Experience Program</li>
+                        <li>Microsoft Introduction to Programming Using Python</li>
+                    </ul>
                     <motion.button onClick={() => handleButtonClick("Certificates")} initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
                 <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgba(255, 255, 255, 0.6)", color: "black"}}>
                     <h2>Honors</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                        libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-                        animi! Ad nam pariatur assumenda quae mollitia libero repellat
-                        explicabo maiores?
-                    </p>
+                    <ul>
+                        <li>Monash University Postgraduate Industry Experience Winner</li>
+                        <li>2022 Commendation of Academic Performance</li>
+                    </ul>
                     <motion.button onClick={() => handleButtonClick("Honors")} initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
                     {/* <Modal
                         isOpen={isModalOpen}

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Modal.scss";
+import "./Modal.scss";
 import { useState } from "react";
 
 
@@ -23,7 +23,7 @@ function Modal({ isOpen, onClose, category, data }) {
               <div>
                 <p onClick={() => setSelectedMonth(null)}>{selectedMonth}
                     <div className="item-content">{data[selectedMonth].description}</div>
-                    {/* <img src={monthInfo[selectedMonth].imageUrl} alt="" /> */}
+                    <img src={data[selectedMonth].imageUrl} alt="" />
                     <h6>Back</h6>
                 </p>
                 
