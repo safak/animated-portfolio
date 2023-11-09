@@ -56,8 +56,8 @@ const Firstpage = () => {
         <motion.h2 variants={textVariants}>ZAINAB AL-MASOODI</motion.h2>
         <motion.h1 variants={textVariants}>Web Developer</motion.h1>
         <motion.p variants={textVariants}>I design and code beautifully simple things, and I love what I do.
-        <br/><br/>I’m currently learning about anything and everything around JavaScript.
-        <br/><br/>I'm open to Job opportunities where I can contribute, learn and grow.
+        <br/>I’m currently learning about anything and everything around JavaScript.
+        <br/>I'm open to Job opportunities where I can contribute, learn and grow.
          If you have a good opportunity that matches my skills and experience then do not hesitate to contact me.</motion.p>
         <motion.div variants={textVariants} className="buttons">
           {/*<motion.button variants={textVariants}><HashLink to={"#Protfolio"}>My projects</HashLink></motion.button>*/}
