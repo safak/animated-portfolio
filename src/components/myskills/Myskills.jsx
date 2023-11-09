@@ -43,7 +43,7 @@ const Myskills = () => {
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/pngegg7.png" alt="" />
+          <img src="./pngegg7.png" alt="" />
           <h1>
             <motion.b whileHover={{color:"orange"}}>Skills</motion.b> I have
           </h1>
@@ -52,7 +52,7 @@ const Myskills = () => {
           <h1>
             <motion.b whileHover={{color:"orange"}}>Tools</motion.b> I use.
           </h1>
-          <img src="/pngegg4.png" alt="" />
+          <img src="./pngegg4.png" alt="" />
         </div>
       </motion.div>
       <motion.div className="listContainer1" variants={variants}>
@@ -61,14 +61,14 @@ const Myskills = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/javascript.png"/>
+          <img src="./javascript.png"/>
           {/*<h2>JavaScript</h2>*/}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/react.png"/>
+          <img src="./react.png"/>
           
         </motion.div>
         
@@ -76,35 +76,35 @@ const Myskills = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/node.png"/>
+          <img src="./node.png"/>
           
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/express.png"/>
+          <img src="./express.png"/>
           {/*<h2>JavaScript</h2>*/}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/rudx.png"/>
+          <img src="./rudx.png"/>
           
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/html.png"/>
+          <img src="./html.png"/>
           
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/css.png"/>
+          <img src="./css.png"/>
           
         </motion.div>
       </motion.div>
@@ -116,7 +116,7 @@ const Myskills = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/python.png"/>
+          <img src="./python.png"/>
           {/*<h2>JavaScript</h2>*/}
         </motion.div>
         
@@ -124,22 +124,14 @@ const Myskills = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/flask.png"/>
+          <img src="./flask.png"/>
           
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/django.png"/>
-          
-        </motion.div>
-
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <img src="/sql.png"/>
+          <img src="./django.png"/>
           
         </motion.div>
 
@@ -147,7 +139,7 @@ const Myskills = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/postgre.png"/>
+          <img src="./sql.png"/>
           
         </motion.div>
 
@@ -155,7 +147,7 @@ const Myskills = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/github.png"/>
+          <img src="./postgre.png"/>
           
         </motion.div>
 
@@ -163,7 +155,15 @@ const Myskills = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <img src="/ai.png"/>
+          <img src="./github.png"/>
+          
+        </motion.div>
+
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <img src="./ai.png"/>
           
         </motion.div>
       </motion.div>

@@ -41,6 +41,7 @@
     position: absolute;
     z-index: 2;
     
+    
     @include mobile {
       background-size: contain;
       background-repeat: no-repeat;

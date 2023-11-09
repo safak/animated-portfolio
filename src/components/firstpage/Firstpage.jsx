@@ -63,7 +63,7 @@ const Firstpage = () => {
           {/*<motion.button variants={textVariants}><HashLink to={"#Protfolio"}>My projects</HashLink></motion.button>*/}
           <motion.button  variants={textVariants} ><HashLink to={"#Contacts"}>Contacts</HashLink></motion.button>
         </motion.div>
-        <motion.a variants={textVariants}animate="scrollButton" href="#My Skills"><img src="/scroll.png" alt="" /></motion.a>
+        <motion.a variants={textVariants}animate="scrollButton" href="#My Skills"><img src="./scroll.png" alt="" /></motion.a>
        
       </motion.div>
       </div>

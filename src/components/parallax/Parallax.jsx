@@ -47,7 +47,7 @@ const Parallax = ({ type }) => {
         style={{
           y: yBg,
           backgroundImage: `url(${
-            type === "skills" ? "/planets.png" : "/sun.png"
+            type === "skills" ? "./planets.png" : "./sun.png"
           })`,
         }}
       ></motion.div>
@@ -55,8 +55,8 @@ const Parallax = ({ type }) => {
 
       <div className="imageContainer">
         {type === "skills" 
-        ? <motion.a variants={textVariants}animate="scrollButton" href="#SkillsL"><img src="/scroll.png" alt="" /></motion.a>
-        : <motion.a variants={textVariants}animate="scrollButton" href="#ProjectsL"><img src="/scroll.png" alt="" /></motion.a>
+        ? <motion.a variants={textVariants}animate="scrollButton" href="#SkillsL"><img src="./scroll.png" alt="" /></motion.a>
+        : <motion.a variants={textVariants}animate="scrollButton" href="#ProjectsL"><img src="./scroll.png" alt="" /></motion.a>
         } 
      </div>
     </div>
