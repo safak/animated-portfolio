@@ -78,7 +78,7 @@ const Firstpage = () => {
       </motion.div>
       
         <div className="imageContainer">
-            <img src="/p1.png" alt=""/>
+            <img src="./p1.png" alt=""/>
         </div>
 
     </div>
