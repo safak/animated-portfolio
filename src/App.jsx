@@ -7,6 +7,7 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import Cursor from "./components/cursor/Cursor";
 import Skill from "./components/skill/Skill";
+import Gallery from "./components/gallery/Gallery";
 
 const App = () => {
   return (<div>
@@ -31,6 +32,9 @@ const App = () => {
      <Portfolio/>
     <section id="Contact">
       <Contact/>
+    </section>
+    <section>
+      <Gallery />
     </section>
 
   </div>);
