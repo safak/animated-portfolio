@@ -1,15 +1,28 @@
 .gallery {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: row;
+    overflow: hidden;
     gap: 20px;
+
+
+    .header{
+        flex: 0 0 30%;  
+    }
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        //width: 50%;
+        flex: 0 0 30%;
+    }
   }
   
-  .project {
+  .project-card {
     position: relative;
     width: 300px;
     height: 200px;
     perspective: 1000px; // Needed for the flip effect
-    margin-top: 30px;
+    margin-bottom: 20px;
   
     img, .overlay {
       width: 100%;
