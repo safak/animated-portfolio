@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconscout/react-unicons": "^2.0.2",
+    "@iconscout/react-unicons-thinline": "^0.0.1",
+    "@iconscout/unicons": "^4.0.8",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.68.0"
   },
   "devDependencies": {
     "@types/react": "18.2.15",
