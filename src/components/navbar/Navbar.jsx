@@ -1,14 +1,49 @@
+import { useState, useEffect } from 'react'; 
 import './Navbar.scss';
 import '../../app.scss';
 import *as Unicons from '@iconscout/react-unicons';
-import './Toggle.jsx';
-
 
 const Navbar = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const handleToggleClick = () => {
+      const navMenu = document.getElementById('nav-menu');
+      setIsMenuOpen(!isMenuOpen);
+  
+      if (isMenuOpen) {
+        navMenu.classList.remove('show-menu');
+      } else {
+        navMenu.classList.add('show-menu');
+      }
+    };
+  
+    const handleCloseClick = () => {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.remove('show-menu');
+      setIsMenuOpen(false);
+    };
+  
+    const handleNavLinkClick = () => {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.remove('show-menu');
+      setIsMenuOpen(false);
+    };
+  
+    useEffect(() => {
+      const navLink = document.querySelectorAll('.nav_link');
+      navLink.forEach((n) => n.addEventListener('click', handleNavLinkClick));
+  
+      return () => {
+        // Limpiar los event listeners al desmontar el componente
+        navLink.forEach((n) => n.removeEventListener('click', handleNavLinkClick));
+      };
+    }, []);
+  
     
     return(
         <header className="header" id="header">
-        <nav className="nav container">
+        <nav className={`nav container ${isMenuOpen ? 'menu-open' : ''}`}>
           <a href="#" className="nav_logo">
             SEYER DEVS</a>
 
@@ -57,13 +92,13 @@ const Navbar = () => {
                             </a>
                         </li>
                     </ul>
-                    <i className="nav_close" id="nav-close">
+                    <i className="nav_close" id="nav-close" onClick={handleCloseClick}>
                         <Unicons.UilTimes/>
                     </i>
                 </div>
 
                 <div className="nav-btns">
-                    <div className="nav_toggle" id="nav-toggle">
+                    <div className="nav_toggle" id="nav-toggle" onClick={handleToggleClick}>
                         <i><Unicons.UilApps /></i>
                     </div>
                 </div>
