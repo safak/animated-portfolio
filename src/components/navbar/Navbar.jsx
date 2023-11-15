@@ -53,7 +53,7 @@ const Navbar = () => {
                         <li className="nav_item">
                             <a href="#contact" className="nav_link">
                                 <Unicons.UilFastMail nav_icon/>
-                                Contact
+                                Contact me
                             </a>
                         </li>
                     </ul>
