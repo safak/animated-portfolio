@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import "./navbar.scss";
-import '../../app.scss';
 import *as Unicons from '@iconscout/react-unicons';
 import * as Toggle from './Toggle';
 
