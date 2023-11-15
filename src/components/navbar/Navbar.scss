@@ -21,7 +21,8 @@
 .nav_logo,
 .nav_toggle{
     color: var(--title-color);
-    font-weight: var(--font-medium);
+    font-size: var(--h1-font-size);
+    font-weight: bold;
 }
 
 .nav_logo:hover{

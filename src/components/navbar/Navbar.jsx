@@ -23,35 +23,35 @@ const Navbar = () => {
                         </li>
 
                         <li className="nav_item">
-                            <a href="" className="nav_link">
-                                <Unicons.UilUser nav_icon/>
+                            <a href="#about" className="nav_link">
+                                <Unicons.UilUser  nav_icon/>
                                 About
                             </a>
                         </li>
 
                         <li className="nav_item">
-                            <a href="" className="nav_link">
+                            <a href="#skills" className="nav_link">
                                 <Unicons.UilCodeBranch nav_icon/>
                                 Skills
                             </a>
                         </li>
 
                         <li className="nav_item">
-                            <a href="" className="nav_link">
+                            <a href="#services" className="nav_link">
                                 <Unicons.UilConstructor nav_icon/>
                                 Services
                             </a>
                         </li>
 
                         <li className="nav_item">
-                            <a href="" className="nav_link">
+                            <a href="#porfolio" className="nav_link">
                                 <Unicons.UilFileCheck nav_icon/>
                                 Portfolio
                             </a>
                         </li>
 
                         <li className="nav_item">
-                            <a href="" className="nav_link">
+                            <a href="#contact" className="nav_link">
                                 <Unicons.UilFastMail nav_icon/>
                                 Contact
                             </a>
