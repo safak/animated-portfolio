@@ -1,31 +1,18 @@
-import './navbar.scss';
-import { useState } from 'react';
+import './Navbar.scss';
 import '../../app.scss';
 import *as Unicons from '@iconscout/react-unicons';
-import * as Toggle from './Toggle';
+import './Toggle.jsx';
 
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-    const handleToggleClick = () => {
-      const navMenu = document.getElementById('nav-menu');
-      setIsMenuOpen(!isMenuOpen);
-  
-      if (isMenuOpen) {
-        Toggle.removeShowMenuClass(navMenu);
-      } else {
-        Toggle.addShowMenuClass(navMenu);
-      }
-    };
     
     return(
         <header className="header" id="header">
-        <nav className={`nav_container ${isMenuOpen ? 'menu-open' : ''}`}>
+        <nav className="nav container">
           <a href="#" className="nav_logo">
             SEYER DEVS</a>
 
-                <div className={`nav_menu ${isMenuOpen ? 'show-menu' : ''}`} id="nav-menu">
+                <div className="nav_menu"  id="nav-menu">
                     <ul className="nav_list grid">
 
                         <li className="nav_item">
@@ -70,12 +57,14 @@ const Navbar = () => {
                             </a>
                         </li>
                     </ul>
-                    <Unicons.UilTimes className="nav_close" id="nav-close" onClick={handleToggleClick} />
+                    <i className="nav_close" id="nav-close">
+                        <Unicons.UilTimes/>
+                    </i>
                 </div>
 
                 <div className="nav-btns">
-                    <div className="nav_toggle" id="nav-toggles" onClick={handleToggleClick}>
-                        <Unicons.UilBracketsCurly/>
+                    <div className="nav_toggle" id="nav-toggle">
+                        <i><Unicons.UilApps /></i>
                     </div>
                 </div>
             </nav>

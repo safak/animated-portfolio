@@ -21,8 +21,7 @@
 .nav_logo,
 .nav_toggle{
     color: var(--title-color);
-    font-weight: 900;
-    font-size: var(--logo-font-size);
+    font-weight: var(--font-medium);
 }
 
 .nav_logo:hover{
@@ -41,7 +40,7 @@
 @media screen and (max-width: 767px){
     .nav_menu{
         position: fixed;
-        bottom: 0;
+        bottom: -100%;
         left: 0;
         width: 100%;
         background-color: var(--body-color);
@@ -49,14 +48,7 @@
         box-shadow: 0 -1px 4px rgba(0,0,0,.15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
-
     }
-
-    .nav_menu.show-menu {
-        transform: translateY(0);
-        visibility: visible;
-        opacity: 1;
-      }
 }
 
 .nav_list{
@@ -70,7 +62,7 @@
     align-items: center;
     font-size: var(--small-font-size);
     color: var(--title-color);
-    font-weight: var(--font-semi);
+    font-weight: var(--font-medium);
 }
 
 .nav_link:hover{
@@ -95,7 +87,6 @@
     color: var(--first-color-alt);
 }
 
- /*--------------SHOW NAV--------------*/
 .show-menu{
     bottom: 0;
 }

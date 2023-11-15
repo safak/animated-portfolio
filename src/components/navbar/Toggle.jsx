@@ -1,13 +1,16 @@
-const addShowMenuClass = (navMenu) => {
-    if (navMenu) {
-      navMenu.classList.add('show-menu');
-    }
-  };
-  
-  const removeShowMenuClass = (navMenu) => {
-    if (navMenu) {
-      navMenu.classList.remove('show-menu');
-    }
-  };
-  
-  export { addShowMenuClass, removeShowMenuClass };
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
+
+if (navToggle){
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.add('show-menu')
+  })
+}
+
+
+if (navClose) {
+  navClose.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu')
+  })
+}
