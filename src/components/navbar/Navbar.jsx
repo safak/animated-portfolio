@@ -1,4 +1,4 @@
-import './navbar.scss';
+import './Navbar.scss';
 import '../../app.scss';
 import *as Unicons from '@iconscout/react-unicons';
 import './Toggle.jsx';
