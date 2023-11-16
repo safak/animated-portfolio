@@ -20,7 +20,8 @@
     "react-dom": "18.2.0",
     "react-three-fiber": "^6.0.13",
     "sass": "^1.68.0",
-    "three": "^0.158.0"
+    "three": "^0.158.0",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@types/react": "18.2.15",

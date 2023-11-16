@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Navbar.scss';
 import '../../app.scss';
+import Typed from 'typed.js';
 import * as Unicons from '@iconscout/react-unicons';
 
 const Navbar = () => {
@@ -51,11 +52,28 @@ const Navbar = () => {
     };
   }, []);
 
+  /* eslint-disable no-unused-vars */
+  const nav_logo = useRef(null);
+  const [typedEffectExecuted, setTypedEffectExecuted] = useState(false);
+
+  useEffect(() => {
+    if (!typedEffectExecuted) {
+      const typed = new Typed(nav_logo.current, {
+        strings: ['SEYER_', 'DEVS_', 'SEYER DEVS_'],
+        typeSpeed: 80,
+        backSpeed: 80,
+        fadeOut: false,
+        showCursor: false
+      });
+      setTypedEffectExecuted(true);
+    }
+  }, [typedEffectExecuted]);
+/* eslint-enable no-unused-vars */
+
     return(
         <header className="header" id="header">
             <nav className={`nav container ${isMenuOpen ? 'menu-open' : ''}`}>
-          <a href="#" className="nav_logo">
-            SEYER DEVS</a>
+          <a href="#home" className="nav_logo" ref={nav_logo}></a>
 
                 <div className="nav_menu"  id="nav-menu">
                     <ul className="nav_list grid">
