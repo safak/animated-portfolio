@@ -1,11 +1,9 @@
 import "./app.scss";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/navbar/Navbar"
 
 const App = () => {
   return <div>
-    <section>
       <Navbar/>
-    </section>
   </div>;
 };
 
