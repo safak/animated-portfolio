@@ -1,21 +1,89 @@
+@import "../../app.scss";
 .gallery {
     display: flex;
     flex-wrap: row;
-    justify-content: end;
+    justify-content: center;
+    align-items: start;
     overflow: hidden;
-    //gap: 20px;
+    position: relative;
+    
 
-
-    .header{
-        flex: 0 0 30%;  
-    }
 
     .column{
         display: flex;
         flex-direction: column;
         flex: 0 0 28%;
-        &:nth-of-type(2) { // Assuming the first .column is actually the second child
-            margin-left: 100px;
+        margin-left: 200px;
+    }
+
+    .wrapper{
+        max-width: 1366px;
+        height: 100%;
+        justify-content: space-between; 
+        align-items: end;
+        margin-top: 15%; 
+    
+        .textContainer{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 25px;
+            margin-left: 50px;
+            
+            @include mobile{
+                margin-top: 30px;
+                width: 70%;
+                height: 50%;
+                gap: 20px;
+                text-align: center;
+            }
+    
+            h2{
+                font-size: 40px;
+                color: #fefae0;
+    
+            }
+    
+            h1{
+                font-size: 80px;
+                color: #fa9a2c;
+    
+                @include mobile{
+                    font-size:30px;
+                }
+            }
+
+            h3 {
+                font-size: 25px;
+
+            }
+    
+            img{
+                margin-top: 20px;
+                width: 50px;
+                
+            }
+    
+            .buttons{
+                a {button{
+                    font-size: 20px;
+                    padding: 20px;
+                    border: 1px solid white;
+                    background-color: transparent;
+                    color: white;
+                    border-radius: 10px;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    position: relative;
+                    z-index:1;
+                }
+            }
+            
+            }
         }
     }
   }
@@ -36,7 +104,7 @@
   
     img {
       backface-visibility: hidden;
-      border-radius: 10px;
+      // border-radius: 10px;
     }
   
     .info-tags {
@@ -49,7 +117,7 @@
       .tag {
         background-color: #dda15e;
         color: #f2f4f3;
-        border-radius: 20px;
+        border-radius: 10px;
         padding: 5px 10px;
         font-size: 0.8em;
       }
@@ -65,8 +133,8 @@
       flex-direction: column;
       justify-content: center;
       padding: 10px;
-      background: #dbd4b8;
-      border-radius: 10px;
+      background: #e9e7e2;
+      // border-radius: 10px;
       color: black;
       transform: rotateY(180deg);
       backface-visibility: hidden; // Hide the back of the back panel
@@ -96,4 +164,27 @@
       transform: rotateY(0deg);
     }
   }
-  
+
+  .slidingtextContainer{
+    position: absolute;
+    font-size: 50vh;
+    top: 320px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+}
+
+// .social{
+//   display: flex;
+//   gap: 5px;
+
+//   img{
+//       width: 50px;
+//       height: 50px;
+//       object-fit: cover;
+//       margin-top: 5px;
+//   }
+
+
+// }

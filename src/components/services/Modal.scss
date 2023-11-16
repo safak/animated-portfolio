@@ -9,7 +9,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    // background-color: rgba(0, 0, 0, 0.5);
     color: black;
 
     // @include mobile{
@@ -23,8 +23,9 @@
         width: 700px;
         height: 500px;
         padding: 50px;
-        background-color: #b4a291;
-        border-radius: 20px;
+        background-color: #f0f0f0;
+        // background-color: #eaeaea6e;
+        // border-radius: 20px;
         color: #33454d;
         display: flex;
         flex-direction: column;
@@ -47,7 +48,7 @@
         h1 {
             @include mobile{
                 font-size: 25px;
-                background-color: #dda15e;
+                background-color: #fa9a2c;
                 padding: 15px;
                 
             }
@@ -56,7 +57,7 @@
             font-size: 20px;
             font-weight: 800;
             border-radius: 30px;
-            border: 2px solid rgba(214, 214, 214, 0.618);
+            border: 3px solid rgba(214, 214, 214, 0.9);
             padding: 30px;
             // background-color: yellowgreen;
 
@@ -85,7 +86,7 @@
             h6 {
                 font-size: 14px;
                 margin-top: 30px;
-                background-color: #dda15e;
+                background-color: #fa9a2c;
             }
 
             img{
@@ -112,7 +113,7 @@
             transition: color 0.2s;
           
             &:hover {
-              color: #dda15e;
+              color: #fa9a2c;
             }
 
             @include mobile{

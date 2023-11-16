@@ -19,12 +19,6 @@ const Parallax = ({type}) => {
     return (
         <motion.div className="parallax"
              ref={ref}
-             style={{
-                background:
-                  type === "services"
-                    ? "linear-gradient(90deg,  rgb(14, 10, 136), rgb(1, 197, 168))"
-                    : "linear-gradient(90deg, rgb(14, 10, 136), rgb(1, 197, 168))"
-             }}
         >
             {/* <motion.h1 style={{ y:yText}}>
                 {type === "services" ? "My Journey" : "What I Did?"}
@@ -35,9 +29,9 @@ const Parallax = ({type}) => {
                 style={{
                 y: yBg,
                 x: xMotion,
-                backgroundImage: `url(${
-                    type === "services" ? "/bg_3d.png" : "/shooting_3d.png"
-                })`,
+                // backgroundImage: `url(${
+                //     type === "services" ? "/bg_3d.png" : "/shooting_3d.png"
+                // })`,
                 }}
             ></motion.div>
             <motion.div style={{ y:yBg}} className="stars"></motion.div>

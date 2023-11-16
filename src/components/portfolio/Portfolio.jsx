@@ -6,27 +6,27 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "Secure Cyclist",
+    title: "Data Cleaning",
     images: ["/cyclist.png", "/sc_hazard.png", "/sc_spinner.png", "/sc_map.png", "/sc_news.png", "/sc_line.png", "/sc_bar.png", "/sc_bar2.png", "/sc_donut.png"],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "",
   },
   {
     id: 2,
-    title: "Interactive Map Visualisation of Taiwan's Travel Destinations",
+    title: "Data Warehouse",
     images: ["/tw_landing.png","/tw_filter.png", "/tw_cluster.png", "/tw_popup.png", "/tw_list.png", "/tw_list_pg.png"],
-    desc: "This project showcases a R Shiny application that fuses four open datasets from Taiwan Travel Bureau into an interactive map visualisation. Designed with the Leaflet library, the application offers users a dynamic interface for exploring Taiwan’s scenic spots, events, restaurent and accommodations. Its features include intuitive filtering options, clickable map that reveal detailed information, and a responsive list view. The visual tool not only enhances the user experience but also serves as an innovative resource for planning travels in Taiwan.",
+    desc: "",
   },
   {
     id: 3,
-    title: "Another Aspect of Stack Overflow Annual Survey 2022",
+    title: "Data Analysis & Vis",
     images: ["/stk_landing.png", "/stk_line.png","/stk_heatmap.png","/stackover.jpeg",],
-    desc: "The project delves into the demographics, earnings, and learning pathways of contributors to Stack Overflow. By examining the survey data, this project provides fresh insights into the global community of developers that use the platform, offering a unique perspective on the trends and traits that define the coding landscape. This analysis aims to enhance user experience and inform educational strategies within the coding community.",
+    desc: "",
   },
   {
     id: 4,
-    title: "Personal Portfolio",
+    title: "Machine Learning",
     images: ["/person.png", "/person.png","/person.png","/person.png",],
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "",
   },
 ];
 
@@ -106,7 +106,7 @@ const Portfolio = () => {
       
         <div className="content">
           <div className="progress">
-            <h1>Projects</h1>
+            <h1>What I did</h1>
             <motion.div style={{ scaleX, originX: "0%" }} className="progressBar"></motion.div>
           </div>
         {items.map((item) => (

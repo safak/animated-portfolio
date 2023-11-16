@@ -14,12 +14,14 @@ const App = () => {
     <Cursor />
     <section id="Home">
       <Navbar/>
-      <Hero/>  
+      <Gallery />
+      {/* <Hero/>   */}
     </section>
     {/* <section id="Services">
       <Parallax type="services" />
     </section> */}
     <section id="Experience">
+      <Navbar/>
       <Services/>
       
     </section>
@@ -27,13 +29,14 @@ const App = () => {
     {/* <section id="Portfolio">
       <Parallax type="portfolio" />
     </section> */}
-     {/* <Portfolio/> */}
-     <section id="Gallery">
+     {/* <section id="Gallery">
+      <Navbar/>
       <Gallery />
-    </section>
+    </section> */}
     <section id="Skills">
       <Skill/>
     </section >
+    <Portfolio/>
     <section id="Contact">
       <Contact/>
     </section>

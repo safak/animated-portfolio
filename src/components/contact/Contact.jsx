@@ -3,7 +3,7 @@ import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 // import emailjs from "@emailjs/browser";
 
-const line = "Let's work together"
+const line = "Contact me"
 
 const sentence = {
   hidden: { opacity: 1 },

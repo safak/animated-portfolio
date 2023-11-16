@@ -24,10 +24,10 @@
 
     .progressBar {
       height: 8px;
-      background-color: rgb(162, 255, 0, 0.9);
+      background-color: #dda15e;
 
       @include mobile{
-        background-color: rgb(162, 255, 0, 0.8);
+        background-color: #dda15e;
      }
     }
   }
@@ -98,7 +98,7 @@
           transition: background-color 0.3s;
       
           &.active {
-            background-color: rgb(162, 255, 0, 0.9);
+            background-color: #dda15e;
           }
         }
 
@@ -139,7 +139,7 @@
         h2 {
           font-size: 40px;
           // color: rgba(44, 61, 15, 0.9);
-          color: rgb(162, 255, 0, 0.9);
+          color: #dda15e;
           
           @include mobile{
             font-size: 25px;
@@ -161,7 +161,7 @@
         }
 
         button {
-          background-color: rgb(162, 255, 0, 0.9);
+          background-color: #dda15e;
           border: none;
           border-radius: 10px;
           padding: 10px;
@@ -192,7 +192,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(162, 255, 0, 0.9);
+  background-color: #dda15e;
   border: none;
   padding: 10px;
   cursor: pointer;

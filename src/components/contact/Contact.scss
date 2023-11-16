@@ -71,6 +71,8 @@
   
       form {
         display: flex;
+        width: 80%;
+        margin-left: 20px;
         flex-direction: column;
         gap: 20px;
         color: black;
@@ -93,7 +95,7 @@
         button {
           padding: 20px;
           border: none;
-          background-color: #d9974b;
+          background-color: #fa9a2c;
           cursor: pointer;
           font-weight: 500;
 

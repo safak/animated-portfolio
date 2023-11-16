@@ -1,4 +1,5 @@
 import "./Hero.scss";
+import React from 'react';
 import { motion } from "framer-motion";
 
 const textVariants = {
@@ -41,6 +42,8 @@ const textVariants = {
 
 
 const Hero = () => {
+
+
     return (
         <div className="hero">
             <div className="wrapper">
@@ -49,10 +52,16 @@ const Hero = () => {
                     <motion.h1 variants={textVariants}>A Data Scientist</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
                       <a href="#Experience"><motion.button  variants={textVariants} >About me</motion.button></a>
+                      <a href="#Experience"><motion.button  variants={textVariants} >View my projects</motion.button></a>
                         {/* <motion.button  variants={textVariants} >Portfolio</motion.button> */}
                     </motion.div>
                     <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
                 </motion.div>
+                <div className="imageContainer">
+                {/* <img src="/71.png" alt="" /> */}
+                </div>
+
+
             </div>
             <motion.div className="slidingtextContainer"
                  variants={sliderVariants}
@@ -60,12 +69,11 @@ const Hero = () => {
                  animate="animate">
                 hello hello hello hello
             </motion.div>
-            <div className="imageContainer">
-                <img src="/71.png" alt="" />
-            </div>
-
+            
+            
         </div>
 
-    )}
+    )};
+
 
 export default Hero;

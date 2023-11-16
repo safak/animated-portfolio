@@ -9,15 +9,15 @@ const getRandomDuration = () => 20 + Math.random() * 5;
 
 const Skill = () => {
     const bubbles = [
-        { size: '50px', duration: getRandomDuration() },
-        { size: '100px', duration: getRandomDuration() },
-        { size: '75px', duration: getRandomDuration() },
-        { size: '50px', duration: getRandomDuration() },
-        { size: '100px', duration: getRandomDuration() },
-        { size: '75px', duration: getRandomDuration() },
-        { size: '50px', duration: getRandomDuration() },
-        { size: '100px', duration: getRandomDuration() },
-        { size: '50px', duration: getRandomDuration() },
+        { size: '250px', duration: getRandomDuration(), bg:'/javascript.png' },
+        { size: '300px', duration: getRandomDuration(), bg:'/react.png' },
+        { size: '375px', duration: getRandomDuration(), bg:'/node.png' },
+        { size: '400px', duration: getRandomDuration(), bg:'/html.png' },
+        { size: '300px', duration: getRandomDuration(), bg:'/r.png' },
+        { size: '275px', duration: getRandomDuration(), bg:'/tableau.png' },
+        { size: '350px', duration: getRandomDuration(), bg:'/tensorflow.png' },
+        { size: '500px', duration: getRandomDuration(), bg:'/docker.png' },
+        { size: '350px', duration: getRandomDuration(), bg:'/python.png' },
         // Add more bubbles as needed
       ];
     
@@ -62,20 +62,12 @@ const Skill = () => {
       };
       
 
-    // const scrollToProjects = () => {
-    //     scroller.scrollTo('projects', {
-    //       duration: 800,
-    //       delay: 0,
-    //       smooth: 'easeInOutQuart'
-    //     });
-    //   }
-
   return (
     <div className="skill">
       <motion.div className="skill-title" variants={container}
             initial="hidden"
             animate="visible">
-        What I do?
+        What can I do?
       </motion.div>
       <motion.div className="skill-container"
             variants={container}
@@ -83,44 +75,54 @@ const Skill = () => {
             animate="visible"
             whileHover={{ scale: 1.1}}>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/react.png" alt=""/>
+        {/* <img src="/react.png" alt=""/> */}
+        <p>Data Cleaning</p>
         </motion.div>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/node.png" alt=""/>
+        {/* <img src="/node.png" alt=""/> */}
+        <p>Data Exploration</p>
         </motion.div>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/html.png" alt=""/>
+        {/* <img src="/html.png" alt=""/> */}
+        <p>Data Preprocessing</p>
         </motion.div>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/css.png" alt=""/>
+        {/* <img src="/css.png" alt=""/> */}
+        <p>Data Analysis</p>
         </motion.div>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/javascript.png" alt=""/>
+        {/* <img src="/javascript.png" alt=""/> */}
+        <p>Data Visualisation</p>
         </motion.div>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/python.png" alt=""/>
+        {/* <img src="/python.png" alt=""/> */}
+        <p>Machine Learning</p>
         </motion.div>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/sql.png" alt=""/>
+        {/* <img src="/sql.png" alt=""/> */}
+        <p>Tableau</p>
         </motion.div>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/tableau.png" alt=""/>
+        {/* <img src="/tableau.png" alt=""/> */}
+        <p>Data Engineer</p>
         </motion.div>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/docker.png" alt=""/>
+        {/* <img src="/docker.png" alt=""/> */}
+        <p>Data Warehouse</p>
         </motion.div>
         <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
-        <img src="/postgregis.png" alt=""/>
+        {/* <img src="/postgregis.png" alt=""/> */}
+        <p>Front End</p>
         </motion.div>
       </motion.div>
       <motion.a href="#Contact" variants={arrow} initial="hidden"
-      animate="visible" className="scroll-arrow">Contact me ↓</motion.a>
+      animate="visible" className="scroll-arrow">↓</motion.a>
       {bubbles.map((bubble, index) => (
         <Bubble 
           key={index} 
           size={bubble.size} 
           duration={bubble.duration} 
-          direction={bubble.direction} 
+          bg={bubble.bg} 
         />
       ))}
 

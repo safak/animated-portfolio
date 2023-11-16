@@ -10,6 +10,8 @@
         max-width: 1366px;
         height: 100%;
         margin: auto;
+        justify-content: space-between; // Align items on opposite ends
+        align-items: start; // Align items to the top
 
         .textContainer{
             width: 50%;
@@ -104,3 +106,90 @@
             left: 70px;
         }}
 }
+
+
+
+
+// .project-card {
+//     position: relative;
+//     width: 300px;
+//     height: 200px;
+//     perspective: 1000px; // Needed for the flip effect
+//     margin-bottom: 20px;
+  
+//     img, .overlay {
+//       width: 100%;
+//       height: 100%;
+//       transition: transform 0.6s;
+//       transform-style: preserve-3d;
+//     }
+  
+//     img {
+//       backface-visibility: hidden;
+//       border-radius: 10px;
+//     }
+  
+//     .info-tags {
+//       position: absolute;
+//       bottom: 10px;
+//       right: 10px;
+//       display: flex;
+//       gap: 5px;
+      
+//       .tag {
+//         background-color: #dda15e;
+//         color: #f2f4f3;
+//         border-radius: 20px;
+//         padding: 5px 10px;
+//         font-size: 0.8em;
+//       }
+//     }
+  
+//     .overlay {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       padding: 10px;
+//       background: #dbd4b8;
+//       border-radius: 10px;
+//       color: black;
+//       transform: rotateY(180deg);
+//       backface-visibility: hidden; // Hide the back of the back panel
+//       align-items: center;
+//       text-align: center;
+//       opacity: 0;
+//       transition: opacity 0.6s ease, visibility 0.6s ease;
+//       visibility: hidden;
+  
+//       .title {
+//         font-size: 1.4em;
+//         margin-bottom: 10px;
+//       }
+  
+//       .description {
+//         font-size: 1em;
+//       }
+//     }
+  
+//     &:hover img {
+//       transform: rotateY(-180deg);
+//     }
+  
+//     &:hover .overlay {
+//       opacity: 1;
+//       visibility: visible;
+//       transform: rotateY(0deg);
+//     }
+//   }
+//   .column {
+//     width: 90%; // Adjust width as needed
+//     display: flex;
+//     flex-direction: column;
+//     align-items: end; // Center-align the project cards
+//     gap: 20px; // Space between cards
+// }
