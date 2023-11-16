@@ -29,14 +29,26 @@ const Navbar = () => {
       navMenu.classList.remove('show-menu');
       setIsMenuOpen(false);
     };
+
+    const handleDocumentClick = (e) => {
+        // Se valida que el clic ocurra fuera o dentro del menú
+        if (!e.target.closest('#nav-menu') && !e.target.closest('#nav-toggle')) {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.remove('show-menu');
+            setIsMenuOpen(false);
+        }
+    };
   
     useEffect(() => {
       const navLink = document.querySelectorAll('.nav_link');
       navLink.forEach((n) => n.addEventListener('click', handleNavLinkClick));
+
+      document.addEventListener('click', handleDocumentClick);
   
       return () => {
         // Limpiar los event listeners al desmontar el componente
         navLink.forEach((n) => n.removeEventListener('click', handleNavLinkClick));
+        document.removeEventListener('click, handleDocumentClick');
       };
     }, []);
   
