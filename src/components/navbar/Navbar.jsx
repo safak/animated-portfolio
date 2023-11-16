@@ -1,63 +1,61 @@
-import { useState, useEffect } from 'react'; 
+import { useState, useEffect } from 'react';
 import './Navbar.scss';
 import '../../app.scss';
-import *as Unicons from '@iconscout/react-unicons';
+import * as Unicons from '@iconscout/react-unicons';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleToggleClick = () => {
+    const navMenu = document.getElementById('nav-menu');
+    setIsMenuOpen(!isMenuOpen);
 
-    const handleToggleClick = () => {
-      const navMenu = document.getElementById('nav-menu');
-      setIsMenuOpen(!isMenuOpen);
-  
-      if (isMenuOpen) {
-        navMenu.classList.remove('show-menu');
-      } else {
-        navMenu.classList.add('show-menu');
-      }
-    };
-  
-    const handleCloseClick = () => {
+    if (isMenuOpen) {
+      navMenu.classList.remove('show-menu');
+    } else {
+      navMenu.classList.add('show-menu');
+    }
+  };
+
+  const handleCloseClick = () => {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show-menu');
+    setIsMenuOpen(false);
+  };
+
+  const handleNavLinkClick = () => {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show-menu');
+    setIsMenuOpen(false);
+  };
+
+  const handleDocumentClick = (e) => {
+    // Verifica si el clic ocurrió dentro del menú o en el botón de alternancia
+    if (!e.target.closest('#nav-menu') && !e.target.closest('#nav-toggle')) {
       const navMenu = document.getElementById('nav-menu');
       navMenu.classList.remove('show-menu');
       setIsMenuOpen(false);
-    };
-  
-    const handleNavLinkClick = () => {
-      const navMenu = document.getElementById('nav-menu');
-      navMenu.classList.remove('show-menu');
-      setIsMenuOpen(false);
-    };
+    }
+  };
+ 
+  useEffect(() => {
+    const navLink = document.querySelectorAll('.nav_link');
+    navLink.forEach((n) => n.addEventListener('click', handleNavLinkClick));
 
-    const handleDocumentClick = (e) => {
-        // Se valida que el clic ocurra fuera o dentro del menú
-        if (!e.target.closest('#nav-menu') && !e.target.closest('#nav-toggle')) {
-            const navMenu = document.getElementById('nav-menu');
-            navMenu.classList.remove('show-menu');
-            setIsMenuOpen(false);
-        }
-    };
-  
-    useEffect(() => {
-      const navLink = document.querySelectorAll('.nav_link');
-      navLink.forEach((n) => n.addEventListener('click', handleNavLinkClick));
+    document.addEventListener('click', handleDocumentClick);
 
-      document.addEventListener('click', handleDocumentClick);
-  
-      return () => {
-        // Limpiar los event listeners al desmontar el componente
-        navLink.forEach((n) => n.removeEventListener('click', handleNavLinkClick));
-        document.removeEventListener('click, handleDocumentClick');
-      };
-    }, []);
-  
-    
+    return () => {
+      // Limpiar los event listeners al desmontar el componente
+      navLink.forEach((n) => n.removeEventListener('click', handleNavLinkClick));
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, []);
+
     return(
         <header className="header" id="header">
-        <nav className={`nav container ${isMenuOpen ? 'menu-open' : ''}`}>
+            <nav className={`nav container ${isMenuOpen ? 'menu-open' : ''}`}>
           <a href="#" className="nav_logo">
-            SEYER DEV</a>
+            SEYER DEVS</a>
 
                 <div className="nav_menu"  id="nav-menu">
                     <ul className="nav_list grid">
@@ -100,7 +98,7 @@ const Navbar = () => {
                         <li className="nav_item">
                             <a href="#contact" className="nav_link">
                                 <Unicons.UilFastMail nav_icon/>
-                                Contact
+                                Contact me
                             </a>
                         </li>
                     </ul>
@@ -110,7 +108,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="nav-btns">
-                    <div className="nav_toggle" id="nav-toggle" onClick={handleToggleClick}>
+                <div className="nav_toggle" id="nav-toggle" onClick={handleToggleClick}>
                         <i><Unicons.UilApps /></i>
                     </div>
                 </div>
