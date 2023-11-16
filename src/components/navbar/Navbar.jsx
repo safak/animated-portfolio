@@ -57,7 +57,7 @@ const Navbar = () => {
         <header className="header" id="header">
         <nav className={`nav container ${isMenuOpen ? 'menu-open' : ''}`}>
           <a href="#" className="nav_logo">
-            SEYER DEVS</a>
+            <SEYER DEV/></a>
 
                 <div className="nav_menu"  id="nav-menu">
                     <ul className="nav_list grid">
