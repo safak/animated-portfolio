@@ -113,8 +113,8 @@ const Skill = () => {
         <img src="/postgregis.png" alt=""/>
         </motion.div>
       </motion.div>
-      <motion.a href="#Projects" variants={arrow} initial="hidden"
-      animate="visible" className="scroll-arrow">what I did ↓</motion.a>
+      <motion.a href="#Contact" variants={arrow} initial="hidden"
+      animate="visible" className="scroll-arrow">Contact me ↓</motion.a>
       {bubbles.map((bubble, index) => (
         <Bubble 
           key={index} 

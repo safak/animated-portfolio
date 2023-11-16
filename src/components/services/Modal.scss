@@ -23,9 +23,9 @@
         width: 700px;
         height: 500px;
         padding: 50px;
-        background-color: #fff;
+        background-color: #b4a291;
         border-radius: 20px;
-        color: black;
+        color: #33454d;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -47,7 +47,7 @@
         h1 {
             @include mobile{
                 font-size: 25px;
-                background-color: greenyellow;
+                background-color: #dda15e;
                 padding: 15px;
                 
             }
@@ -85,7 +85,7 @@
             h6 {
                 font-size: 14px;
                 margin-top: 30px;
-                background-color: greenyellow;
+                background-color: #dda15e;
             }
 
             img{
@@ -112,7 +112,7 @@
             transition: color 0.2s;
           
             &:hover {
-              color: #09db1e;
+              color: #dda15e;
             }
 
             @include mobile{

@@ -1,8 +1,9 @@
 .gallery {
     display: flex;
     flex-wrap: row;
+    justify-content: end;
     overflow: hidden;
-    gap: 20px;
+    //gap: 20px;
 
 
     .header{
@@ -12,8 +13,10 @@
     .column{
         display: flex;
         flex-direction: column;
-        //width: 50%;
-        flex: 0 0 30%;
+        flex: 0 0 28%;
+        &:nth-of-type(2) { // Assuming the first .column is actually the second child
+            margin-left: 100px;
+        }
     }
   }
   
@@ -32,7 +35,8 @@
     }
   
     img {
-      backface-visibility: hidden; // Hide the back of the front panel
+      backface-visibility: hidden;
+      border-radius: 10px;
     }
   
     .info-tags {
@@ -43,8 +47,8 @@
       gap: 5px;
       
       .tag {
-        background-color: green;
-        color: white;
+        background-color: #dda15e;
+        color: #f2f4f3;
         border-radius: 20px;
         padding: 5px 10px;
         font-size: 0.8em;
@@ -61,7 +65,8 @@
       flex-direction: column;
       justify-content: center;
       padding: 10px;
-      background: white;
+      background: #dbd4b8;
+      border-radius: 10px;
       color: black;
       transform: rotateY(180deg);
       backface-visibility: hidden; // Hide the back of the back panel

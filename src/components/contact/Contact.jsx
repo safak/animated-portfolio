@@ -21,7 +21,7 @@ const letter = {
   visible: {
     opacity: 1,
     y: 0,
-  },}
+  }}
 
 const variants = {
   initial: {
@@ -75,7 +75,7 @@ const Contact = () => {
       initial="initial"
       whileInView="animate"
     >
-      <motion.div className="textContainer" variants={variants}>
+      <motion.div className="textContainer">
         <motion.h1 variants={sentence}
                     initial="hidden"
                     animate="visible">

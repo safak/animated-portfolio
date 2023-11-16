@@ -112,52 +112,52 @@ const Services = () => {
             </motion.div>
             <motion.div className="titleContainer">
                 <div className="title">
-                    <img src="/people.webp" alt="" />
+                    <img src="/ta11.JPG" alt="" />
                     <h1>
-                        <motion.b whileHover={{color:"orange"}}>Best</motion.b> Candidate
+                        <motion.b whileHover={{color:"#dda15e"}}>Best</motion.b> Candidate
                     </h1>
                 </div>
                 <div className="title">
                     <h1>
-                        <motion.b whileHover={{color:"orange"}}>Building</motion.b> Success with.
+                        <motion.b whileHover={{color:"#dda15e"}}>Building</motion.b> Success with.
                     </h1>
-                    <a href="#Projects"><button>View My Projects</button></a>
+                    <a href="#Gallery"><button>View My Projects</button></a>
                 </div>
             </motion.div>
             <motion.div className="listContainer">
-                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgba(255, 255, 255, 0.6)", color: "black"}}>
+                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgb(250, 240, 202, 0.6)", color: "black"}}>
                     <h2>Education</h2>
                     <ul>
                         <li>Master of Data Science</li>
                         <li>Bachelor of English Language and Literature</li>
                     </ul>
-                    <motion.button  onClick={() => handleButtonClick("Education")} initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
+                    <motion.button  onClick={() => handleButtonClick("Education")} initial={{ background: "transparent"}} whileHover={{background: "#dda15e", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
-                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgba(255, 255, 255, 0.6)", color: "black"}}>
+                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgb(250, 240, 202, 0.6)", color: "black"}}>
                     <h2>Experience</h2>
                     <ul>
                         <li>Data Engineer @ Formosa Massage Therapy</li>
                         <li>Administrative Assistant @ Airoha Technology Corp.</li>
                         <li>Office Assistant @ NIA Taiwan</li>
                     </ul>
-                    <motion.button  onClick={() => handleButtonClick("Experience")} initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
+                    <motion.button  onClick={() => handleButtonClick("Experience")} initial={{ background: "transparent"}} whileHover={{background: "#dda15e", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
-                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgba(255, 255, 255, 0.6)", color: "black"}}>
+                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgb(250, 240, 202, 0.6)", color: "black"}}>
                     <h2>Certificates</h2>
                     <ul>
                         <li>Monash Postgraduate Expo</li>
                         <li>Accenture Data Analytics and Visualization Virtual Experience Program</li>
                         <li>Microsoft Introduction to Programming Using Python</li>
                     </ul>
-                    <motion.button onClick={() => handleButtonClick("Certificates")} initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
+                    <motion.button onClick={() => handleButtonClick("Certificates")} initial={{ background: "transparent"}} whileHover={{background: "#dda15e", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
-                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgba(255, 255, 255, 0.6)", color: "black"}}>
+                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"rgb(250, 240, 202, 0.6)", color: "black"}}>
                     <h2>Honors</h2>
                     <ul>
                         <li>Monash University Postgraduate Industry Experience Winner</li>
                         <li>2022 Commendation of Academic Performance</li>
                     </ul>
-                    <motion.button onClick={() => handleButtonClick("Honors")} initial={{ background: "transparent"}} whileHover={{background: "rgb(162, 255, 0)", color: "black", scale: 1.2}}>Detail</motion.button>
+                    <motion.button onClick={() => handleButtonClick("Honors")} initial={{ background: "transparent"}} whileHover={{background: "#dda15e", color: "black", scale: 1.2}}>Detail</motion.button>
                     {/* <Modal
                         isOpen={isModalOpen}
                         onClose={() => setIsModalOpen(false)}

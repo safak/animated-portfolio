@@ -24,7 +24,7 @@
     p{
         font-size: 20px;
         font-weight: 200;
-        color: white;
+        color: #dbd4b8;
         text-align: right;
         @include mobile{
             top: 30px;
@@ -35,7 +35,7 @@
     hr{
         width: 500px;
         border: none;
-        border-top: 0.5px solid rgb(229, 229, 229);
+        border-top: 0.5px solid #dbd4b8;
         @include mobile{
             width: 200px;
         }
@@ -92,7 +92,7 @@
         button{
             width: 250px;
             height: 90px;
-            background-color: rgb(162, 255, 0, 0.9);
+            background-color: #d9974b;
             color: black;
             border: none;
             border-radius: 50px;
@@ -157,11 +157,12 @@
 
         button{
             width: 60px;
+            //font-size: 16px;
             margin-top: 20px;
             padding: 10px;
             background-color: transparent;
-            color: white;
-            border: 2px solid rgb(162, 255, 0);
+            color: #dbd4b8;
+            border: 2px solid #d9974b;
             border-radius: 20px;
             cursor: pointer;
 

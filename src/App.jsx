@@ -23,19 +23,21 @@ const App = () => {
       <Services/>
       
     </section>
-    <section id="Skills">
-      <Skill/>
-    </section>
+    
     {/* <section id="Portfolio">
       <Parallax type="portfolio" />
     </section> */}
-     <Portfolio/>
+     {/* <Portfolio/> */}
+     <section id="Gallery">
+      <Gallery />
+    </section>
+    <section id="Skills">
+      <Skill/>
+    </section >
     <section id="Contact">
       <Contact/>
     </section>
-    <section>
-      <Gallery />
-    </section>
+    
 
   </div>);
 };

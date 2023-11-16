@@ -4,8 +4,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    color: black;
+    background-color: #a9927d;
+    color: #5e503f;
 
     .bg{
         z-index: 999;
@@ -14,7 +14,7 @@
         right: 0;
         bottom: 0;
         width: 125px;
-        background: rgba(255, 255, 255, 0.677);
+        background: #a9927d;
 
         @include mobile{
             top: 20px;
@@ -47,7 +47,7 @@
         position: fixed;
         top:0px;
         right:5px;
-        color: white;
+        color: #FFE8D6;
         background-color: transparent;
         border: none;
         cursor: pointer;

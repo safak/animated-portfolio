@@ -34,7 +34,7 @@ const Links = () => {
                 <motion.a href={`#${item}`} 
                           key={item}
                           variants={itemVariants}
-                          whileHover={{scale: 1.1, color: "rgb(54, 210, 18)"}}
+                          whileHover={{scale: 1.1, color: "#dbd4b8"}}
                           whileTap={{scale: 0.95}}
                           >
                             {item}

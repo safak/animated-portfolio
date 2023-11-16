@@ -30,13 +30,13 @@
 
             h2{
                 font-size: 30px;
-                color: rgb(54, 210, 18);
+                color: #fefae0;
 
             }
 
             h1{
-                font-size: 80px;
-                color: white;
+                font-size: 50px;
+                color: #d9974b;
 
                 @include mobile{
                     font-size:30px;
@@ -82,7 +82,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        right: 100px;
+        right: 0px;
 
 
         img{
