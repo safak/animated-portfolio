@@ -3,12 +3,12 @@
 
 /*--------------VARIABLE CSS--------------*/
 :root{
-    --header-height: 211;
+    --header-height: 3rem;
 
     /*--------------COLORS--------------*/
-    --hue-color: 211;
+    --hue-color: 207;
 
---first-color: hsl(var(--hue-color), 69%, 61%);
+--first-color: hsl(var(--hue-color), 98%, 34%);
 --first-color-second: hsl(var(--hue-color), 53%, 28%);
 --first-color-alt: hsl(var(--hue-color), 57%, 53%);
 --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -26,6 +26,7 @@
 --body-font: 'Poppins', sans-serif;
 
     --big-font-size: 5rem;
+    --home-font-size: 2.0rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.252rem;
     --h3-font-size: 1.125rem;
@@ -33,6 +34,7 @@
     --small-font-size: .813rem;
     --smaller-font-size: 0.75rem;
 
+    --font-semi-medium: 200;
     --font-medium: 400;
     --font-semi-bold: 700;
 

@@ -28,9 +28,6 @@ const Home = () => {
     }, []);
 /* eslint-enable no-unused-vars */
 
-
-
-
     return(
         <section className="home section" id='home'>
             <div className="home_container container grid">
@@ -51,15 +48,24 @@ const Home = () => {
                     <div className="home_img">
                         <img className='home_blob' src={bg1} alt="" />
                     </div>
+
                     <div className="home_data">
-                        <h1 className="home_title">{'DEVSARROLLANDO>'}<br/><span className="wrap" ref={devsa}></span></h1>
-                        <p>Hola Soy Sergio Tirro!, tengo 24 años, soy Técnico en informática y estudio la carrera de 
-                        Ing. en Comunicaciones y Electrónica en el IPN. Con más de 4 años de experiencia en el área de sistemas computacionales tengo habilidades
-                        para el desarrollo de soluciones, desarrollo de proyectos, liderazgo, paciencia y amor por mi profesión.
-                        </p>
+                        <h1 className="home_title">{'DEVSARROLLANDO>'}<br/><span ref={devsa}></span></h1>
+                        <p className="home_description">Hola Soy Sergio Tirro!, tengo 24 años, soy Técnico en informática y estudio la carrera de 
+                            Ing. en Comunicaciones y Electrónica en el IPN. Con más de 4 años de experiencia en el área de sistemas computacionales tengo habilidades
+                            para el desarrollo de soluciones, desarrollo de proyectos, liderazgo, paciencia y amor por mi profesión.</p>
+                            <a href="#contact" className="button button--flex">Contratame!</a>
                     </div>
                 </div>
-            </div>
+
+                <div className="home_scroll">
+                    <a href="#about" className="home_scroll-button button--flex">
+                    <i className="home_scroll mouse"><Unicons.UilMouseAlt/></i>
+                    <span className="home_scroll-name">Scroll down</span>
+                    <i className="home_scroll-arrow"><Unicons.UilArrowDown/></i>
+                 </a>
+                </div>
+           </div>
         </section>
     )
 }
