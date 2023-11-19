@@ -1,0 +1,72 @@
+@import "../../app.scss";
+
+.qa_tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2);
+}
+
+.qa_button{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.qa_button:hover{
+   color: var(--first-color);
+}
+
+.qa_icon{
+    font-size: 1.8rem;
+    margin-right: var(--mb-0-25);
+}
+
+.qa_data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.qa_title{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+
+}
+.qa_subtitle{
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.qa_calendar{
+    font-size: var(--smaller-font-size);
+    color: (--text-color-light);
+}
+
+.qa_rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+}
+
+.qa_line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--first-color);
+    transform: translate(6px, -7px);
+}
+
+.qa [data-content]{
+    display: none;
+}
+
+.qa_active[data-content]{
+    display: block;
+}
+
+.qa_button.qa_active{
+    color: var(--first-color);
+}
