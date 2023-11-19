@@ -5,7 +5,7 @@ import * as Unicons from '@iconscout/react-unicons';
 
 const Skill = () =>{
 
-    const [openSection, setOpenSection] = useState(null);
+    const [openSection, setOpenSection] = useState(0);
 
     const toggleSkills = (index) => {
       setOpenSection((prevOpenSection) => (prevOpenSection === index ? null : index));

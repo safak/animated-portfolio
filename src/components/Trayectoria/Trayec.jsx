@@ -1,28 +1,15 @@
+import {useState} from 'react';
 import './Trayec.scss';
 import '../../app.scss';
 import * as Unicons from '@iconscout/react-unicons';
 
 const Trayec = () => {
 
-    const tabs = document.querySelectorAll('[data-target]'),
-      tabContents = document.querySelectorAll('[data-content]')
+    const [activeTab, setActiveTab] = useState('education');
 
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = document.querySelector(tab.dataset.target)
-
-            tabContents.forEach(tabContent => {
-                tabContent.classList.remove('qa_active')
-            })
-            target.classList.add('qa_active')
-
-            tabs.forEach(tab =>{
-                tab.classList.remove('qa_active')
-            })
-            tab.classList.add('qa_active')
-        })
-      })
-
+    const handleTabClick = (tab) => {
+      setActiveTab(tab);
+    };
     return(
         <section className="qa section">
             <h2 className="section_title">Trayectoria.</h2>
@@ -30,11 +17,13 @@ const Trayec = () => {
 
             <div className="qa_container container">
                 <div className="qa_tabs">
-                    <div className="qa_button button--flex qa_active" data-target='#education'>
+                    <div className={`qa_button button--flex ${activeTab === 'education' ? 'qa_active' : ''}`}
+                    onClick={() => handleTabClick('education')}>
                         <i className="qa_icon"><Unicons.UilGraduationCap/></i>
                         Educación
                     </div>
-                    <div className="qa_button button--flex" data-target='#work'>
+                    <div className={`qa_button button--flex ${activeTab === 'work' ? 'qa_active' : ''}`}
+                    onClick={() => handleTabClick('work')}>
                         <i className="qa_icon"><Unicons.UilProcessor/></i>
                         Exp. Laboral
                     </div>
@@ -43,7 +32,7 @@ const Trayec = () => {
                
                 <div className="qa_sections">
                     {/*CONTENEDOR DE EDUCACION*/}
-                    <div className="qa_content qa_activa" data-content id='education'> 
+                    <div className={`qa_content ${activeTab === 'education' ? 'qa_active' : ''}`} data-content id='education'> 
 
                     {/*PRIMERA QA 1*/}
                         <div className="qa_data">
@@ -51,7 +40,7 @@ const Trayec = () => {
                                 <h3 className="qa_title">Ing. en Comunicaciones y Electronica</h3>
                                 <span className="qa_subtitle">ESIME Unidad Zacatenco | IPN</span>
                                 <div className="qa_calendar">
-                                    <i><Unicons.UilCalendarAlt /></i>
+                                    <i className='qa_icon'><Unicons.UilCalendarAlt /></i>
                                     2021 - Presente (4to Semestre)
                                 </div>
                             </div>
@@ -74,7 +63,7 @@ const Trayec = () => {
                                 <h3 className="qa_title">Técnico en Informática.</h3>
                                 <span className="qa_subtitle">Colegio de Bachilleres.</span>
                                 <div className="qa_calendar">
-                                    <i><Unicons.UilCalendarAlt /></i>
+                                    <i className='qa_icon'><Unicons.UilCalendarAlt /></i>
                                     Marzo 2021 - Junio 2021
                                 </div>
                             </div>
@@ -119,7 +108,7 @@ const Trayec = () => {
                     </div>
 
                     {/*CONTENEDOR DE TRABAJO*/}
-                    <div className="qa_content" data-content id='work'> 
+                    <div className={`qa_content ${activeTab === 'work' ? 'qa_active' : ''}`} data-content id='work'> 
                         
                         {/*PRIMERA QA 1*/}
                         <div className="qa_data">
@@ -196,7 +185,7 @@ const Trayec = () => {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Trayec;
