@@ -1,0 +1,142 @@
+@import "../../app.scss";
+.card{
+    height: calc(100vh);
+
+}
+
+.cardheader{
+    font-size: 4rem;
+    padding: 20px;
+  }
+.componentContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    padding: 20px;
+    height: calc(100vh - 6rem);
+  }
+  
+  .item {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+  
+    &:hover {
+      background-color: #f0f0f0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .itemTitle {
+    font-size: 1.5rem;
+    font-size: clamp(12px, 2vw, 20px); // Adjust as needed
+    color: #333;
+  }
+  
+  .itemSubtitle {
+    
+    font-size: clamp(12px, 2vw, 16px); // Adjust as needed
+    color: #666;
+  }
+
+  .itemImage {
+        width: 400px;
+  }
+  
+  .detailsContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 10%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    //transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  .detailTitle{
+    font-size: 2rem;
+  }
+  .closeButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #0056b3;
+    }
+  
+
+  }
+
+  .cimg {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &.active {
+      background-color: lightgrey;
+
+    }
+  }
+
+  .navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 40px;
+    border-radius: 10px;
+    color:white;
+    
+    @include mobile{
+      font-size: 20px;
+   }
+  }
+  
+  .prevButton {
+    left: -50px;
+  }
+  
+  .nextButton {
+    right: -50px;
+  }

@@ -9,8 +9,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    // background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: black;
+    z-index: 10;
 
     // @include mobile{
     //     width: 80%;
@@ -23,7 +24,7 @@
         width: 700px;
         height: 500px;
         padding: 50px;
-        background-color: #f0f0f0;
+        background-color: rgb(235, 224, 211);
         // background-color: #eaeaea6e;
         // border-radius: 20px;
         color: #33454d;
@@ -35,10 +36,10 @@
         overflow: scroll;
 
         @include mobile{
-            width: 80%;
+            width: 90%;
             text-align: start;
-            line-height: 20px;;
-            // padding: 20px;
+            line-height: 20px;
+            padding: 30px;
             // gap: 0px;
             // font-size: 20px;
             // padding: 30px;
@@ -48,6 +49,7 @@
         h1 {
             @include mobile{
                 font-size: 25px;
+                margin-top: 25px;
                 background-color: #fa9a2c;
                 padding: 15px;
                 
@@ -57,16 +59,14 @@
             font-size: 20px;
             font-weight: 800;
             border-radius: 30px;
-            border: 3px solid rgba(214, 214, 214, 0.9);
+            border: 3px solid rgba(194, 193, 193, 0.9);
             padding: 30px;
             // background-color: yellowgreen;
 
             @include mobile{
-                display: unset;
                 font-size: 15px;
-                width: 80%;
-                border: none;
-                padding: 5px;
+                width: 100%;
+                padding: 15px;
                 text-align: start;
                 // line-height: 0;
                 
@@ -86,6 +86,7 @@
             h6 {
                 font-size: 14px;
                 margin-top: 30px;
+                text-align: center;
                 background-color: #fa9a2c;
             }
 
@@ -94,6 +95,13 @@
                 width: 60%;
                 height: 60%;
                 object-fit: cover;
+                @include mobile{
+                    // height: 50%;
+                    margin: 0px;
+                    object-fit: contain;
+                    width: 100%;
+    
+                }
                 // border-radius: 30px;
             }
         
@@ -117,7 +125,8 @@
             }
 
             @include mobile{
-                right: 0px;
+                right: -10px;
+                top: -20px;
 
             }
           }

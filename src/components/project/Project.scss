@@ -1,40 +1,52 @@
 @import "../../app.scss";
-.gallery {
+.project {
     display: flex;
     flex-wrap: row;
-    justify-content: center;
+    justify-content:end;
     align-items: start;
     overflow: hidden;
     position: relative;
-    height: calc(100vh - 50px);
+    height: calc(100vh + 50px);
+    @include mobile{
+      flex-direction: column;
+      justify-content: start;
+      //align-items: center;
+    }
     
 
 
     .column{
         display: flex;
         flex-direction: column;
-        flex: 0 0 28%;
-        margin-left: 200px;
+        flex: 1;
+        margin-right: 100px;
         @include mobile{
-         display: none;
-      }
+          margin-left: 80px;
+          margin-right: reset;
+          flex: 1;}
     }
 
     .wrapper{
+        display: flex;
+        flex: 3;
+        flex-direction: column;
         max-width: 1366px;
         height: 100%;
         justify-content: space-between; 
-        align-items: end;
-        margin-top: 5%; 
+        align-items: start;
+        //margin-top: 5%; 
     
         .textContainer{
             width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
+            align-items: end;
+            text-align: right;
             gap: 25px;
-            margin-left: 50px;
+            padding: 50px;
+            margin-left: 150px;
             
             @include mobile{
                 margin-top: 25%;
@@ -42,6 +54,7 @@
                 height: 50%;
                 gap: 20px;
                 text-align: center;
+                display: none;
             }
     
             h2{
@@ -54,7 +67,7 @@
             }
     
             h1{
-                font-size: 80px;
+                font-size: 50px;
                 color: #fa9a2c;
     
                 @include mobile{
@@ -78,7 +91,8 @@
     
             .buttons{
                 a {button{
-                    font-size: 20px;
+                    position: relative;
+                    font-size: 15px;
                     padding: 20px;
                     border: 1px solid white;
                     background-color: transparent;
@@ -100,10 +114,15 @@
   
   .project-card {
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 450px;
+    height: 300px;
     perspective: 1000px; // Needed for the flip effect
     margin-bottom: 20px;
+
+    @include mobile{
+      width: 300px;
+      height: 200px;
+  }
   
     img, .overlay {
       width: 100%;
@@ -189,16 +208,54 @@
   }
 }
 
-// .social{
-//   display: flex;
-//   gap: 5px;
+.dropbtn {
+  position: relative;
+  background-color: #3e8e41;
+  color: white;
+  padding: 16px;
+  font-size: 60px;
+  border: none;
+  z-index: 999;
+  
+  cursor: pointer;
+  @include mobile{
+    //top: -20px;
+    //padding: 0 200px;
+    font-size: 5vh;
+}
 
-//   img{
-//       width: 50px;
-//       height: 50px;
-//       object-fit: cover;
-//       margin-top: 5px;
-//   }
+}
 
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  //float: right;
+}
 
-// }
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #04AA6D;}

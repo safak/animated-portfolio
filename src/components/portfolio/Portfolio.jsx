@@ -6,9 +6,9 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "Data Cleaning",
+    title: "Secure Cyclist",
     images: ["/cyclist.png", "/sc_hazard.png", "/sc_spinner.png", "/sc_map.png", "/sc_news.png", "/sc_line.png", "/sc_bar.png", "/sc_bar2.png", "/sc_donut.png"],
-    desc: "",
+    desc: "jijpjpjipjpijipjpijp",
   },
   {
     id: 2,

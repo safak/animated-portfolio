@@ -8,6 +8,8 @@ import Contact from "./components/contact/Contact";
 import Cursor from "./components/cursor/Cursor";
 import Skill from "./components/skill/Skill";
 import Gallery from "./components/gallery/Gallery";
+import Project from "./components/project/Project";
+import Card from "./components/card/Card";
 
 const App = () => {
   return (<div>
@@ -33,10 +35,14 @@ const App = () => {
       <Navbar/>
       <Gallery />
     </section> */}
-    <section id="Skills">
+    {/* <section id="Skills">
       <Skill/>
-    </section >
-    <Portfolio/>
+    </section > */}
+    {/* <Portfolio/> */}
+    <section id="Card">
+      {/* <Project /> */}
+      <Card/>  
+    </section>
     <section id="Contact">
       <Contact/>
     </section>

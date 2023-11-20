@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 50px);
+    width: 95%;
     // overflow-y: scroll;
 }
 
@@ -22,16 +23,16 @@
         text-align: center;
     }
 
-    p{
-        font-size: 20px;
-        font-weight: 200;
-        color: #dbd4b8;
-        text-align: right;
-        @include mobile{
-            top: 30px;
-            font-size: 18px;
-        }
-    }
+    // p{
+    //     font-size: 2vh;
+    //     font-weight: 200;
+    //     color: #dbd4b8;
+    //     text-align: right;
+    //     @include mobile{
+    //         top: 30px;
+    //         font-size: 18px;
+    //     }
+    // }
 
     hr{
         width: 500px;
@@ -50,6 +51,7 @@
     justify-content: center;
     margin-left: 50px;
     gap:10px;
+    
 
     @include mobile{
         width: 100%;
@@ -81,10 +83,10 @@
         }
 
         h1{
-            font-size: 70px;
+            font-size: 8vh;
             font-weight: 100;
             @include mobile{
-                font-size: 30px;
+                font-size: 20px;
              }
         }
 
@@ -97,12 +99,13 @@
             color: black;
             border: none;
             border-radius: 50px;
+            font-size: 3vh;
             cursor: pointer;
-            font-size: 20px;
+            // font-size: 20px;
             @include mobile{
                 width: 200px;
                 height: 70px;
-                font-size: 15px;
+                font-size: 2.2vh;
              }
 
         }}
@@ -112,7 +115,8 @@
 .listContainer{
     flex:2;
     display: flex;
-    max-width: 1366px;
+    // flex-wrap: wrap; 
+    justify-content: space-around;
     margin: 20px;
     gap: 20px;
 
@@ -120,36 +124,44 @@
         flex-direction:column;
         align-items: center;
         width: 100%;
-        height: 50%;
+        height: 20%;
         margin: 0px;
         flex-wrap: wrap;
         gap: 5px;
      }
 
     .box{
-        padding: 40px;
+        flex-basis: calc(50% - 40px);
+        flex: 1;
+        max-width: 25%;
         border-radius: 30px;
+        padding: 40px;
         border: 2px solid rgba(214, 214, 214, 0.783);
         display: flex;
         flex-direction:column;
         justify-content: space-between;
         align-items: center;
+        overflow-y: auto;
+        max-height: 300px;
         //min-width: 300px;
 
         @include mobile{
-            padding: 10px;
-            width: 150px;
-            box-sizing: border-box;
-            margin: 5px;
+            max-width: 100%;
+            //box-sizing: border-box;
+            overflow-y: hidden;
+            margin: 5px 0;
+            height: 10vh;
          }
         
-        p{
+        ul{
+            font-size: 2vh;
             @include mobile{
                 display: none;
              }
         }
 
         h2 {
+            font-size: 3vh;
             @include mobile{
                 font-size: 18px;
                 // flex-wrap: wrap;
