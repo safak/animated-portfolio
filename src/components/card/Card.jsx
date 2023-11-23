@@ -84,34 +84,18 @@ const projects = [
       link: '/project-one'
     }
   ];
-  const textVariants = {
-    initial: {
-      x: -500,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        staggerChildren: 0.1,
-      },
-    },
-    scrollButton: {
-      opacity: 0,
-      y: 10,
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-      },
-    },
-  };
+ 
 
 
 
-const Card = () => {
+  const Card = () => {
     const [selectedId, setSelectedId] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState([{}]);
+    const [isExpanded, setIsExpanded] = useState(true);
+    const toggleExpansion = () => {
+        setIsExpanded(!isExpanded); 
+    };
+
     useEffect(() => {
         const imageIndices = projects.reduce((acc, project) => {
             acc[project.id] = 0;
@@ -119,14 +103,14 @@ const Card = () => {
         }, {});
         setCurrentImageIndex(imageIndices);
     }, []);
-    
+
     const nextImage = (projectId, imageCount) => {
         setCurrentImageIndex(prev => ({
             ...prev,
             [projectId]: (prev[projectId] + 1) % imageCount
         }));
     };
-    
+
     const prevImage = (projectId, imageCount) => {
         setCurrentImageIndex(prev => ({
             ...prev,
@@ -140,63 +124,92 @@ const Card = () => {
             [projectId]: index
         }));
     };
+    const itemVariants = {
+        hidden: { opacity: 0, y: 0 },
+        visible: i => ({
+            opacity: 1,
+            y: 0,
+            transition: { delay: i * 0.08 }
+        })
+    };
+    const variants = {
+        hidden: { opacity: 0, x: -100 },
+        visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 120 } }
+    };
 
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
-  return (
-    <div className="card">
-        
-        <div className="cardContainer">
-            <h1 className="cardheader">Projects</h1>
-            {projects.map(project => (
-                    <motion.div key={project.id} layoutId={project.id} onClick={() => setSelectedId(project.id)} className="item">
-                        <motion.h5 className="itemSubtitle">{project.title}</motion.h5>
-                        <motion.h2 className="itemTitle">{project.technology}</motion.h2>
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 600);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const componentContainerClass = `componentContainer ${isExpanded && isMobile ? 'hiddenOnMobile' : ''}`;
+    const isPhone = window.innerWidth <= 600;
+    const toggleButtonText = isExpanded ? 'Projects⌄' : 'Projects⌄';
+
+    return (
+        <div className="card">
+            <div className="cardContainer">
+                <h1 className="cardheader">
+                    {(
+                        <button onClick={toggleExpansion} className="cButton">
+                            {toggleButtonText}
+                        </button>
+                    )}
+                </h1>
+                {isExpanded && (
+                    <motion.div initial="hidden" animate="visible">
+                        {projects.map((project, index) => (
+                            <motion.div key={project.id} custom={index} variants={itemVariants} onClick={() => setSelectedId(project.id)} className="item">
+                                <h5 className="itemSubtitle">{project.title}</h5>
+                                <h2 className="itemTitle">{project.technology}</h2>
+                            </motion.div>
+                        ))}
                     </motion.div>
-                ))}
-        </div>
-        <div className="componentContainer">
-                <AnimatePresence>
-                    {selectedId && (
-                        <motion.div className="midcontent" layoutId={selectedId}>
-                            {projects.filter(project => project.id === selectedId).map(project=> (
-                                <React.Fragment key={project.id}>
-                                    
-                                    
-                        {/* <motion.div layoutId={selectedId} className="detailsContainer"> */}
-                            {/* {projects.filter(project => project.id === selectedId).map(project=> (
-                                <React.Fragment key={project.id}> */}
-                                    
-                                    {/* <motion.img className="itemImage" src={projects.image} alt={projects.title} /> */}
-                                    
-                                    <motion.h5 className="detailTitle">{project.title}</motion.h5>
-                                    <motion.h2 className="detailDesc">{project.description}</motion.h2>
-                                    <motion.div className="detailsContainer">
-                                        {typeof currentImageIndex[project.id] !== 'undefined' && (
-                                            <motion.img className="cimg" src={project.images[currentImageIndex[project.id]]} alt={project.title} />
-                                        )}
-                                        <motion.div className="dots">
+                )}
+            </div>
+            <div className={componentContainerClass}>
+                {!selectedId && (
+                    <p>click to view project</p>
+                )}
+                {selectedId && (
+                    <div className="midcontent">
+                        {projects.filter(project => project.id === selectedId).map(project => (
+                            <React.Fragment key={project.id}>
+                                <motion.h5 initial="hidden" animate="visible" variants={variants} className="detailTitle">
+                                    {project.title}
+                                </motion.h5>
+                                <motion.h2 initial="hidden" animate="visible" variants={variants} className="detailDesc">
+                                    {project.description}
+                                </motion.h2>
+                                <motion.div initial="hidden" animate="visible" variants={variants} className="detailsContainer">
+                                    {typeof currentImageIndex[project.id] !== 'undefined' && (
+                                        <img className="cimg" src={project.images[currentImageIndex[project.id]]} alt={project.title} />
+                                    )}
+                                    <div className="dots">
                                         {project.images.map((_, index) => (
                                             <span
-                                            key={index}
-                                            className={`dot ${index === currentImageIndex[project.id] ? "active" : ""}`}
-                                            onClick={() => goToImage(project.id, index)}
+                                                key={index}
+                                                className={`dot ${index === currentImageIndex[project.id] ? "active" : ""}`}
+                                                onClick={() => goToImage(project.id, index)}
                                             ></span>
                                         ))}
-                                        </motion.div>
-                                        <motion.button onClick={() => prevImage(project.id, project.images.length)} className="navButton prevButton">&#171;</motion.button>
-                                        <motion.button onClick={() => nextImage(project.id, project.images.length)} className="navButton nextButton">&#187;</motion.button>
-                                    </motion.div>
-                                    
-                                    {/* <motion.button onClick={() => setSelectedId(null)} className="closeButton">Close</motion.button> */}
-                                </React.Fragment>
-                            ))}
-                        </motion.div>
-                        // </motion.div>
-                    )}
-                </AnimatePresence>
+                                    </div>
+                                    <button onClick={() => prevImage(project.id, project.images.length)} className="navButton prevButton">&#171;</button>
+                                    <button onClick={() => nextImage(project.id, project.images.length)} className="navButton nextButton">&#187;</button>
+                                </motion.div>
+                            </React.Fragment>
+                        ))}
+                    </div>
+                )}
             </div>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default Card;

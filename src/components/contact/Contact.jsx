@@ -10,8 +10,8 @@ const sentence = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.5,
-      staggerChildren: 0.15,
+      delay: 5,
+      staggerChildren: 0.3,
     },
   },
 }
@@ -71,9 +71,6 @@ const Contact = () => {
     <motion.div
       ref={ref}
       className="contact"
-      variants={variants}
-      initial="initial"
-      whileInView="animate"
     >
       <motion.div className="textContainer">
         <motion.h1 variants={sentence}
@@ -97,7 +94,8 @@ const Contact = () => {
           <h2>Mail</h2>
           <span>hello@react.dev</span>
         </motion.div> */}
-        <motion.div className="item" variants={variants}>
+        <motion.div className="socialitem" variants={variants} animate="animate"
+              initial="initial">
             <div className="social">
                 <a href="#"><img src="/linkedin.png" alt=""/></a>
                 <a href="#"><img src="/github.png" alt=""/></a>
@@ -117,7 +115,7 @@ const Contact = () => {
           className="phoneSvg"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
-          transition={{ delay: 3, duration: 1 }}
+          transition={{ delay: 2, duration: 3 }}
         >
           <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
             <motion.path
@@ -147,7 +145,7 @@ const Contact = () => {
           // onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 4, duration: 1 }}
+          transition={{ delay: 3, duration: 3 }}
         >
           <input type="text" required placeholder="Name" name="name"/>
           <input type="email" required placeholder="Email" name="email"/>
