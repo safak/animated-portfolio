@@ -1,20 +1,18 @@
-import React from 'react'
+import "./navbar.scss";
 
 const Navbar = () => {
     return (
         <div className="navbar">
-        {/* Sidebar */}
-        <div className='wrapper'>
-        <span>Sabrina Quadir</span>
-        <div className="social">
-            <a href="https://www.linkedin.com/in/sabrina-quadir-4543721b4/"><img src="" alt="" /></a>
-
-        
+            <div className="wrapper">
+                <span>Sabrina Quadir</span>
+                <div className="social">
+                    <a href="https://www.linkedin.com/in/sabrina-quadir-4543721b4/" target="_blank" rel="noopener noreferrer">
+                        <img src="/linkedin.png" alt="Sabrina's LinkedIn" />
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-) 
-    
+    );
 }
 
-export default Navbar
+export default Navbar;
