@@ -1,0 +1,24 @@
+html { 
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bodoni Moda', serif;
+}
+body{
+    background-color: #ffc4e1;
+    color: white;
+}
+
+a{ 
+    text-decoration: none;
+    color: inherit;
+}
+section {
+    height: 100vh;
+    scroll-snap-align: center;
+}
