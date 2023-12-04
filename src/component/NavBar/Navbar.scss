@@ -1,0 +1,26 @@
+nav {
+    height: 100px;
+}
+
+.wrapper {
+    max-height: 1366px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+span {
+    font-weight: bold;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    img {
+        height: 18px;
+        width: 18px;
+    }
+}
