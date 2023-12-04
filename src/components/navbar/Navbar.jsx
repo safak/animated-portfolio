@@ -16,7 +16,7 @@ const Navbar = () => {
 					Nurul Fauzi
 				</motion.span>
 				<div className="social">
-					<a href="#"><img src="/instagram.png" alt="" /></a>
+					<a href="https://www.instagram.com/nurulfauzi._/?hl=id" target="_blank" rel="noopener noreferrer"><img src="/instagram.png" alt="" /></a>
 				</div>
 			</div>
 		</div>
