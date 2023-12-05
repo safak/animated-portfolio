@@ -19,7 +19,7 @@ const variants = {
 	}
 }
 
-const Services = () => {
+const About = () => {
 
 	const ref = useRef();
 
@@ -57,54 +57,54 @@ const Services = () => {
 		</motion.div>
 		<motion.div className="listContainer" variants={variants}>
 			<motion.div className="logo-slide" variants={variants}>
-				<img src="/public/bootstrap.png" alt="" />
-				<img src="/public/css.png" alt="" />
-				<img src="/public/figma.png" alt="" />
-				<img src="/public/git.png" alt="" />
-				<img src="/public/html.png" alt="" />
-				<img src="/public/javascript.png" alt="" />
-				<img src="/public/laravel.png" alt="" />
-				<img src="/public/navicat.png" alt="" />
-				<img src="/public/react.png" alt="" />
-				<img src="/public/tailwind.png" alt="" />
-				<img src="/public/vuejs.png" alt="" />
-				<img src="/public/bootstrap.png" alt="" />
-				<img src="/public/css.png" alt="" />
-				<img src="/public/figma.png" alt="" />
-				<img src="/public/git.png" alt="" />
-				<img src="/public/html.png" alt="" />
-				<img src="/public/javascript.png" alt="" />
-				<img src="/public/laravel.png" alt="" />
-				<img src="/public/navicat.png" alt="" />
-				<img src="/public/react.png" alt="" />
-				<img src="/public/tailwind.png" alt="" />
-				<img src="/public/vuejs.png" alt="" />
-				<img src="/public/bootstrap.png" alt="" />
-				<img src="/public/css.png" alt="" />
-				<img src="/public/figma.png" alt="" />
-				<img src="/public/git.png" alt="" />
-				<img src="/public/html.png" alt="" />
-				<img src="/public/javascript.png" alt="" />
-				<img src="/public/laravel.png" alt="" />
-				<img src="/public/navicat.png" alt="" />
-				<img src="/public/react.png" alt="" />
-				<img src="/public/tailwind.png" alt="" />
-				<img src="/public/vuejs.png" alt="" />
-				<img src="/public/bootstrap.png" alt="" />
-				<img src="/public/css.png" alt="" />
-				<img src="/public/figma.png" alt="" />
-				<img src="/public/git.png" alt="" />
-				<img src="/public/html.png" alt="" />
-				<img src="/public/javascript.png" alt="" />
-				<img src="/public/laravel.png" alt="" />
-				<img src="/public/navicat.png" alt="" />
-				<img src="/public/react.png" alt="" />
-				<img src="/public/tailwind.png" alt="" />
-				<img src="/public/vuejs.png" alt="" />
+				<img src="/bootstrap.png" alt="" />
+				<img src="/css.png" alt="" />
+				<img src="/figma.png" alt="" />
+				<img src="/git.png" alt="" />
+				<img src="/html.png" alt="" />
+				<img src="/javascript.png" alt="" />
+				<img src="/laravel.png" alt="" />
+				<img src="/navicat.png" alt="" />
+				<img src="/react.png" alt="" />
+				<img src="/tailwind.png" alt="" />
+				<img src="/vuejs.png" alt="" />
+				<img src="/bootstrap.png" alt="" />
+				<img src="/css.png" alt="" />
+				<img src="/figma.png" alt="" />
+				<img src="/git.png" alt="" />
+				<img src="/html.png" alt="" />
+				<img src="/javascript.png" alt="" />
+				<img src="/laravel.png" alt="" />
+				<img src="/navicat.png" alt="" />
+				<img src="/react.png" alt="" />
+				<img src="/tailwind.png" alt="" />
+				<img src="/vuejs.png" alt="" />
+				<img src="/bootstrap.png" alt="" />
+				<img src="/css.png" alt="" />
+				<img src="/figma.png" alt="" />
+				<img src="/git.png" alt="" />
+				<img src="/html.png" alt="" />
+				<img src="/javascript.png" alt="" />
+				<img src="/laravel.png" alt="" />
+				<img src="/navicat.png" alt="" />
+				<img src="/react.png" alt="" />
+				<img src="/tailwind.png" alt="" />
+				<img src="/vuejs.png" alt="" />
+				<img src="/bootstrap.png" alt="" />
+				<img src="/css.png" alt="" />
+				<img src="/figma.png" alt="" />
+				<img src="/git.png" alt="" />
+				<img src="/html.png" alt="" />
+				<img src="/javascript.png" alt="" />
+				<img src="/laravel.png" alt="" />
+				<img src="/navicat.png" alt="" />
+				<img src="/react.png" alt="" />
+				<img src="/tailwind.png" alt="" />
+				<img src="/vuejs.png" alt="" />
 			</motion.div>
 		</motion.div>
 	</motion.div>
   )
 }
 
-export default Services
+export default About
