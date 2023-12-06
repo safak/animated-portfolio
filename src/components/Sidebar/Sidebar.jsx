@@ -7,8 +7,6 @@ import { useState } from 'react'
 
 const Sidebar = () => {
 
-  const [open, setOpen] = useState(false)
-
   const variants ={
     open:{
       clipPath:"circle(1200px at 50px 50px)",
@@ -28,6 +26,10 @@ const Sidebar = () => {
       }
     }
   }
+
+  const [open, setOpen] = useState(false)
+
+ 
   return (
     <motion.div className="sidebar" 
     animate={open ? "open" : "closed"}>
