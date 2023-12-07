@@ -7,7 +7,7 @@
     color: black;
 
     .bg{
-
+        z-index:999;
         position:fixed;
         top:0;
         left:0;
@@ -32,6 +32,7 @@
     }
 
     button{
+        z-index:999;
         width: 50px;
         height: 50px;
         border-radius: 50%;
