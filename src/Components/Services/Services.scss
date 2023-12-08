@@ -114,7 +114,7 @@
       justify-content:flex-start;
       flex-direction: column;
       flex-wrap:wrap; 
-      max-height:50%;
+      max-height:60%;
       margin: 35px 0px 0px 0;
 
     }
@@ -132,8 +132,8 @@
       margin-right: 0.7rem;
 
       @include mobile{
-        height: 170px;
-        width: 180px;
+        height: 40vw;
+        width: 45vw;
         overflow: hidden;
         margin: 10px 5px 10px  5px;
 
