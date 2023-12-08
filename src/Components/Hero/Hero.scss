@@ -1,0 +1,128 @@
+@import "../../app.scss";
+
+.hero {
+  height: calc(100vh - 80px);
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+  overflow: hidden;
+
+  .wrapper {
+    max-width: 70vw;
+    height: 100%;
+    margin: auto;
+
+    @include mobile {
+      margin-left: auto;
+      max-width: 1366px;
+    }
+
+    .text-container {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+
+      @include mobile {
+        height: 50%;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 30px;
+        letter-spacing: 6px;
+        color: rebeccapurple;
+        margin-top: -3.4rem;
+        font-weight: 500;
+
+        @include mobile {
+          font-size: 33px;
+          margin-top: 30px;
+          margin-bottom: -10px;
+        }
+      }
+
+      h1 {
+        font-size: 69px;
+        margin-top: -1.6vw;
+
+        @include mobile {
+          font-size: 50px;
+        }
+      }
+
+      .buttons {
+        button {
+          padding: 17px;
+          background: transparent;
+          border-radius: 1.2rem;
+          border: 1px solid white;
+          color: white;
+          // margin-top: -1rem;
+          margin-right: 1rem;
+          font-weight: 500;
+          z-index: 2;
+        }
+        .button2 {
+          padding: 17px;
+          background: white;
+          border-radius: 1.2rem;
+          border: 1px solid white;
+          color: black;
+          // margin-top: -1rem;
+          margin-right: 1rem;
+          font-weight: 700;
+          z-index: 2;
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .imgContainer {
+    height: auto;
+    position: absolute;
+    top: 60px;
+    right: 100px;
+
+    @include mobile {
+      height: 45%;
+      width: 65%;
+      top: unset;
+      bottom: 0;
+      // right: auto;
+    }
+    img {
+      height: 500px;
+      width: 500px;
+      object-fit: contain;
+      border-radius: 50%;
+      right: 0;
+      @include mobile{
+        height: 330px;
+        width: 330px;
+        border-radius: 50%;
+        // right: 10px;
+        // left: auto;
+      }
+    }
+  }
+
+  .slidingText {
+    font-size: 50vh;
+    position: absolute;
+    bottom: -95px;
+    white-space: nowrap;
+    color: #ffffff09;
+    font-weight: bold;
+    width: 50%;
+    // z-index: 1;
+  }
+}
