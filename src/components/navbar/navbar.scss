@@ -1,0 +1,28 @@
+.navbar {
+  height: 100px;
+
+  //because using sass, we can put children inside parent component
+  .wrapper {
+    // max-width: 1366px; //one of the most popular breakpoint
+    max-width: 1000px; 
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .social {
+    display: flex;
+    gap: 20px;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
