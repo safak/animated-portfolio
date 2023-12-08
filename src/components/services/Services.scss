@@ -23,17 +23,6 @@
         text-align: center;
     }
 
-    // p{
-    //     font-size: 2vh;
-    //     font-weight: 200;
-    //     color: #dbd4b8;
-    //     text-align: right;
-    //     @include mobile{
-    //         top: 30px;
-    //         font-size: 18px;
-    //     }
-    // }
-
     hr{
         width: 500px;
         border: none;
@@ -46,7 +35,6 @@
 .titleContainer{
     flex:2;
     display: flex;
-    // flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     margin-left: 50px;
@@ -84,7 +72,7 @@
 
         h1{
             font-size: 8vh;
-            font-weight: 100;
+            font-weight: 600;
             @include mobile{
                 font-size: 20px;
              }
@@ -114,8 +102,7 @@
 
 .listContainer{
     flex:2;
-    display: flex;
-    // flex-wrap: wrap; 
+    display: flex; 
     justify-content: space-around;
     margin: 20px;
     gap: 20px;
@@ -123,16 +110,16 @@
     @include mobile{
         flex-direction:column;
         align-items: center;
-        width: 100%;
+        width: 90%;
         height: 20%;
-        margin: 0px;
+        margin: 10px;
         flex-wrap: wrap;
         gap: 5px;
      }
 
     .box{
-        flex-basis: calc(50% - 40px);
-        flex: 1;
+        //flex-basis: calc(50% - 40px);
+        //flex: 1;
         max-width: 25%;
         border-radius: 30px;
         padding: 40px;
@@ -142,15 +129,14 @@
         justify-content: space-between;
         align-items: center;
         overflow-y: auto;
-        max-height: 300px;
-        //min-width: 300px;
+        max-height: 320px;
 
         @include mobile{
-            max-width: 100%;
-            //box-sizing: border-box;
+            max-width: 90%;
             overflow-y: hidden;
             margin: 5px 0;
-            height: 10vh;
+            height: 120px;
+            padding: 30px;
          }
         
         ul{

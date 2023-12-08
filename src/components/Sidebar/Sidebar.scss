@@ -14,7 +14,7 @@
         right: 0;
         bottom: 0;
         width: 125px;
-        background: #e6d8cb;
+        background: rgb(218, 216, 214);
 
         @include mobile{
             top: 20px;
@@ -33,7 +33,7 @@
         }
 
         a{
-            font-size: 20px;
+            font-size: 1em;
 
         }
 

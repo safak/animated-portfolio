@@ -67,50 +67,50 @@ const Skill = () => {
       <motion.div className="skill-title" variants={container}
             initial="hidden"
             animate="visible">
-        What can I do?
+        What I can do?
       </motion.div>
       <motion.div className="skill-container"
             variants={container}
             initial="hidden"
             animate="visible"
             whileHover={{ scale: 1.1}}>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/react.png" alt=""/> */}
         <p>Data Cleaning</p>
         </motion.div>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/node.png" alt=""/> */}
         <p>Data Exploration</p>
         </motion.div>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/html.png" alt=""/> */}
         <p>Data Preprocessing</p>
         </motion.div>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/css.png" alt=""/> */}
         <p>Data Analysis</p>
         </motion.div>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/javascript.png" alt=""/> */}
         <p>Data Visualisation</p>
         </motion.div>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/python.png" alt=""/> */}
         <p>Machine Learning</p>
         </motion.div>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/sql.png" alt=""/> */}
         <p>Tableau</p>
         </motion.div>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/tableau.png" alt=""/> */}
         <p>Data Engineer</p>
         </motion.div>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/docker.png" alt=""/> */}
         <p>Data Warehouse</p>
         </motion.div>
-        <motion.div className="sk" variants={item} whileHover={{ scale: 1.1, rotate: 360 }}>
+        <motion.div className="sk" variants={item} whileHover={{ scale: 1.5, rotate: 360 }}>
         {/* <img src="/postgregis.png" alt=""/> */}
         <p>Front End</p>
         </motion.div>

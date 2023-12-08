@@ -6,7 +6,7 @@ import Modal from "./Modal";
 
 const honorsData = {
     '2023 Monash University Postgraduate Industry Experience Winner': {
-      description: 'Student Vote Postgraduate Industry Experience Winner',
+      description: 'Winner of Student Vote Project of Monash University Postgraduate Industry Experience.',
       imageUrl: "/expo_win.png", 
     },
     '2022 Commendation of academic performance': {
@@ -16,12 +16,16 @@ const honorsData = {
   };
 
   const certData = {
-    'Monash Postgraduate Expo Participation': {
-      description: '',
-      imageUrl: "/expo_cert.png", 
+    'AWS Solution Architecture Job Simulation': {
+      description: 'Designed and simple and scalable hosting architecture based on Elastic Beanstalk for a client experiencing significant growth and slow response times. Described my proposed architecture in plain language ensuring my client understood how it works and how costs will be calculated for it.',
+      imageUrl: "/cert_aws.png", 
     },
+    'Awsome Day Online Conference': {
+        description: 'Attended a one-day online conference on AWS.',
+        imageUrl: "/cert_awsome.png", 
+      },
     'Data Analytics and Visualization Virtual Experience Program': {
-        description: '',
+        description: 'Completed a simulation focused on advising a hypothetical social media client as a Data Analyst at Accenture. Cleaned, modelled and analyzed 7 datasets to uncover insights into content trends to inform strategic decisions. Prepared a PowerPoint deck and video presentation to communicate key insights for the client and internal stakeholders',
         imageUrl: "/cert_acc.png", 
     },
     'Introduction to Programming Using Python': {
@@ -31,28 +35,28 @@ const honorsData = {
   };
 
   const expData = {
-    'Data Analyst': {
-      description: 'Student Vote Postgraduate Industry Experience Winner',
+    'Freelance Data Engineer @ Formosa Massage Therapy': {
+      description: 'Developing a automatic data pipeline for the business to collect and analyse sales and customer data. Designing a relational database to store the data in a more structured way than current setup.',
       imageUrl: "/exp_formosa.webp", 
     },
-    'Administrative Assistant': {
-        description: 'Student Vote Postgraduate Industry Experience Winner',
+    'Administrative Assistant @ Airoha Technology Corp.': {
+        description: 'File management, data entry and data management for over 20 years of files for a 1000-5000 size corportate.',
         imageUrl: "/exp_airoha.webp",
     },
-    'Office Assistant': {
-        description: 'Student Vote Postgraduate Industry Experience Winner',
+    'Office Assistant @ NIA Taiwan': {
+        description: 'Law enformemt & general office duties',
         imageUrl: "/exp_nia.png",
     },
   };
 
 const educationData = {
-    'Administrative Assistant': {
-        description: 'Details about the Master of Science program',
-        imageUrl: "/edu_monash.png", // Replace with the actual path to your image
+    'Master of Data Science @ Monash University': {
+        description: 'GPA3.5 2022-2023',
+        imageUrl: "/edu_monash.png", 
     },
-    '2 2022-2023 Bachelor of Data Science': {
-        description: 'Details about the Bachelor of Science program',
-        imageUrl: "/edu_fju.png", // Replace with the actual path to your image
+    'Bachelor of English Language and Literature @ FJU': {
+        description: 'Taipei, Taiwan. 2013-2017',
+        imageUrl: "/edu_fju.png",
     },};
     
 
@@ -72,6 +76,26 @@ const variants = {
         },
     },
 }
+const containerVariants = {
+    hidden: { 
+      opacity: 0
+    },
+    visible: { 
+      opacity: 1,
+      transition: { delay: 2.5,
+                    staggerChildren: 1,
+                    duration: 4 }
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { 
+      opacity: 0 
+    },
+    visible: { 
+      opacity: 1 
+    }
+  };
 
 const Services = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -99,70 +123,97 @@ const Services = () => {
         }
       };
 
+      const letterVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+        },
+    };
+    
+    const AnimatedText = ({ text }) => (
+        <motion.h1>
+            {text.split("").map((char, index) => (
+                <motion.span key={index}
+                             variants={letterVariants}
+                             initial="hidden"
+                             animate="visible"
+                             transition={{ delay: 0.05 * index }}>
+                    {char}
+                </motion.span>
+            ))}
+        </motion.h1>
+    );
+    const AnimatedTextd = ({ text }) => (
+        <motion.h1>
+            {text.split("").map((char, index) => (
+                <motion.span key={index}
+                             variants={letterVariants}
+                             initial="hidden"
+                             animate="visible"
+                             transition={{ delay: 1 + 0.05 * index }}>
+                    {char}
+                </motion.span>
+            ))}
+        </motion.h1>
+    );
+    
+
     return (
         <motion.div className="services" 
                     variants={variants} 
-                    //initial="initial" 
-                    animate={isInView && "animate"}
+                    initial="initial" 
+                    animate={"animate"}
                     ref={ref}
                     >
-            {/* <motion.div className="textContainer">
-                <p>About my story</p>
-                <hr />
-            </motion.div> */}
             <motion.div className="titleContainer">
                 <div className="title">
                     <img src="/ta11.JPG" alt="" />
-                    <h1>
-                        <motion.b whileHover={{color:"#dda15e"}}>About me, </motion.b>
-                    </h1>
+                    <AnimatedText text="About me, " />
                 </div>
                 <div className="title">
-                    <h1>
-                    My Journey in <motion.b whileHover={{color:"#dda15e"}}>Data Science</motion.b>
-                    </h1>
-                    <a href="#Gallery"><button>View My Projects</button></a>
+                    <AnimatedTextd text="My Journey in Data Science" />
+                    <a href="#Card"><button>View My Projects</button></a>
                 </div>
             </motion.div>
-            <motion.div className="listContainer">
-                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
+            <motion.div className="listContainer"
+                        initial="hidden"
+                        animate="visible"
+                        variants={containerVariants}>
+                                               
+                <motion.div className="box" variants={itemVariants} initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
                     <h2>Education</h2>
                     <ul>
-                        <li>Master of Data Science</li>
-                        <li>Bachelor of English Language and Literature</li>
+                        <li>Master of Data Science @ Monash University</li>
+                        <li>Bachelor of English Language and Literature @ FJU</li>
                     </ul>
                     <motion.button  onClick={() => handleButtonClick("Education")} initial={{ background: "transparent"}} whileHover={{background: "#fa9a2c", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
-                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
+                <motion.div className="box" variants={itemVariants} initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
                     <h2>Experience</h2>
                     <ul>
-                        <li>Data Engineer @ Formosa Massage Therapy</li>
+                        <li>Freelance Data Engineer @ Formosa Massage Therapy</li>
                         <li>Administrative Assistant @ Airoha Technology Corp.</li>
                         <li>Office Assistant @ NIA Taiwan</li>
                     </ul>
                     <motion.button  onClick={() => handleButtonClick("Experience")} initial={{ background: "transparent"}} whileHover={{background: "#fa9a2c", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
-                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
+                <motion.div className="box" variants={itemVariants} initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
                     <h2>Certificates</h2>
                     <ul>
-                        <li>Monash Postgraduate Expo</li>
+                        <li>AWS Solution Architecture Job Simulation</li>
                         <li>Accenture Data Analytics and Visualization Virtual Experience Program</li>
                         <li>Microsoft Introduction to Programming Using Python</li>
                     </ul>
                     <motion.button onClick={() => handleButtonClick("Certificates")} initial={{ background: "transparent"}} whileHover={{background: "#fa9a2c", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
-                <motion.div className="box" initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
+                <motion.div className="box" variants={itemVariants} initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
                     <h2>Honors</h2>
                     <ul>
                         <li>Monash University Postgraduate Industry Experience Winner</li>
                         <li>2022 Commendation of Academic Performance</li>
                     </ul>
                     <motion.button onClick={() => handleButtonClick("Honors")} initial={{ background: "transparent"}} whileHover={{background: "#fa9a2c", color: "black", scale: 1.2}}>Detail</motion.button>
-                    {/* <Modal
-                        isOpen={isModalOpen}
-                        onClose={() => setIsModalOpen(false)}
-                        // trailName={selectedTrailName}
-                    /> */}
                     <Modal
                         isOpen={isModalOpen}
                         onClose={() => setIsModalOpen(false)}

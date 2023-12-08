@@ -162,6 +162,15 @@
       .description {
         font-size: 1em;
       }
+
+      .project-link{
+        font-size: 0.8em;
+        background-color: #f4af61;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px;
+      }
     }
   
     &:hover img {

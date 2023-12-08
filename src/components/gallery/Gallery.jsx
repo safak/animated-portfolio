@@ -1,24 +1,26 @@
-import React from 'react';
 import './Gallery.scss';
 import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+
 const textVariants = {
     initial: {
-      x: -500,
+      x: 0,
       opacity: 0,
     },
     animate: {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 1,
-        staggerChildren: 0.1,
+        duration: 3,
+        staggerChildren: 0.2,
       },
     },
     scrollButton: {
-      opacity: 0,
-      y: 10,
+      opacity: 1,
+      y: 15,
       transition: {
-        duration: 2,
+        duration: 3,
+        delay: 1.5,
         repeat: Infinity,
       },
     },
@@ -37,6 +39,44 @@ const textVariants = {
         }
     }
   }
+  const line = "Hi, I'm Chinying!"
+  const line2 = "A Data Scientist"
+  const line3 = "with 10+ projects"
+
+  const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  }
+  const sentenceTwo = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.07,
+      },
+    },
+  }
+  const sentenceThree = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.07,
+      },
+    },
+  }
+  
+  const letter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    }}
   
 const projects = [
   {
@@ -46,8 +86,8 @@ const projects = [
     type: 'React.js',
     language: 'Node.js',
     technology: 'Front End',
-    description: '',
-    link: '/project-one'
+    description: 'Secure Cyclist is designed to ensure the safety and well-being of international students who commute via bicycle in the vibrant region of Victoria. Leveraging the power of open data on car accidents, our project seeks to provide valuable insights into the dynamics of bicycling in Victoria, ultimately facilitating safer and more informed trips for cyclists.',
+    link: '/#Card'
   },
   {
     id: 1,
@@ -56,8 +96,8 @@ const projects = [
     type: 'Chart.js',
     language: 'SQL',
     technology: 'Azure',
-    description: '',
-    link: '/project-one'
+    description: 'Secure Cyclist is designed to ensure the safety and well-being of international students who commute via bicycle in the vibrant region of Victoria. Leveraging the power of open data on car accidents, our project seeks to provide valuable insights into the dynamics of bicycling in Victoria, ultimately facilitating safer and more informed trips for cyclists.',
+    link: '/#Card'
   },
   {
     id: 2,
@@ -66,7 +106,7 @@ const projects = [
     type: 'Dashboard',
     language: 'R Shiny',
     technology: 'Interative',
-    description: 'A brief introduction of Project One...',
+    description: 'Taiwan Travel Map is a dynamic and interactive dashboard meticulously crafted to empower travelers with the essential information needed to explore and plan their journeys across the captivating island of Taiwan. This platform offers insights into a wide array of establishments and attractions, including restaurants, accommodations, events, and scenic spots.',
     link: '/project-one'
   },
   {
@@ -76,17 +116,17 @@ const projects = [
     type: 'Data Exploration',
     language: 'R',
     technology: 'Data Vis',
-    description: 'A brief introduction of Project One...',
+    description: 'Analyzing the Stack Overflow Developers Survey 2022 data, this project explores the demographics, earnings, and learning journeys of contributors to the coding community, aiming to uncover who these contributors are, their income levels, and how they acquire coding skills. Beyond Stack Overflow\'s own analysis, this endeavor provides a unique perspective, enriching our understanding of the global coding community.',
     link: '/project-one'
   },
   {
     id: 4,
     image: 'pj_lga.png',
-    title: 'Flight Analysis',
+    title: 'PTV Analysis',
     type: 'Data Analysis',
     language: 'PostgreSQL',
     technology: 'Dbeaver',
-    description: '',
+    description: 'This project analyzes spatial data to assess PTV\'s coverage, pinpoint any underserved areas, and identify regions with the best transport options, providing stakeholders with insights to improve public transport accessibility, reduce commute times, and support the evolving workstyle needs of Victoria\'s residents.',
     link: '/project-one'
   },
   {
@@ -141,6 +181,7 @@ const projects = [
   },
   
 ];
+
 const cardHeight = 200; 
 const gapHeight = 20; 
 const totalHeight = (cardHeight + gapHeight) * projects.length /2;
@@ -180,24 +221,70 @@ const Gallery = () => {
   const handleMouseLeave = () => {
     setHovered(null);
   };
+  const [animationStage, setAnimationStage] = useState(0);
+  useEffect(() => {
+    if (animationStage === 1) {
+      setTimeout(() => setAnimationStage(2), 1200); // Delay for second sentence
+    } else if (animationStage === 2) {
+      setTimeout(() => setAnimationStage(3), 1500); // Delay for third sentence
+    } else if (animationStage === 3) {
+      setTimeout(() => setAnimationStage(4), 1500); // Delay for third sentence
+    }
+  }, [animationStage]);
 
   return (
     <div className="gallery">
             <div className="wrapper">
-                <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
-                    <motion.h2 variants={textVariants}>Hi, I'm Chinying!</motion.h2>
-                    <motion.h1 variants={textVariants}>A Data Scientist</motion.h1>
-                    <motion.h3 variants={textVariants}>with 10+ projects </motion.h3>
-                    {/* <div className="social">
-                    <a href="#"><img src="/linkedin.png" alt=""/></a>
-                    <a href="#"><img src="/github.png" alt=""/></a>
-                    </div> */}
-                    <motion.div variants={textVariants} className="buttons">
+            <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
+
+                    <motion.h2 variants={sentence}
+                                initial="hidden"
+                                animate={animationStage >= 1 ? "visible" : "hidden"}
+                                onAnimationComplete={() => setAnimationStage(1)}
+                                >
+                    {line.split("").map((char, index) => {
+                        return (
+                        <motion.span key={char + "-" + index} variants={letter}>
+                            {char}
+                        </motion.span>
+                        );
+
+                    })}
+                    </motion.h2>
+                    <motion.h1 variants={sentenceTwo}
+                                initial="hidden"
+                                animate={animationStage >= 2 ? "visible" : "hidden"}
+                                >
+                    {line2.split("").map((char, index) => {
+                        return (
+                        <motion.span key={char + "-" + index} variants={letter}>
+                            {char}
+                        </motion.span>
+                        );
+
+                    })}
+                    </motion.h1>
+                    <motion.h3 variants={sentenceThree}
+                                initial="hidden"
+                                animate={animationStage >= 3 ? "visible" : "hidden"}>
+                    {line3.split("").map((char, index) => {
+                        return (
+                        <motion.span key={char + "-" + index} variants={letter}>
+                            {char}
+                        </motion.span>
+                        );
+
+                    })}
+                    </motion.h3>
+
+                    {/* <motion.h1 variants={textVariants}>A Data Scientist</motion.h1>
+                    <motion.h3 variants={textVariants}>with 10+ projects </motion.h3> */}
+                    <motion.div variants={textVariants} animate={animationStage >= 4 ? "animate" : "initial"} className="buttons">
                       <a href="#Experience"><motion.button  variants={textVariants} >About me</motion.button></a>
                       {/* <a href="#Experience"><motion.button  variants={textVariants} >View my projects</motion.button></a> */}
                         {/* <motion.button  variants={textVariants} >Portfolio</motion.button> */}
                     </motion.div>
-                    <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
+                    <motion.img variants={textVariants} animate={animationStage >= 4 ? "scrollButton" : "initial"} src="/scroll.png" alt="" />
                 </motion.div>
                 <motion.div className="slidingtextContainer"
                     variants={sliderVariants}
@@ -205,28 +292,13 @@ const Gallery = () => {
                     animate="animate">
                     hello hello hello hello
                 </motion.div>
-                <div className="imageContainer">
-                {/* <img src="/71.png" alt="" /> */}
-                </div>
+                {/* <div className="imageContainer">
+                <img src="/71.png" alt="" />
+                </div> */}
 
 
             </div>
-    {/* <div className="header">project
-    <div className="content">The ProjectGallery component renders two motion.div elements, each with a variants prop corresponding to the scroll direction we want. The first column uses the animateUp variant, and the second column uses the animateDown variant. We use the filter method to distribute projects into two columns based on their index.</div>
-    <img src="/71.png" alt="" />
-    </div> */}
-    
-      {/* <motion.div
-        className="column"
-        variants={scrollVariants}
-        animate="animateUp"
-        initial={{ y: 0 }}
-      >
-        
-        {projects.concat(projects).filter((_, index) => index % 2 === 0).map((project, index) => (
-            <ProjectCard key={index} project={project} />
-        ))}
-      </motion.div> */}
+
       <motion.div
         className="column"
         variants={scrollVariants}
@@ -253,7 +325,7 @@ const ProjectCard = ({ project }) => {
         <div className="overlay">
           <div className="title">{project.title}</div>
           <div className="description">{project.description}</div>
-          <button onClick={() => window.location.href = project.link}>Check out the project</button>
+          <button className="project-link" onClick={() => window.location.href = project.link}>Go to project</button>
         </div>
       </div>
     );

@@ -9,7 +9,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(47, 47, 47, 0.9);
     color: black;
     z-index: 10;
 
@@ -18,22 +18,47 @@
     //     font-size: 18px;
         
     // }
-
+    .image-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .image-modal-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 80%;
+    }
+    
+    .image-modal-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
     .modal-content {
         position: relative;
         width: 700px;
-        height: 500px;
+        min-height: 500px;
         padding: 50px;
-        background-color: rgb(235, 224, 211);
+        background-color: rgb(15, 14, 14);
         // background-color: #eaeaea6e;
-        // border-radius: 20px;
-        color: #33454d;
+        border-radius: 10px;
+        color: #c3c3b3;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        font-size: 25px;
+        font-size: 20px;
+        font-weight: 100px;
         text-align: center;
-        overflow: scroll;
+        overflow-y: scroll;
 
         @include mobile{
             width: 90%;
@@ -48,7 +73,7 @@
 
         h1 {
             @include mobile{
-                font-size: 25px;
+                font-size: 20px;
                 margin-top: 25px;
                 background-color: #fa9a2c;
                 padding: 15px;
@@ -56,10 +81,10 @@
             }
         }
         p {
-            font-size: 20px;
-            font-weight: 800;
-            border-radius: 30px;
-            border: 3px solid rgba(194, 193, 193, 0.9);
+            font-size: 15px;
+            //font-weight: 800;
+            border-radius: 15px;
+            border: 2px solid rgba(90, 89, 89, 0.9);
             padding: 30px;
             // background-color: yellowgreen;
 
@@ -86,8 +111,10 @@
             h6 {
                 font-size: 14px;
                 margin-top: 30px;
+                padding: 5px;
                 text-align: center;
-                background-color: #fa9a2c;
+                color: white;
+                background-color: #828282;
             }
 
             img{
@@ -113,7 +140,7 @@
             position: absolute; 
             top: 0px; 
             right: 20px; 
-            color: black;
+            color: rgb(157, 157, 157);
             background-color: transparent;
             border: none;
             font-size: 2.7rem; 

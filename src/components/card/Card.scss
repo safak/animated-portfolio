@@ -1,6 +1,6 @@
 @import "../../app.scss";
 .card{
-    height: calc(100vh);
+    //height: calc(100vh);
     position: relative;
     display: flex;
     flex-direction: row;
@@ -8,10 +8,10 @@
 }
 
 .cButton{
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 900;
     padding: 20px;
-    color: #918f73;
+    color: #aca764;
     background-color: transparent;
     border: none;
     
@@ -25,6 +25,11 @@
     max-width: 800px;
     overflow-wrap: break-word;
 }
+.beforeselect{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 300px;
+}
 
 
 .componentContainer {
@@ -32,22 +37,29 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 50px;
     padding: 20px;
     width: 100%;
+    @include mobile{
+        margin-left: 20px;
+        padding-top: 0px;
+     }
     //height: calc(100vh - 6rem);
   }
   
   .item {
-    margin: 20px;
-    padding: 15px;
+    display: flex;             
+    justify-content: end;   
+    align-items: center;
+    text-align: end;
+    margin: 15px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     width: 200px;
-    height: 70px;
-    overflow: hidden;
+    height: 60px;
   
     &:hover {
       background-color: #f0f0f0;
@@ -57,26 +69,22 @@
   
   .itemTitle {
     font-size: 1.5rem;
-    font-size: clamp(12px, 2vw, 20px); // Adjust as needed
     color: #333;
   }
   
   .itemSubtitle {
-    
-    font-size: 1rem; // Adjust as needed
-    color: #666;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4b4a4a;
   }
 
   .detailsContainer {
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    bottom: 0%;
-    left: 20%;
-    width: 600px;
+    justify-content: center;
+    width: 700px;
     height: 400px;
-    //transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0);
     padding: 10px;
     border-radius: 10px;
@@ -85,15 +93,39 @@
   }
   .detailTitle{
     // position: absolute;
-    margin-top: 100px;
-    font-size: 4.5rem;
-    line-height: 5rem;   
-  }
-  .detailDesc {
-    font-size: 1rem;
-    color: #555353;
+    text-wrap: wrap;
+    margin-top: 60px;
+    font-size: 4rem;
+    line-height: 4rem;
+    //white-space: nowrap;
+    
   }
 
+  .detailDesc {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #b4b0b0;
+    font-weight: 300;
+  }
+  .detailFeaturebox{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .detailFeature{
+    background-color: rgb(75, 74, 74);
+    color: rgb(232, 223, 223);
+    padding: 5px;
+    border-radius: 5px;
+    @include mobile{
+        font-size: 0.9rem;
+     }
+  }
+  .imageDescription{
+    margin-top: 5px;
+    color:#aca764;
+  }
 
   .cimg {
     width: 100%;
@@ -103,12 +135,11 @@
   }
 
   .dots {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 6px;
+    margin-top: 30px;
+    margin-left: 120px;
   }
 
   .dot {
@@ -123,12 +154,17 @@
       background-color: lightgrey;
 
     }
+    @include mobile{
+        width: 7px;
+        height: 7px;
+     }
   }
 
   .navButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    //position: absolute;
+    //top: 50%;
+    //transform: translateY(-50%);
+    margin-top: 300px;
     background-color: transparent;
     border: none;
     padding: 10px;
@@ -143,11 +179,11 @@
   }
   
   .prevButton {
-    left: -50px;
+    margin-left: 100px;
   }
   
   .nextButton {
-    right: -50px;
+    left: 250px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -165,8 +201,8 @@
     }
   
     .item {
-      width: 80%;
-      margin: 5px;
+      width: 70%;
+      margin: 10px;
       height: 40px;
     }
   
@@ -176,25 +212,23 @@
     .itemTitle {
         display: none; 
       }
-    .detailsContainer {
-      width: 100%;
-    }
     .hiddenOnMobile {
         display: none;
     }
     .detailTitle{
         // position: absolute;
         margin-top: 0px;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        text-wrap: wrap;
         line-height: 2rem;   
       }
     .detailDesc {
         margin-top: 10px;
-        font-size: 1rem;
+        font-size: 0.9rem;
         color: #555353;
     }
     .cButton{
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 900;
         padding: 20px;
         color: #918f73;
@@ -203,22 +237,22 @@
         
      }
      .detailsContainer {
-        position: absolute;
+        margin-top: 0px;
         display: flex;
-        top: 220px;
-        left: 50px;
-        width: 300px;
-        height: 310px;
+        width: 100%;
+        height: 250px;
       }
+      .beforeselect{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 200px;
+    }
 
       .midcontent{
         max-width: 300px;
         overflow-wrap: break-word;
     }
     .navButton {
-        position: absolute;
-        top: 90%;
-        transform: translateY(-50%);
         background-color: transparent;
         border: none;
         padding: 10px;
@@ -226,6 +260,7 @@
         font-size: 40px;
         border-radius: 10px;
         color:rgb(236, 236, 236);
+        margin-top: 250px;
         
         @include mobile{
           font-size:30px;
@@ -238,22 +273,19 @@
       
       .nextButton {
         width: 50px;
-        right: 0px;
+        left: 250px;
       }
 
       .dots {
-        position: absolute;
-        top: 75%;
-        left: 40%;
+        margin-top: 20px;
         transform: translateX(-50%);
         display: flex;
         gap: 6px;
       }
       .cimg {
         width: 100%;
-        height: 200px;
-        position: absolute;
-        right: 25px;
+        max-height: 180px;
+        margin-top: 20px;
         object-fit: contain;
     
       }

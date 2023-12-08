@@ -4,85 +4,82 @@ import "./Card.scss";
 
 const projects = [
     {
-      id: 1,
-      images: ["/cyclist.png", "/sc_hazard.png", "/sc_spinner.png", "/sc_map.png", "/sc_news.png", "/sc_line.png", "/sc_bar.png", "/sc_bar2.png", "/sc_donut.png"],
-      title: 'Secure Cyclist',
-      type: 'Chart.js',
-      language: 'SQL',
-      technology: 'Azure',
-      description: 'something...something...something...something...something...something...something...something...something...something...something...something...something...something...something...something...something...something...something...something...something...something...',
+        id: 1,
+        images: ["/exp_formosa.webp"],
+        images_desc: ["ongoing project..."],
+        title: 'Ongoing: Formosa Massage Data Pineline',
+        type: 'python',
+        language: 'SQL',
+        technology: 'Visualisation',
+        description: 'Formosa Massage is a massage therapy located in TAS. The project is to build a data pipeline to collect data from the shop\'s booking system, and then analyse the data to provide insights for the shop owner to make business decisions.',
+        link: '/project-one'
+      },
+    {
+      id: 2,
+      images: ["/seek.png"],
+      images_desc: ["Automation web scraping with Selenium"],
+      title: 'Ongoing: SEEK Web Scraping',
+      type: 'python',
+      language: 'LDA',
+      technology: 'Semi-structured Data Analysis',
+      description: 'This project presents a thorough approach to extracting and analyzing job posting data from the SEEK website. Employing Python for robust web scraping, it efficiently gathers and structures a wide range of job market data. The analysis is powered by Latent Dirichlet Allocation (LDA), enabling deep insights into job trends and requirements. ',
       link: '/project-one'
     },
     {
-      id: 2,
-      images: ["/cyclist.png", "/sc_hazard.png", "/sc_spinner.png", "/sc_map.png", "/sc_news.png", "/sc_line.png", "/sc_bar.png", "/sc_bar2.png", "/sc_donut.png"],
-      title: 'Taiwan Travel Map',
+        id: 3,
+        images: ["/cyclist.png", "/sc_hazard.png", "/sc_spinner.png", "/sc_map.png", "/sc_news.png", "/sc_line.png", "/sc_bar.png", "/sc_bar2.png", "/sc_donut.png"],
+        images_desc: ["Worked as a data scientist and frontend developer in this project (Landing page for the app)", "Showing past 20 years bike accidents on the suggested route", "Interactive information display design", "Converted data format, concatenated over 10 datasets and showed bike trail on Leaflet Map with customised markers", "UI/UX design", "Pointed out the importance of bike safety with increasing number of bikers with chart.js", "Highlight current time to easily compare with history data", "Highlight why bike safety should be aware of", "Showing the severity of past bike related accidents"],
+        title: 'Secure Cyclist Web App',
+        type: 'Chart.js',
+        language: 'SQL',
+        technology: 'Azure',
+        description: 'Secure Cyclist is a comprehensive initiative designed to ensure the safety and well-being of international students who commute via bicycle in the vibrant region of Victoria. Leveraging the power of open data on car accidents, our project seeks to provide valuable insights into the dynamics of bicycling in Victoria, ultimately facilitating safer and more informed trips for cyclists.',
+        link: '/project-one'
+      },
+    {
+      id: 4,
+      images: ["/tw_landing.png", "/tw_filter.png", "/tw_cluster.png", "/tw_list.png", "/tw_popup.png"],
+      images_desc: ["Taiwan Travel Map Dashboard Landing page (build with R shiny)", "Interactive filter feature", "Easy to explore with clustering nearby tourist spots", "Allow search by keywords", "Providing detailed information of the location"],
+      title: 'Taiwan Travel Map Dashboard',
       type: 'Dashboard',
       language: 'R Shiny',
       technology: 'Interative',
-      description: 'A brief introduction of Project One...',
-      link: '/project-one'
-    },
-    {
-      id: 3,
-      images: ["/cyclist.png", "/sc_hazard.png", "/sc_spinner.png", "/sc_map.png", "/sc_news.png", "/sc_line.png", "/sc_bar.png", "/sc_bar2.png", "/sc_donut.png"],
-      title: 'Another Aspect of Stack Overflow Survey',
-      type: 'Data Exploration',
-      language: 'R',
-      technology: 'Data Vis',
-      description: 'A brief introduction of Project One...',
-      link: '/project-one'
-    },
-    {
-      id: 4,
-      images: ["/cyclist.png", "/sc_hazard.png", "/sc_spinner.png", "/sc_map.png", "/sc_news.png", "/sc_line.png", "/sc_bar.png", "/sc_bar2.png", "/sc_donut.png"],
-      title: 'Melbourne Blackspot Analysis',
-      type: 'Data Analysis',
-      language: 'PostgreSQL',
-      technology: 'Dbeaver',
-      description: '',
+      description: 'Taiwan Travel Map is a dynamic and interactive dashboard meticulously crafted to empower travelers with the essential information needed to explore and plan their journeys across the captivating island of Taiwan. This platform offers insights into a wide array of establishments and attractions, including restaurants, accommodations, events, and scenic spots.',
       link: '/project-one'
     },
     {
       id: 5,
-      images: 'pj_dw.png',
-      title: 'Data Warehouse',
-      type: 'Data Warehouse',
-      language: 'Data Engineer',
-      technology: 'SQL',
-      description: '',
+      images: ["/stk_landing.png", "/stk_bar.png","/stk_line.png", "/stk_heatmap.png"],
+      images_desc: ["Show respondants distribution by joining extra dataset (country name and its coordinate)", "Investigate if education background affect salary", "Explore how developers learn to code nowaways by age group", "Heatmap of most popular technology and salary of developers used it at work"],
+      title: 'Stack Overflow Survey Insights',
+      type: 'Data Exploration',
+      language: 'R',
+      technology: 'Data Vis',
+      description: 'This project explores the demographics, earnings, and learning journeys of contributors to the coding community, aiming to uncover who these contributors are, their income levels, and how they acquire coding skills. Beyond Stack Overflow\'s own analysis, this endeavor provides a unique perspective, enriching our understanding of the global coding community.',
       link: '/project-one'
     },
     {
       id: 6,
-      images: 'pj_ml.png',
-      title: 'Machine Learning',
-      type: 'ML',
-      language: 'Deep Learning',
-      technology: 'Python',
-      description: 'A brief introduction of Project One...',
+      images: ["/rfds_1.png", "/rfds_2.png", "/rfds_3.png", "/rfds_4.png", "/rfds_5.png"],
+      images_desc: ["Identify outliers (extreme and unusal value)", "Remove duplicated data (same aircraft shouldn\'t have 2 depature time)", "Aggregate with different granularity (by month & week)", "Aggregate with different granularity (by sum & average)", "Geo visualisation for flight distribution by aircraft type"],
+      title: 'RDBS Visualisation with Tableau',
+      type: 'Data cleaning',
+      language: 'Tableau',
+      technology: 'Data Vis',
+      description: 'The goal of the project is to understand the operation patterns of Royal Flying Doctor Service (RFDS flights), active 24/7 in providing emergency medical services across rural and remote Australia with Tableau. Anomalies (i.e. outliers, duplicates, null) were identified and handled before visualisation.',
       link: '/project-one'
     },
     {
-      id: 7,
-      images: 'pj_lda.png',
-      title: 'Semi-Structured Data Analysis',
-      type: 'NLP',
-      language: 'Topic Modeling',
-      technology: 'LDA',
-      description: 'A brief introduction of Project One...',
-      link: '/project-one'
-    },
-    {
-      id: 8,
-      images: 'pj_flight.png',
-      title: 'Flight Analysis',
-      type: 'Data Visualization',
-      language: 'R',
-      technology: 'Tableau',
-      description: 'A brief introduction of Project One...',
-      link: '/project-one'
-    }
+        id: 7,
+        images: ["/pj_lga.png"],
+        images_desc: ["data restoration → data varification → data preprocessing → data visualisation"],
+        title: 'PTV Blankspot Spatial Data Analysis',
+        type: 'Spatial Data',
+        language: 'PostgreSQL',
+        technology: 'Dbeaver',
+        description: 'This project analyzes spatial data to assess PTV\'s coverage, pinpoint any underserved areas, and identify regions with the best transport options, providing stakeholders with insights to improve public transport accessibility, reduce commute times, and support the evolving workstyle needs of Victoria\'s residents.',
+        link: '/project-one'
+      },
   ];
  
 
@@ -95,6 +92,12 @@ const projects = [
     const toggleExpansion = () => {
         setIsExpanded(!isExpanded); 
     };
+
+    const handleSelect = () => {
+        if (isMobile) {
+          setIsExpanded(false);
+        }
+      };
 
     useEffect(() => {
         const imageIndices = projects.reduce((acc, project) => {
@@ -149,7 +152,7 @@ const projects = [
     }, []);
 
     const componentContainerClass = `componentContainer ${isExpanded && isMobile ? 'hiddenOnMobile' : ''}`;
-    const isPhone = window.innerWidth <= 600;
+    //const isPhone = window.innerWidth <= 600;
     const toggleButtonText = isExpanded ? 'Projects⌄' : 'Projects⌄';
 
     return (
@@ -165,9 +168,12 @@ const projects = [
                 {isExpanded && (
                     <motion.div initial="hidden" animate="visible">
                         {projects.map((project, index) => (
-                            <motion.div key={project.id} custom={index} variants={itemVariants} onClick={() => setSelectedId(project.id)} className="item">
+                            <motion.div key={project.id} custom={index} variants={itemVariants} onClick={() => {
+                                setSelectedId(project.id);
+                                handleSelect();
+                              }} className="item">
                                 <h5 className="itemSubtitle">{project.title}</h5>
-                                <h2 className="itemTitle">{project.technology}</h2>
+                                {/* <h2 className="itemTitle">{project.technology}</h2> */}
                             </motion.div>
                         ))}
                     </motion.div>
@@ -175,7 +181,7 @@ const projects = [
             </div>
             <div className={componentContainerClass}>
                 {!selectedId && (
-                    <p>click to view project</p>
+                    <p className="beforeselect">Please select a project <br/> &#128072;&#127995;&#128072;&#127996;&#128072;&#127997;&#128072;&#127998; </p>
                 )}
                 {selectedId && (
                     <div className="midcontent">
@@ -184,13 +190,23 @@ const projects = [
                                 <motion.h5 initial="hidden" animate="visible" variants={variants} className="detailTitle">
                                     {project.title}
                                 </motion.h5>
+                                <motion.div className="detailFeaturebox" initial="hidden" animate="visible" variants={variants}>
+                                <motion.div className="detailFeature" variants={variants}>{project.type}</motion.div>
+                                <motion.div className="detailFeature" variants={variants}>{project.language}</motion.div>
+                                <motion.div className="detailFeature" variants={variants}>{project.technology}</motion.div>
+                                </motion.div>
                                 <motion.h2 initial="hidden" animate="visible" variants={variants} className="detailDesc">
                                     {project.description}
                                 </motion.h2>
                                 <motion.div initial="hidden" animate="visible" variants={variants} className="detailsContainer">
                                     {typeof currentImageIndex[project.id] !== 'undefined' && (
-                                        <img className="cimg" src={project.images[currentImageIndex[project.id]]} alt={project.title} />
-                                    )}
+                                        <>
+                                            <img className="cimg" src={project.images[currentImageIndex[project.id]]} alt={project.title} />
+                                            <p className="imageDescription">
+                                                {project.images_desc[currentImageIndex[project.id]]}
+                                            </p>
+                                        </>
+                                    )} 
                                     <div className="dots">
                                         {project.images.map((_, index) => (
                                             <span

@@ -5,11 +5,25 @@ import { useState } from "react";
 
 function Modal({ isOpen, onClose, category, data }) {
     const [selectedMonth, setSelectedMonth] = useState(null);
+    const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState('');
   
   
     const handleClick = (month) => {
       setSelectedMonth(month);
     };
+
+    const toggleImageModal = (imageUrl) => {
+      if (isImageModalOpen) {
+        setIsImageModalOpen(false);
+      } else {
+        setSelectedImage(imageUrl);
+        setIsImageModalOpen(true);
+      }
+    };
+    const closeImageModal = () => {
+      setIsImageModalOpen(false);
+  };
   
     return (
       isOpen && (
@@ -23,31 +37,27 @@ function Modal({ isOpen, onClose, category, data }) {
               <div>
                 <p onClick={() => setSelectedMonth(null)}>{selectedMonth}
                     <div className="item-content">{data[selectedMonth].description}</div>
-                    <img src={data[selectedMonth].imageUrl} alt="" />
+                    <img src={data[selectedMonth].imageUrl} alt="" onClick={() => toggleImageModal(data[selectedMonth].imageUrl)} />
                     <h6>Back</h6>
                 </p>
-                
               </div>
             ) : (
               Object.keys(data).map((month) => (
                 <p key={month} onClick={() => handleClick(month)}>
                   {month}
                 </p>
-            // Object.keys(data).map((month) => (
-            //     <div key={month}>
-            //       <p onClick={() => handleClick(month)}>
-            //         {month}
-            //       </p>
-            //       <div className={styles.itemContent}>
-            //         {data[month].description}
-            //       </div>
-            //       {/* <img src={data[month].imageUrl} alt="" /> */}
-            //     </div>
-            
               ))
             )}
-            
           </div>
+
+          {/* Image Modal */}
+          {isImageModalOpen && (
+            <div className="image-modal" onClick={() => setIsImageModalOpen(false)}>
+              <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+                <img className="image-modal-img" src={selectedImage} alt="" style={{ cursor: 'pointer' }} onClick={closeImageModal}/>
+              </div>
+            </div>
+          )}
         </div>
       )
     );

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 // import emailjs from "@emailjs/browser";
@@ -10,8 +10,8 @@ const sentence = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 5,
-      staggerChildren: 0.3,
+      delay: 4,
+      staggerChildren: 0.15,
     },
   },
 }
@@ -25,14 +25,14 @@ const letter = {
 
 const variants = {
   initial: {
-    y: -500,
+    y: 0,
     opacity: 0,
   },
   animate: {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 1,
+      delay: 3,
       duration: 3,
       staggerChildren: 0.1,
     },
@@ -44,8 +44,13 @@ const Contact = () => {
   const formRef = useRef();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-
+  const [isVisible, setIsVisible] = useState(false);
+  const inView = useInView(ref, { threshold: 0.5 });
   const isInView = useInView(ref, { margin: "-100px" });
+
+  useEffect(() => {
+    setIsVisible(inView);
+  }, [inView]);
 
   // const sendEmail = (e) => {
   //   e.preventDefault();
@@ -74,9 +79,9 @@ const Contact = () => {
     >
       <motion.div className="textContainer">
         <motion.h1 variants={sentence}
-                    initial="hidden"
-                    animate="visible">
-          {/* Let’s work together */}
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}>
+
           {line.split("").map((char, index) => {
             return (
               <motion.span key={char + "-" + index} variants={letter}>
@@ -97,18 +102,13 @@ const Contact = () => {
         <motion.div className="socialitem" variants={variants} animate="animate"
               initial="initial">
             <div className="social">
-                <a href="#"><img src="/linkedin.png" alt=""/></a>
-                <a href="#"><img src="/github.png" alt=""/></a>
-                {/* <a href="#"><img src="/youtube.png" alt=""/></a>
-                <a href="#"><img src="/dribbble.png" alt=""/></a> */}
+                <a href="https://www.linkedin.com/in/chin-ying-cheng/" target="_blank"><img src="/linkedin.png" alt=""/></a>
+                <a href="https://github.com/chinnnying/" target="_blank"><img src="/github.png" alt=""/></a>
+
             </div>
-          {/* <h2>Address</h2>
-          <span>Hello street New York</span> */}
+
         </motion.div>
-        {/* <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span>+1 234 5678</span>
-        </motion.div> */}
+
       </motion.div>
       <div className="formContainer">
         <motion.div
