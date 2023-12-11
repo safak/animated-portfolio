@@ -29,7 +29,7 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_kw2n4no",
+        "service_wqroupj",
         "template_k4argdh",
         formRef.current,
         "VE6mLMGUv-rYbzQBZ"
