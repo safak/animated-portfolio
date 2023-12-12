@@ -1,29 +1,37 @@
-.navbar{
-    height:100px;
+@import "../../app.scss";
 
-    .wrapper{
-        max-width:900px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content:space-between;
-        height: 100%;
+.navbar {
+  height: 100px;
 
-        span{
-            font-weight: bold;
-        }
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
 
-        .social{
-            display: flex;
-            gap: 20px;
-
-            img{
-                width: 18px;
-                height: 18px;
-            }
-        }
+    @include mobile {
+      justify-content: flex-end;
+      padding: 20px;
     }
 
-}
+    span {
+      font-weight: bold;
 
-//14:22
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

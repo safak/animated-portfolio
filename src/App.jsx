@@ -10,7 +10,7 @@ import Services from "./components/services/Services";
 const App = () => {
   return <div>
     <section id="Homepage">
-    <Cursor/>
+      <Cursor/>
       <Navbar/>
       <Hero/>
     </section>

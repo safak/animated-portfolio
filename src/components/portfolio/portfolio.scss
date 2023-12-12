@@ -1,3 +1,6 @@
+@import "../../app.scss";
+
+
 .portfolio{
 
     position: relative;
@@ -10,6 +13,10 @@
         text-align: center;
         color: orange;
         font-size: 36px;
+
+        @include mobile{
+            padding: 20px;
+        }
        
 
         .progressBar{
