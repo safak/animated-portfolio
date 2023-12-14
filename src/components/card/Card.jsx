@@ -22,9 +22,20 @@ const projects = [
       type: 'python',
       language: 'LDA',
       technology: 'Semi-structured Data Analysis',
-      description: 'This project presents a thorough approach to extracting and analyzing job posting data from the SEEK website. Employing Python for robust web scraping, it efficiently gathers and structures a wide range of job market data. The analysis is powered by Latent Dirichlet Allocation (LDA), enabling deep insights into job trends and requirements. ',
+      description: 'This project presents a thorough approach to extracting and analysing job posting data from SEEK. Employing Python for robust web scraping, it enables to collect data needed for deep insights into job trends and requirements. ',
       link: '/project-one'
     },
+    {
+        id: 8,
+        images: ["/port_landing.png", "/port_exp.png", "/port_skill.png"],
+        images_desc: ["Landing page", "Experience", "Skills"],
+        title: 'Personal portfolio',
+        type: 'javascript',
+        language: 'React',
+        technology: 'framer-motion',
+        description: 'An interactive portfolio website to practice and showcase my projects and skills.',
+        link: '/project-one'
+      },
     {
         id: 3,
         images: ["/cyclist.png", "/sc_hazard.png", "/sc_spinner.png", "/sc_map.png", "/sc_news.png", "/sc_line.png", "/sc_bar.png", "/sc_bar2.png", "/sc_donut.png"],
@@ -71,8 +82,8 @@ const projects = [
     },
     {
         id: 7,
-        images: ["/pj_lga.png"],
-        images_desc: ["data restoration → data varification → data preprocessing → data visualisation"],
+        images: ["/ptv_plan.png" , "ptv_tech.png", "/pj_lga.png"],
+        images_desc: ["Project plan", "Tools used in this project", "Insights: Data visualisation of blankspot areas of Melbourne"],
         title: 'PTV Blankspot Spatial Data Analysis',
         type: 'Spatial Data',
         language: 'PostgreSQL',

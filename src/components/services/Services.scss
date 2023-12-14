@@ -122,14 +122,14 @@
         //flex: 1;
         max-width: 25%;
         border-radius: 30px;
-        padding: 40px;
+        padding: 30px 40px;
         border: 2px solid rgba(214, 214, 214, 0.783);
         display: flex;
         flex-direction:column;
         justify-content: space-between;
         align-items: center;
         overflow-y: auto;
-        max-height: 320px;
+        max-height: 380px;
 
         @include mobile{
             max-width: 90%;
@@ -141,23 +141,36 @@
         
         ul{
             font-size: 2vh;
+            //color: rgb(183, 148, 148);
             @include mobile{
                 display: none;
              }
         }
 
         h2 {
-            font-size: 3vh;
+            font-size: 5vh;
+            color: #ee9c40;
             @include mobile{
-                font-size: 18px;
-                // flex-wrap: wrap;
+                display: none;
+             }
+        }
+
+        h3 {
+            font-size: 3vh;
+            color: #ee9c40;
+            margin-bottom: 20px;
+            //color: #dbd4b8;
+            @include mobile{
+                font-size: 16px;
+                margin-bottom: 0px;
+                color: #dbd4b8;
              }
         }
 
         button{
             width: 60px;
             //font-size: 16px;
-            margin-top: 20px;
+            margin-top: 30px;
             padding: 10px;
             background-color: transparent;
             color: #dbd4b8;

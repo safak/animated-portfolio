@@ -86,7 +86,7 @@ const projects = [
     type: 'React.js',
     language: 'Node.js',
     technology: 'Front End',
-    description: 'Secure Cyclist is designed to ensure the safety and well-being of international students who commute via bicycle in the vibrant region of Victoria. Leveraging the power of open data on car accidents, our project seeks to provide valuable insights into the dynamics of bicycling in Victoria, ultimately facilitating safer and more informed trips for cyclists.',
+    description: 'Secure Cyclist is designed to ensure the safety and well-being of international students who commute via bicycle in the vibrant region of Victoria. ',
     link: '/#Card'
   },
   {
@@ -96,7 +96,7 @@ const projects = [
     type: 'Chart.js',
     language: 'SQL',
     technology: 'Azure',
-    description: 'Secure Cyclist is designed to ensure the safety and well-being of international students who commute via bicycle in the vibrant region of Victoria. Leveraging the power of open data on car accidents, our project seeks to provide valuable insights into the dynamics of bicycling in Victoria, ultimately facilitating safer and more informed trips for cyclists.',
+    description: 'A safety-focused initiative leveraging accident data to create safer cycling routes in Victoria, enhancing the commute experience for international students.',
     link: '/#Card'
   },
   {
@@ -106,17 +106,17 @@ const projects = [
     type: 'Dashboard',
     language: 'R Shiny',
     technology: 'Interative',
-    description: 'Taiwan Travel Map is a dynamic and interactive dashboard meticulously crafted to empower travelers with the essential information needed to explore and plan their journeys across the captivating island of Taiwan. This platform offers insights into a wide array of establishments and attractions, including restaurants, accommodations, events, and scenic spots.',
+    description: 'An interactive tool providing travelers with comprehensive, real-time information about Taiwan\'s attractions, aiding in efficient and enjoyable travel planning.',
     link: '/project-one'
   },
   {
     id: 3,
     image: 'stk_landing.png',
-    title: 'Another Aspect of Stack Overflow Survey',
+    title: 'Stack Overflow Survey Analysis',
     type: 'Data Exploration',
     language: 'R',
     technology: 'Data Vis',
-    description: 'Analyzing the Stack Overflow Developers Survey 2022 data, this project explores the demographics, earnings, and learning journeys of contributors to the coding community, aiming to uncover who these contributors are, their income levels, and how they acquire coding skills. Beyond Stack Overflow\'s own analysis, this endeavor provides a unique perspective, enriching our understanding of the global coding community.',
+    description: 'Delivers in-depth analysis of the global coding community, exploring demographics, income, and learning paths, providing a unique perspective beyond Stack Overflow\'s own analysis.',
     link: '/project-one'
   },
   {
@@ -126,17 +126,17 @@ const projects = [
     type: 'Data Analysis',
     language: 'PostgreSQL',
     technology: 'Dbeaver',
-    description: 'This project analyzes spatial data to assess PTV\'s coverage, pinpoint any underserved areas, and identify regions with the best transport options, providing stakeholders with insights to improve public transport accessibility, reduce commute times, and support the evolving workstyle needs of Victoria\'s residents.',
+    description: 'Utilises spatial data to evaluate public transport coverage in Melbourne, identifying underserved areas and aiding in public transport accessibility improvements.',
     link: '/project-one'
   },
   {
     id: 5,
     image: 'pj_dw.png',
-    title: 'Project One',
+    title: 'Data Warehouse',
     type: 'Data Warehouse',
     language: 'Data Engineer',
     technology: 'SQL',
-    description: '',
+    description: 'Design and implement a data warehouse practice',
     link: '/project-one'
   },
   {
@@ -146,7 +146,7 @@ const projects = [
     type: 'ML',
     language: 'Deep Learning',
     technology: 'Python',
-    description: 'A brief introduction of Project One...',
+    description: '',
     link: '/project-one'
   },
   {
@@ -162,7 +162,7 @@ const projects = [
   {
     id: 8,
     image: 'pj_flight.png',
-    title: 'Project One',
+    title: 'Data Analysis of Flight Delay',
     type: 'Data Visualization',
     language: 'R',
     technology: 'Tableau',
@@ -325,7 +325,7 @@ const ProjectCard = ({ project }) => {
         <div className="overlay">
           <div className="title">{project.title}</div>
           <div className="description">{project.description}</div>
-          <button className="project-link" onClick={() => window.location.href = project.link}>Go to project</button>
+          {/* <button className="project-link" onClick={() => window.location.href = project.link}>Go to project</button> */}
         </div>
       </div>
     );

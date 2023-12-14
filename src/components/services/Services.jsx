@@ -2,7 +2,11 @@ import "./Services.scss"
 import { motion, useInView } from "framer-motion";
 import { useRef, useState} from "react";
 import Modal from "./Modal";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { faLaptop } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { faMedal } from '@fortawesome/free-solid-svg-icons';
 
 const honorsData = {
     '2023 Monash University Postgraduate Industry Experience Winner': {
@@ -16,6 +20,10 @@ const honorsData = {
   };
 
   const certData = {
+    'Cognizant Artificial Intelligence Job Simulation': {
+        description: 'Completed a job simulation focused on AI for Cognizant’s Data Science team. Conducted exploratory data analysis using Python and Google Colab for one of Cognizant’s technology-led clients, Gala Groceries. Communicated findings and analysis in the form of a PowerPoint slide to present the results back to the business.',
+        imageUrl: "/cert_ai.png", 
+      },
     'AWS Solution Architecture Job Simulation': {
       description: 'Designed and simple and scalable hosting architecture based on Elastic Beanstalk for a client experiencing significant growth and slow response times. Described my proposed architecture in plain language ensuring my client understood how it works and how costs will be calculated for it.',
       imageUrl: "/cert_aws.png", 
@@ -173,7 +181,7 @@ const Services = () => {
                 </div>
                 <div className="title">
                     <AnimatedTextd text="My Journey in Data Science" />
-                    <a href="#Card"><button>View My Projects</button></a>
+                    <a href="#Projects"><button>View My Projects</button></a>
                 </div>
             </motion.div>
             <motion.div className="listContainer"
@@ -182,7 +190,8 @@ const Services = () => {
                         variants={containerVariants}>
                                                
                 <motion.div className="box" variants={itemVariants} initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
-                    <h2>Education</h2>
+                    <h2><FontAwesomeIcon icon={faBook} />  </h2>
+                    <h3>Education</h3>
                     <ul>
                         <li>Master of Data Science @ Monash University</li>
                         <li>Bachelor of English Language and Literature @ FJU</li>
@@ -190,7 +199,8 @@ const Services = () => {
                     <motion.button  onClick={() => handleButtonClick("Education")} initial={{ background: "transparent"}} whileHover={{background: "#fa9a2c", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
                 <motion.div className="box" variants={itemVariants} initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
-                    <h2>Experience</h2>
+                    <h2><FontAwesomeIcon icon={faLaptop} /> </h2>
+                    <h3>Experience</h3>
                     <ul>
                         <li>Freelance Data Engineer @ Formosa Massage Therapy</li>
                         <li>Administrative Assistant @ Airoha Technology Corp.</li>
@@ -199,16 +209,19 @@ const Services = () => {
                     <motion.button  onClick={() => handleButtonClick("Experience")} initial={{ background: "transparent"}} whileHover={{background: "#fa9a2c", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
                 <motion.div className="box" variants={itemVariants} initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
-                    <h2>Certificates</h2>
+                    <h2> <FontAwesomeIcon icon={faPenToSquare} /> </h2>
+                    <h3>Certificates</h3>
                     <ul>
+                        <li>Cognizant Artificial Intelligence Job Simulation</li>
                         <li>AWS Solution Architecture Job Simulation</li>
-                        <li>Accenture Data Analytics and Visualization Virtual Experience Program</li>
-                        <li>Microsoft Introduction to Programming Using Python</li>
+                        <li>Accenture Data Analytics Virtual Experience Program</li>
+                        {/* <li>Microsoft Introduction to Programming Using Python</li> */}
                     </ul>
                     <motion.button onClick={() => handleButtonClick("Certificates")} initial={{ background: "transparent"}} whileHover={{background: "#fa9a2c", color: "black", scale: 1.2}}>Detail</motion.button>
                 </motion.div>
                 <motion.div className="box" variants={itemVariants} initial={{ background: "transparent"}} whileHover={{background:"#eaeaea6e", color: "black"}}>
-                    <h2>Honors</h2>
+                    <h2> <FontAwesomeIcon icon={faMedal} /> </h2>
+                    <h3>Honours</h3>
                     <ul>
                         <li>Monash University Postgraduate Industry Experience Winner</li>
                         <li>2022 Commendation of Academic Performance</li>

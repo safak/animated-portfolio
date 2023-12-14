@@ -35,11 +35,12 @@ const App = () => {
       <Navbar/>
       <Gallery />
     </section> */}
-    {/* <section id="Skills">
+    <section id="Skills">
+      <Navbar/>
       <Skill/>
-    </section > */}
+    </section >
     {/* <Portfolio/> */}
-    <section id="Card">
+    <section id="Projects">
       {/* <Project /> */}
       <Card/>  
     </section>

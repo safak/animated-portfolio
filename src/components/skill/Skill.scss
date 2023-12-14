@@ -6,39 +6,66 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    padding: 20px;
-    gap: 20px;
+    padding: 10px;
+    gap: 0px;
 
     .skill-title{
-        font-size: 70px;
+        height: 100px;
+        font-size: 50px;
         padding: 50px;
+        margin-top: 30px;
         font-weight: 800;
         color: #dbd4b8;
+        text-align: center;
+        a{
+
+            button{
+                width: 200px;
+                height: 60px;
+                margin-left: 100px;
+                background-color: #fa9a2c;
+                color: black;
+                border: none;
+                border-radius: 50px;
+                font-size: 2vh;
+                cursor: pointer;
+                // font-size: 20px;
+                @include mobile{
+                    width: 150px;
+                    height: 40px;
+                    font-size: 1.8vh;
+                    margin-top: 40px;
+                    //justify-content: center;
+                    margin-left: reset;
+                 }
+    
+            }}
         
         @include mobile{
-            font-size: 40px;
+            font-size: 30px;
             padding: 20px;
+            margin-top: 0px;
          }
     }
     .skill-container{
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
         margin-left: 50px;
         //background-color: rgba(204, 204, 204, 0.608);
         border-radius: 30px;
         padding: 30px;
-        // height: 50%;
-        width: 30%;
+        height: 200px;
+        width: 90%;
         gap: 20px;
         
 
         @include mobile{
-            width: 90%;
-            height: 60%;
-            margin-left: 10px;
-            padding:  10px;
+            display: none;
             min-height: 350px;
+            gap: 0px;
+            justify-content: flex-start;
             overflow-y: scroll;
          }
 
@@ -48,14 +75,13 @@
             //border-radius: 30px;
             // padding: 30px;
             // width: 50px;
-            height: 20px;
+            height: 50px;
             // text-align: center;
 
             @include mobile{
-                width: 70px;
-                height: 70px;
-                margin-left: 10px;
-                padding:  10px;
+                height: 40px;
+                //margin-left: 10px;
+                padding:  5px;
                 // overflow: scroll;
              }
 
@@ -63,7 +89,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
-                border-radius: 30px;
+                //border-radius: 30px;
             }
 
         }
@@ -76,7 +102,7 @@
     position: absolute;
     bottom: 30px;
     left: 30%;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #dbd4b8;
     // display: flex;
     // justify-content: bottom;
@@ -84,6 +110,7 @@
     cursor: pointer;
     
     @include mobile{
+        display: none;
         width: 70px;
         height: 70px;
         // margin-left: 10px;
@@ -91,4 +118,46 @@
         font-size: 1.2rem;
         // overflow: scroll;
      }
+  }
+
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+    max-width: 800px;
+    margin: auto;
+    color: white;
+    @include mobile{
+        //max-width: 300px;
+        grid-template-columns: repeat(2, 1fr);
+        // overflow: scroll;
+     }
+  
+    .service-item {
+      background: #333;
+      border-radius: 8px;
+      padding: 50px 30px;
+      display: flex;
+      font-size: 1.2rem;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include mobile{
+        max-width: 300px;
+        border-radius: 8px;
+        padding: 20px 10px;
+        display: flex;
+        font-size: 1rem;
+     }
+  
+      .fa-icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+  
+      .service-title {
+        margin-top: 8px;
+      }
+    }
   }

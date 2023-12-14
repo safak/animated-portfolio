@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const line = "Contact me"
 
@@ -39,6 +39,24 @@ const variants = {
   },
 };
 
+const Toast = ({ message, onClose }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onClose();
+    }, 3000); // The toast will disappear after 3 seconds
+
+    return () => clearTimeout(timer);
+  }, [onClose]);
+
+  return (
+    <div className="toast">
+      {message}
+    </div>
+  );
+}
+
+
+
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
@@ -47,30 +65,36 @@ const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const inView = useInView(ref, { threshold: 0.5 });
   const isInView = useInView(ref, { margin: "-100px" });
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState(""); 
 
   useEffect(() => {
     setIsVisible(inView);
   }, [inView]);
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  //   emailjs
-  //     .sendForm(
-  //       "service_94y20xo",
-  //       "template_v10u2oh",
-  //       formRef.current,
-  //       "pX_2hasGmGcuvjXIW"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         setSuccess(true)
-  //       },
-  //       (error) => {
-  //         setError(true);
-  //       }
-  //     );
-  // };
+    emailjs
+      .sendForm(
+        "service_6394gz9",
+        "template_5ph4f3o",
+        formRef.current,
+        "mhI641H6BlWFp30x2"
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+          setToastMessage("Message sent successfully!");
+          setShowToast(true);
+        },
+        (error) => {
+          setError(true);
+          setToastMessage("Error sending message. Please try again later.");
+          setShowToast(true);
+        }
+      );
+  };
 
   return (
     <motion.div
@@ -142,7 +166,7 @@ const Contact = () => {
         </motion.div>
         <motion.form
           ref={formRef}
-          // onSubmit={sendEmail}
+          onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 3, duration: 3 }}
@@ -151,8 +175,9 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email"/>
           <textarea rows={8} placeholder="Message" name="message"/>
           <button>Submit</button>
-          {/* {error && "Error"} */}
-          {/* {success && "Success"} */}
+          {error && "Error"}
+          {success && "Success"}
+          {showToast && <Toast message={toastMessage} onClose={() => setShowToast(false)} />}
         </motion.form>
       </div>
     </motion.div>

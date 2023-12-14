@@ -95,7 +95,7 @@
     // position: absolute;
     text-wrap: wrap;
     margin-top: 60px;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 4rem;
     //white-space: nowrap;
     
@@ -103,7 +103,7 @@
 
   .detailDesc {
     margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #b4b0b0;
     font-weight: 300;
   }
@@ -161,10 +161,10 @@
   }
 
   .navButton {
-    //position: absolute;
-    //top: 50%;
-    //transform: translateY(-50%);
-    margin-top: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    //margin-top: 300px;
     background-color: transparent;
     border: none;
     padding: 10px;
@@ -179,11 +179,11 @@
   }
   
   .prevButton {
-    margin-left: 100px;
+    //margin-left: 100px;
   }
   
   .nextButton {
-    left: 250px;
+    //left: 250px;
   }
 
   @media only screen and (max-width: 600px) {
