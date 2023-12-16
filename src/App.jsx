@@ -10,6 +10,7 @@ import Skill from "./components/skill/Skill";
 import Gallery from "./components/gallery/Gallery";
 import Project from "./components/project/Project";
 import Card from "./components/card/Card";
+import ProfilesSwiper from "./components/Swiper/Swiper";
 
 const App = () => {
   return (<div>
@@ -39,11 +40,15 @@ const App = () => {
       <Navbar/>
       <Skill/>
     </section >
-    {/* <Portfolio/> */}
     <section id="Projects">
-      {/* <Project /> */}
+      <Navbar/>
+      <ProfilesSwiper/>
+    </section >
+    {/* <Portfolio/> */}
+    {/* <section id="Projects">
+      <Project />
       <Card/>  
-    </section>
+    </section> */}
     <section id="Contact">
       <Contact/>
     </section>

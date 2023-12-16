@@ -86,7 +86,7 @@ const projects = [
         images_desc: ["Project plan", "Tools used in this project", "Insights: Data visualisation of blankspot areas of Melbourne"],
         title: 'PTV Blankspot Spatial Data Analysis',
         type: 'Spatial Data',
-        language: 'PostgreSQL',
+        language: 'PostgisSQL',
         technology: 'Dbeaver',
         description: 'This project analyzes spatial data to assess PTV\'s coverage, pinpoint any underserved areas, and identify regions with the best transport options, providing stakeholders with insights to improve public transport accessibility, reduce commute times, and support the evolving workstyle needs of Victoria\'s residents.',
         link: '/project-one'

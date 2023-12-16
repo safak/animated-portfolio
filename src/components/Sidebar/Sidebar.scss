@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: #a9927d;
-    color: #5e503f;
+    color: #0f0f0e;
 
     .bg{
         z-index: 999;
@@ -13,8 +13,8 @@
         top: 0px;
         right: 0;
         bottom: 0;
-        width: 125px;
-        background: rgb(218, 216, 214);
+        width: 225px;
+        background: rgb(244, 174, 61);
 
         @include mobile{
             top: 20px;

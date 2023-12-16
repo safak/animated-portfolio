@@ -163,7 +163,7 @@
   .navButton {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    //transform: translateY(-50%);
     //margin-top: 300px;
     background-color: transparent;
     border: none;
@@ -173,17 +173,14 @@
     border-radius: 10px;
     color:rgb(236, 236, 236);
     
-    @include mobile{
-      font-size: 20px;
-   }
   }
   
   .prevButton {
-    //margin-left: 100px;
+    left: 10px;
   }
   
   .nextButton {
-    //left: 250px;
+    right: 10px;
   }
 
   @media only screen and (max-width: 600px) {

@@ -20,7 +20,8 @@
     "react-icons": "^4.11.0",
     "react-slick": "^0.29.0",
     "sass": "^1.68.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@types/react": "18.2.15",
