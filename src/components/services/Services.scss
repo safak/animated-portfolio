@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    
 
     @include mobile{
         flex-direction: row;
@@ -33,7 +34,7 @@
     }
 }
 .titleContainer{
-    flex:2;
+    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,40 +61,41 @@
         }
 
         img{
-            width: 250px;
-            height: 90px;
+            width: 18rem;
+            height: 6rem;
             border-radius: 50px;
             object-fit: cover;
             @include mobile{
-                width: 200px;
-                height: 70px;
+                width: 12rem;
+                height: 4rem;
              }
         }
 
         h1{
-            font-size: 8vh;
+            font-size: 4rem;
             font-weight: 600;
             @include mobile{
-                font-size: 20px;
+                font-size: 1.5rem;
              }
         }
 
         a{
 
         button{
-            width: 250px;
-            height: 90px;
+            
+            width: 18rem;
+            height: 6rem;
             background-color: #fa9a2c;
             color: black;
             border: none;
             border-radius: 50px;
-            font-size: 3vh;
+            font-size: 1.3rem;
             cursor: pointer;
             // font-size: 20px;
             @include mobile{
-                width: 200px;
-                height: 70px;
-                font-size: 2.2vh;
+                width: 12rem;
+                height: 4rem;
+                font-size: 0.8rem;
              }
 
         }}
@@ -101,16 +103,16 @@
 }
 
 .listContainer{
-    flex:2;
+    flex: 2;
     display: flex; 
     justify-content: space-around;
     margin: 20px;
     gap: 20px;
 
     @include mobile{
-        flex-direction:column;
+        flex-direction: column;
         align-items: center;
-        width: 90%;
+        //width: 50%;
         height: 20%;
         margin: 10px;
         flex-wrap: wrap;
@@ -118,8 +120,6 @@
      }
 
     .box{
-        //flex-basis: calc(50% - 40px);
-        //flex: 1;
         max-width: 25%;
         border-radius: 30px;
         padding: 30px 40px;
@@ -129,27 +129,28 @@
         justify-content: space-between;
         align-items: center;
         overflow-y: auto;
-        max-height: 380px;
+        max-height: 450px;
 
         @include mobile{
             max-width: 90%;
             overflow-y: hidden;
             margin: 5px 0;
-            height: 120px;
-            padding: 30px;
+            height: 9rem;
+            width: 10rem;
+            padding: 20px;
          }
         
         ul{
-            font-size: 2vh;
-            color:rgb(239, 235, 235);
-            //color: rgb(183, 148, 148);
+            font-size: 1rem;
+            line-height: 1.8rem;
+            color:rgb(219, 217, 217);
             @include mobile{
                 display: none;
              }
         }
 
         h2 {
-            font-size: 5vh;
+            font-size: 2.2rem;
             color: #ee9c40;
             @include mobile{
                 display: none;
@@ -162,28 +163,28 @@
             margin-bottom: 20px;
             //color: #dbd4b8;
             @include mobile{
-                font-size: 16px;
+                font-size: 1.1rem;
+                margin-top: 10px;
                 margin-bottom: 0px;
                 color: #dbd4b8;
              }
         }
 
         button{
-            width: 60px;
-            //font-size: 16px;
+            font-size: 0.8rem;
             margin-top: 30px;
-            padding: 10px;
+            padding: 0.8rem 1rem;
             background-color: transparent;
             color: #dbd4b8;
             border: 2px solid #fa9a2c;
-            border-radius: 20px;
+            border-radius: 3rem;
             cursor: pointer;
 
             @include mobile{
-                font-size: 12px;
+                font-size: 0.7rem;
                 margin: 15px;
-                padding: 8px;
-                border-radius: 20px;
+                padding: 10px;
+                border-radius: 1.5rem;
                 // flex-wrap: wrap;
              }
         }

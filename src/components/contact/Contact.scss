@@ -3,7 +3,6 @@
     position: relative;
     height:100%;
     max-width: 1366px;
-    // margin: auto;
     display: flex;
     align-items: center;
     gap: 0px;
@@ -20,8 +19,6 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      // text-align: center;
-      // justify-content: left;
       margin: 50px;
       gap: 40px;
 
@@ -36,10 +33,11 @@
         font-size: 80px;
         line-height: 88px;
         font-weight: 500;
-        // bottom: 300px;
+        //bottom: 300px;
 
       @include mobile{
-        font-size: 40px;
+        margin-top: 50px;
+        font-size: 3rem;
         line-height: 40px;
         font-weight: 500;
     }
@@ -54,9 +52,10 @@
     .formContainer {
       flex: 1;
       position: relative;
-      padding-right: 50px;
+      padding-right: 40px;
       
       @include mobile{
+        flex: 2;
         width: 80%;
         padding-right: 0px;
     }
@@ -79,6 +78,7 @@
 
         @include mobile{
           gap:10px;
+          width:90%;
       }
   
         input,
@@ -88,9 +88,11 @@
           border: 1px solid white;
           color: white;
           border-radius: 5px;
+          @include mobile{
+            padding: 15px;
   
           
-        }
+        }}
   
         button {
           padding: 20px;
@@ -118,8 +120,8 @@
         margin-top: 5px;
 
         @include mobile{
-          width: 40px;
-          height: 40px;
+          width: 50px;
+          height: 50px;
       }
     }
 

@@ -1,6 +1,5 @@
 @import "../../app.scss";
 .skill{
-    // background: linear-gradient(180deg, rgb(1, 197, 168), rgb(14, 10, 136));
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -11,29 +10,29 @@
 
     .skill-title{
         height: 120px;
-        font-size: 50px;
+        font-size: 4rem;
         padding: 50px;
         margin-top: 30px;
         font-weight: 800;
         color: #dbd4b8;
         text-align: center;
+
         a{
 
             button{
-                width: 200px;
-                height: 60px;
+                width: 12rem;
+                height: 4rem;
                 margin-left: 100px;
                 background-color: #fa9a2c;
                 color: black;
                 border: none;
                 border-radius: 50px;
-                font-size: 2vh;
+                font-size: 1rem;
                 cursor: pointer;
-                // font-size: 20px;
                 @include mobile{
-                    width: 150px;
-                    height: 40px;
-                    font-size: 1.8vh;
+                    width: 10rem;
+                    height: 4rem;
+                    font-size: 0.8rem;
                     margin-top: 40px;
                     //justify-content: center;
                     margin-left: reset;
@@ -42,9 +41,10 @@
             }}
         
         @include mobile{
-            font-size: 30px;
+            font-size: 3rem;
             padding: 20px;
-            margin-top: 0px;
+            margin-top: 2rem;
+            line-height: 1rem;
          }
     }
     .skill-container{
@@ -53,7 +53,6 @@
         flex-wrap: wrap;
         flex-direction: row;
         margin-left: 50px;
-        //background-color: rgba(204, 204, 204, 0.608);
         border-radius: 30px;
         padding: 30px;
         height: 200px;
@@ -126,6 +125,7 @@
     gap: 16px;
     padding: 16px;
     max-width: 800px;
+    max-height: 500px;
     margin: auto;
     color: white;
     @include mobile{
@@ -146,7 +146,7 @@
       @include mobile{
         max-width: 300px;
         border-radius: 8px;
-        padding: 20px 10px;
+        padding: 1.8rem 1rem;
         display: flex;
         font-size: 1rem;
      }

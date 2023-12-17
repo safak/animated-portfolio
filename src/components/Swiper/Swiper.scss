@@ -132,40 +132,43 @@
     
         .mySwiper {
             height: 100%;
-            padding: 10px;
+            padding: 1rem;
         }
     
         .project-header {
-            height: 12vh;
+            height: 10vh;
         }
     
         .swiper-head {
             margin-top: 20px;
             font-size: 3rem;
+            font-weight: 900;
             span {
-                font-size: 3rem;
+                font-size: 4rem;
             }
             button {
-                padding: 5px 15px;
-                font-size: 0.8rem;
+                padding: 0.8rem 1rem;
+                font-size: 0.7rem;
                 margin-left: 20px;
+                border-radius: 1.5rem;
+
             }
         }
     
         .swiper-slide {
-
-            border: none;
-
+            margin-top: 20px;
+            height: 70vh;
+            //min-height: 480px;
             .swiper-img {
-                height: 30vh;
+                height: 25vh;
             }
             .swiper-content {
                 height: 50vh;
                 h3 {
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                 }
                 p {
-                    font-size: 0.9rem;
+                    font-size: 0.8rem;
                 }
             }
         }

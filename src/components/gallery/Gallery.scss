@@ -38,18 +38,19 @@
             
             @include mobile{
                 margin-top: 25%;
-                width: 70%;
+                width: 90%;
                 height: 50%;
                 gap: 20px;
                 text-align: center;
+                margin-left: 20px;
             }
     
             h2{
                 font-size: 40px;
                 color: #fefae0;
                 @include mobile{
-                  margin-top: 50px;
-                  font-size: 30px;
+                  margin-top: 80px;
+                  font-size: 2rem;
               }
             }
     
@@ -58,12 +59,17 @@
                 color: #fa9a2c;
     
                 @include mobile{
-                    font-size:50px;
+                    margin-top: 2rem;
+                    font-size: 3.5rem;
                 }
             }
 
             h3 {
                 font-size: 25px;
+                @include mobile{
+                  margin-top: 3rem;;
+                  font-size: 1.2rem;
+              }
 
             }
     
