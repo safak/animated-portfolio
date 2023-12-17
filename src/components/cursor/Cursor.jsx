@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "./cursor.scss";
+import "./Cursor.scss";
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
