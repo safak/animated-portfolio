@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -7,13 +9,17 @@
   color: black;
 
   .bg {
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: 400px;
     background: white;
-    z-index: 999;
+
+    @include mobile {
+      width: 200px;
+    }
     .links {
       position: absolute;
       width: 100%;
@@ -25,6 +31,9 @@
       gap: 20px;
       a {
         font-size: 40px;
+        @include mobile {
+          font-size: 20px;
+        }
       }
     }
   }

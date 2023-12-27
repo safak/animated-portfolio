@@ -20,3 +20,9 @@ section {
   height: 100vh;
   scroll-snap-align: center;
 }
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
