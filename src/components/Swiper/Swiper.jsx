@@ -105,13 +105,19 @@ const ProfilesSwiper = () => {
   // Effect to update slidesPerView on window resize
   useEffect(() => {
     const handleResize = () => {
-      // Set slidesPerView to 1 if window width is less than or equal to 768px
-      if (window.innerWidth <= 768) {
-        setSlidesPerView(1);
-      } else {
-        setSlidesPerView(3);
-      }
-    };
+        // Set slidesPerView to 1 if window width is less than or equal to 768px
+        if (window.innerWidth <= 768) {
+          setSlidesPerView(1);
+        }
+        // Set slidesPerView to 2 if window width is greater than 768px and less than or equal to 1024px
+        else if (window.innerWidth > 768 && window.innerWidth <= 1400) {
+          setSlidesPerView(2);
+        }
+        // Set slidesPerView to 3 for widths greater than 1024px
+        else {
+          setSlidesPerView(3);
+        }
+      };
 
     // Add event listener
     window.addEventListener('resize', handleResize);
@@ -140,7 +146,7 @@ const ProfilesSwiper = () => {
       className="mySwiper"
     >
       {projects.map((profile, index) => (
-        <SwiperSlide key={index} className="swiper-slide" onClick={() => window.open(profile.link, '_blank')}>
+        <SwiperSlide key={index} className="swiper-slide">
             <div className="features">
                 <p className="feature">{profile.type}</p>
                 <p className="feature">{profile.language}</p>
@@ -153,9 +159,9 @@ const ProfilesSwiper = () => {
               <h3>{profile.title}</h3>
               <p>{profile.description}</p>
             </div>
-            {/* <div className="swiper-footer">
-                <button>View More</button>
-            </div> */}
+            <div className="swiper-footer">
+                <button onClick={() => window.open(profile.link, '_blank')}>View More</button>
+            </div>
          
         </SwiperSlide>
       ))}

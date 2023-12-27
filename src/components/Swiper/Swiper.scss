@@ -28,7 +28,7 @@
 
     }
     button {
-        padding: 10px 20px;
+        padding: 15px 20px;
         border: none;
         font-size: 1rem;
         margin-left: 50px;
@@ -65,9 +65,10 @@
 
   .swiper-content {
     padding: 0px 20px;
-    height: 28vh;
     display: flex;
     flex-direction: column;
+    height: 25vh;
+    overflow: scroll;
 
     h3{
       font-size: 1.1rem;
@@ -85,8 +86,9 @@
 
   .swiper-footer {
     text-align: center;
+    //height: 8vh;
     button {
-      padding: 5px 10px;
+      padding: 12px 12px;
       border: none;
       font-size: 0.7rem;
       border-radius: 25px;
@@ -163,7 +165,7 @@
                 height: 25vh;
             }
             .swiper-content {
-                height: 50vh;
+                height: 20vh;
                 h3 {
                     font-size: 0.9rem;
                 }
