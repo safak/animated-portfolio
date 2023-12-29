@@ -1,0 +1,290 @@
+@import "../../app.scss";
+.card{
+    //height: calc(100vh);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cButton{
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 20px;
+    color: #aca764;
+    background-color: transparent;
+    border: none;
+    
+  }
+
+.cardContainer{
+    flex-wrap: wrap;
+}
+
+.midcontent{
+    max-width: 800px;
+    overflow-wrap: break-word;
+}
+.beforeselect{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 300px;
+}
+
+
+.componentContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 50px;
+    padding: 20px;
+    width: 100%;
+    @include mobile{
+        margin-left: 20px;
+        padding-top: 0px;
+     }
+    //height: calc(100vh - 6rem);
+  }
+  
+  .item {
+    display: flex;             
+    justify-content: end;   
+    align-items: center;
+    text-align: end;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+    height: 60px;
+  
+    &:hover {
+      background-color: #f0f0f0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .itemTitle {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .itemSubtitle {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4b4a4a;
+  }
+
+  .detailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  .detailTitle{
+    // position: absolute;
+    text-wrap: wrap;
+    margin-top: 60px;
+    font-size: 3rem;
+    line-height: 4rem;
+    //white-space: nowrap;
+    
+  }
+
+  .detailDesc {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #b4b0b0;
+    font-weight: 300;
+  }
+  .detailFeaturebox{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .detailFeature{
+    background-color: rgb(75, 74, 74);
+    color: rgb(232, 223, 223);
+    padding: 5px;
+    border-radius: 5px;
+    @include mobile{
+        font-size: 0.9rem;
+     }
+  }
+  .imageDescription{
+    margin-top: 5px;
+    color:#aca764;
+  }
+
+  .cimg {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+
+  }
+
+  .dots {
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    margin-top: 30px;
+    margin-left: 120px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &.active {
+      background-color: lightgrey;
+
+    }
+    @include mobile{
+        width: 7px;
+        height: 7px;
+     }
+  }
+
+  .navButton {
+    position: absolute;
+    top: 50%;
+    //transform: translateY(-50%);
+    //margin-top: 300px;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 40px;
+    border-radius: 10px;
+    color:rgb(236, 236, 236);
+    
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .card {
+      flex-direction: column;
+      height: reset;
+      overflow: reset;
+      // Other adjustments for mobile
+    }
+    .cardContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+  
+    .item {
+      width: 70%;
+      margin: 10px;
+      height: 40px;
+    }
+  
+    .itemSubTitle {
+        font-size: 1rem;
+    }
+    .itemTitle {
+        display: none; 
+      }
+    .hiddenOnMobile {
+        display: none;
+    }
+    .detailTitle{
+        // position: absolute;
+        margin-top: 0px;
+        font-size: 1.5rem;
+        text-wrap: wrap;
+        line-height: 2rem;   
+      }
+    .detailDesc {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: #555353;
+    }
+    .cButton{
+        font-size: 1.8rem;
+        font-weight: 900;
+        padding: 20px;
+        color: #918f73;
+        background-color: transparent;
+        border: none;
+        
+     }
+     .detailsContainer {
+        margin-top: 0px;
+        display: flex;
+        width: 100%;
+        height: 250px;
+      }
+      .beforeselect{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 200px;
+    }
+
+      .midcontent{
+        max-width: 300px;
+        overflow-wrap: break-word;
+    }
+    .navButton {
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 40px;
+        border-radius: 10px;
+        color:rgb(236, 236, 236);
+        margin-top: 250px;
+        
+        @include mobile{
+          font-size:30px;
+       }
+      }
+
+      .prevButton {
+        width: 50px;
+        }
+      
+      .nextButton {
+        width: 50px;
+        left: 250px;
+      }
+
+      .dots {
+        margin-top: 20px;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 6px;
+      }
+      .cimg {
+        width: 100%;
+        max-height: 180px;
+        margin-top: 20px;
+        object-fit: contain;
+    
+      }
+      
+  }

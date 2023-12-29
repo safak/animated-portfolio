@@ -1,0 +1,142 @@
+@import "../../app.scss";
+.contact {
+    position: relative;
+    height:100%;
+    max-width: 1366px;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    background-image: url("/stars.png");
+    background-size: cover;
+
+    @include mobile{
+      flex-direction: column;
+  }
+  
+  
+    .textContainer {
+      align-self: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin: 50px;
+      gap: 40px;
+
+      @include mobile{
+        width: 50%;
+        gap: 20px;
+        text-align: center;
+    }
+  
+  
+      h1 {
+        font-size: 80px;
+        line-height: 88px;
+        font-weight: 500;
+        //bottom: 300px;
+
+      @include mobile{
+        margin-top: 50px;
+        font-size: 3rem;
+        line-height: 40px;
+        font-weight: 500;
+    }
+       
+      }
+  
+      span {
+        font-weight: 900;
+      }
+    }
+  
+    .formContainer {
+      flex: 1;
+      position: relative;
+      padding-right: 40px;
+      
+      @include mobile{
+        flex: 2;
+        width: 80%;
+        padding-right: 0px;
+    }
+      
+  
+      .phoneSvg {
+        stroke: #d9974b;
+        position: absolute;
+        margin: auto;
+        z-index: -1;
+      }
+  
+      form {
+        display: flex;
+        width: 80%;
+        margin-left: 20px;
+        flex-direction: column;
+        gap: 20px;
+        color: black;
+
+        @include mobile{
+          gap:10px;
+          width:90%;
+      }
+  
+        input,
+        textarea {
+          padding: 20px;
+          background-color: transparent;
+          border: 1px solid white;
+          color: white;
+          border-radius: 5px;
+          @include mobile{
+            padding: 15px;
+  
+          
+        }}
+  
+        button {
+          padding: 20px;
+          border: none;
+          background-color: #fa9a2c;
+          cursor: pointer;
+          font-weight: 500;
+
+          @include mobile{
+            margin-bottom: 30px;
+        }
+          
+        }
+      }
+    }
+  }
+  .social{
+    display: flex;
+    gap: 20px;
+
+    img{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        margin-top: 5px;
+
+        @include mobile{
+          width: 50px;
+          height: 50px;
+      }
+    }
+
+    
+
+}
+.toast {
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  z-index: 1000;
+  text-align: center;
+}
