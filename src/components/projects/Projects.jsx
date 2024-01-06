@@ -7,7 +7,7 @@ const items =[
     {
         id: 1,
         title: "Todo-App",
-        img: "todo-app.png",
+        img: "../todo-app.png",
         desc: ["This project consists of PostgreSQL, Express, React, and Node.js technologies to build a Todo full-stack web application!"],
         git: "https://github.com/Zainab-Almasoodi/Todo-App_full"
       },
@@ -21,7 +21,7 @@ const items =[
       {
         id: 3,
         title: "Budget Allocation App.",
-        img: "budget_allocation.png",
+        img: "./public/budget_allocation.png",
         desc: ["React."],
         git:"https://github.com/Zainab-Almasoodi/IBM_FinalProject_BudgetAllocationApp"
       },
