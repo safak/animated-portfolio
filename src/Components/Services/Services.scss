@@ -1,0 +1,187 @@
+@import "../../app.scss";
+
+.services {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  justify-content: space-between;
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile{
+      margin-top: 20px;
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+
+    }
+
+    hr {
+      width: 25vw;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include mobile{
+        width: 300px;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      color: gray;
+      text-align: right;
+      font-size: 1.1rem;
+    }
+  }
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile{
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      @include mobile{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+      img {
+        height: 100px;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 300px;
+
+        @include mobile{
+          width: 200px;
+          height: 50px;
+        }
+      }
+
+      h1 {
+        font-size: 5.2rem;
+        font-weight: 100;
+
+        @include mobile{
+          font-size: 39px;
+        }
+      }
+
+      button {
+        color: black;
+        background-color: orange;
+        width: 250px;
+        height: 90px;
+        border: none;
+        border-radius: 50px;
+        font-size: 20px;
+        // display: none;
+
+        @include mobile{
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 85vw;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 0.7rem;
+
+    @include mobile{
+      max-width: 100%;
+      display: flex;
+      align-items:center;
+      justify-content:flex-start;
+      flex-direction: column;
+      flex-wrap:wrap; 
+      max-height:60%;
+      margin: 35px 0px 0px 0;
+
+    }
+
+    .BOX {
+      display: flex;
+      border: 1px solid gray;
+      border-radius: 1rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      padding: 5vw 1vw;
+      // margin-top: -2vw;
+      margin-right: 0.7rem;
+
+      @include mobile{
+        height: 40vw;
+        width: 45vw;
+        overflow: hidden;
+        margin: 10px 5px 10px  5px;
+
+      }
+
+      h2 {
+        // margin-bottom:-1rem;
+        margin-top: -50px;
+        font-size: 29px;
+        // color: Black;
+
+        @include mobile{
+          font-size: 25px;
+          margin-top: -50px;
+        }
+      }
+
+      p {
+        font-size: 1.3vw;
+        padding-top: 20px;
+        margin-bottom: -3rem;
+        font-weight: 400;
+
+        @include mobile{
+          // display:   none;
+          margin-top: -10px;
+          font-size: 12px;
+        }
+      }
+
+      button {
+        padding: 13px 3rem;
+        font-weight: 400;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: orange;
+        color: black;
+        display: none;
+
+        @include mobile{
+          padding: 2px 25px;
+          overflow: hidden;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
