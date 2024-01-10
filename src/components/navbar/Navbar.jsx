@@ -13,7 +13,7 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Lama Dev
+          DURVESH
         </motion.span>
         <div className="social">
           <a href="#">
@@ -21,9 +21,6 @@ const Navbar = () => {
           </a>
           <a href="#">
             <img src="/instagram.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="/youtube.png" alt="" />
           </a>
           <a href="#">
             <img src="/dribbble.png" alt="" />
