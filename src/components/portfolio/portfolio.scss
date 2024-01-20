@@ -15,18 +15,16 @@ position: relative;
 
         @include mobile{
              padding-top: calc(100vh - 100px);
-             bottom: 0;
-                font-size: 24px;
+            font-size: 24px;
              }
-           
 
         .progressBar{
-height: 10px;
-background-color: white;
+        height: 10px;
+        background-color: white;
         }
 }
 
-.container{
+    .container{
     display: flex;
     align-items:center;
     justify-content: center;
@@ -34,28 +32,28 @@ background-color: white;
     height: 100%;
     overflow: hidden;
 
-.wrapper{
-max-width: 1366px;
-height: 100%;
-margin: auto;
-display: flex;
-align-items: center;
-justify-content: center;    
-gap: 50px;
+    .wrapper{
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    gap: 50px;
 
-@include mobile{
-flex-direction: column;
-  }
+    @include mobile{
+    flex-direction: column;
+    }
 
 
-.imageContainer{
+    .imageContainer{
 
     flex: 1;
     height: 50%;
 
     @include mobile{
-width: 100%;
-max-height: 300px;
+    width: 100%;
+    max-height: 300px;
       }
     
     img{
@@ -64,10 +62,8 @@ max-height: 300px;
         object-fit: cover;
 
         @include mobile{
-object-fit: contain;
+        object-fit: contain;
                   }
-        
-
     }
 }
     

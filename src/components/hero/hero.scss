@@ -22,7 +22,7 @@
            @include mobile{
             height: 50%;
             width: 100%;
-            gap: 10px;
+            gap: 20px;
             align-items: center;
             text-align: center;
            }
@@ -36,12 +36,12 @@
                 font-size: 85px;
 
                 @include mobile{
-                    font-size: 25px;
+                    font-size: 30px;
                    }
             }
             .buttons{
                 button{
-                    padding: 10px;
+                    padding: 20px;
                     border: 1px solid white;
                     border-radius:10px;
                     background-color:transparent;

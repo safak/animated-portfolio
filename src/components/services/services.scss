@@ -12,7 +12,7 @@
     align-self: flex-end;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 
     @include mobile{
     align-self: center;
@@ -24,7 +24,7 @@
 
     p{
         font-weight: 200;
-        font-size: 18px;
+        font-size: 20px;
         color: gray;
       text-align: right;
     }
@@ -47,8 +47,6 @@
 
     @include mobile{
       width: 100%;
-      height: 50%;
-  padding: 30px;
          }
 
     .title{
@@ -58,10 +56,8 @@
 
         @include mobile{
           flex-direction: column;
-          text-align:unset;
-          gap: 5px;
-          margin-top: 0;
-          margin-bottom: 0;
+          text-align: center;
+          gap: 20px;
              }
 
         img{
@@ -82,7 +78,6 @@
 
 
         @include mobile{
-          margin-top: 0;
           font-size: 36px;
              }
         }
@@ -138,27 +133,19 @@ margin: auto;
            }
     }
 
-
-
-
-
-
     button{
-       padding: 5px;
+       padding: 10px;
         background-color: orange;
         border: none;
         cursor: pointer;
-
-
 
         @include mobile{
           background-color: transparent;
           border: 1px solid gray;
           border-radius: 5px;
           color: orange;
-          width: 20%;
-          padding: 3px;
-          
+          width: 50%;
+          padding: 5px;
              }
     }
 }
