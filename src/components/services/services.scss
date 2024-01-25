@@ -9,24 +9,36 @@
 
   .textContainer{
     flex: 1;
-    align-self: flex-end;
+    align-self:flex-end;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
+    height: 90%;
 
     @include mobile{
     align-self: center;
     text-align: center;
     flex-direction: column;
-    
+    gap: 5px;
+    height: 80%;
      }
     
 
     p{
-        font-weight: 200;
-        font-size: 20px;
+      height: 100%;
+        font-weight: 300;
+        font-size: 18px;
         color: gray;
       text-align: right;
+      padding-top: 10px;
+
+      @include mobile{
+        height: 50%;
+        width:90%;
+        padding: 10px;
+        font-weight: 200;
+        font-size:large;
+           }  
     }
 
     hr{
@@ -34,9 +46,9 @@
         border: none;
         border-top: 0.5px solid gray; 
 
-        @include mobile{
-        width: 300px;
-           }
+          @include mobile{
+          width: 350px;
+            }
     }
   }
   .titleContainer{
@@ -44,31 +56,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+  
+    width: 100%;
+    height: 50%;
     @include mobile{
+     margin-top: 0;
       width: 100%;
+      height: 100%;
+      justify-content: center;
+ 
          }
 
     .title{
         display: flex;
         align-items: center;
-        gap: 50px;
+ 
 
         @include mobile{
+      
           flex-direction: column;
           text-align: center;
-          gap: 20px;
+          gap: 10px;
              }
 
         img{
             width: 300px;
-            height: 100px;
+            height: 80px;
             border-radius: 50px;
             object-fit: cover;
 
             @include mobile{
-            width: 200px;
-            height: 50px;
+            width: 250px;
+            height: 60px;
 
                  }
         }
@@ -109,6 +128,7 @@ margin: auto;
   
   flex-direction: column;
   width: 100%;
+  margin-bottom: 20px;
      }
 
 
@@ -123,8 +143,8 @@ margin: auto;
 
        border: none;
        align-items: center;
-        gap: 20px;
-        padding: 10px;
+        gap: 10px;
+        padding: 5px;
            }
 
     p{
