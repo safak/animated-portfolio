@@ -6,7 +6,6 @@
     margin: auto;
     display: flex;
     align-items: center;
-    //justify-content: space-between;
     gap:50px;
 
     @include mobile{
@@ -15,43 +14,38 @@
      flex-direction: column;
     }
 
-    .textContainer{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    //margin-top: 50px;
-    //font-size:30px;
+                .textContainer{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
 
-    @include mobile{
-    gap: 20px;
-    text-align: center;
-    align-items: center;
-    margin-top: 70px;
-    //font-size:20px;
+                @include mobile{
+                gap: 20px;
+                text-align: center;
+                align-items: center;
+                margin-top: 70px;
+                    }
 
-   }
+                h1{
+                font-size:100px;
+                line-height: 88px;
 
-    h1{
-    font-size:100px;
-    line-height: 88px;
+                @include mobile{
+                        font-size:36px;
+                    }
 
-    @include mobile{
-            font-size:36px;
-        }
-
-    }
-span{
-    font-weight:300;
-}
-    }
+                }
+                span{
+                font-weight:300;
+                    }
+            }
     .formContainer{
         flex: 1;
         position: relative;
 
-
         @include mobile{
-            padding: 50px;
+            padding: 20px;
             width: 100%;
                }
 
@@ -60,6 +54,11 @@ span{
             position: absolute;
             margin: auto;
             z-index: -1;
+
+            @include mobile{
+                padding: 50px;
+                height: 50%;
+                   }
         }
 
         form{
@@ -67,15 +66,13 @@ span{
             display: flex;
             flex-direction: column;
             gap: 5px;
-       
-            
+
             input,textarea{
                 padding: 20px;
                 background-color: transparent;
                 border: 1px solid white;
                 color: white;
                 border-radius: 5px;
-
 
                 @include mobile{
                 padding: 10px;

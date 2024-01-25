@@ -8,7 +8,7 @@ const textVariants = {
   animate: {
     x: 0,
     opacity: 1,
-    Transition: {
+    transition: {
       duration: 1,
       staggerChildren: 0.1,
     },
@@ -28,7 +28,7 @@ const sliderVariants = {
   },
   animate: {
     x: "-220%",
-    Transition: {
+    transition: {
       repeat: Infinity,
       repeatType: "mirror",
       duration: 20,
@@ -46,11 +46,11 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>HARVEY TYLER</motion.h2>
+          <motion.h2 variants={textVariants}>DAVID YEPES</motion.h2>
           <motion.h1 variants={textVariants}>
             Web developer and UI designer
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
+          <motion.div className="buttons" variants={textVariants} >
             <motion.button variants={textVariants}>
               See the Latest Works
             </motion.button>
@@ -69,8 +69,7 @@ const Hero = () => {
         variants={sliderVariants}
         initial="initial"
         animate="animate"
-      >
-        Writer Content Creator Influencer
+      >Writer Content Creator Influencer
       </motion.div>
 
       <div className="imageContainer">

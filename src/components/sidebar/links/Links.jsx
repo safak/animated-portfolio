@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import * as React from 'react'
 const variants = {
   open: {
     transition: {
@@ -14,6 +14,7 @@ const variants = {
   },
 };
 
+
 const itemVariants = {
   open: {
     y: 0,
@@ -26,7 +27,7 @@ const itemVariants = {
 };
 
 const Links = () => {
-  const items = ["Hompage", "Service", "Portfolio", "Contact", "About"];
+  const items = ["Homepage", "Services", "Portfolio", "Contact", "About"];
 
   return (
     <motion.div className="links" variants={variants}>

@@ -32,8 +32,8 @@ const Services = () => {
       //animate="animate"
       //whileInView="animate"
       ref={ref}
-      //animate={isInView && "animate"}
-      animate={"animate"}
+      animate={isInView && "animate"}
+      //animate={"animate"}
     >
       <motion.div
         className="textContainer"
@@ -54,7 +54,7 @@ const Services = () => {
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>Business.
+            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b> Business.
           </h1>
           <button>WHAT WE DO?</button>
         </div>
