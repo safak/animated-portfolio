@@ -1,0 +1,50 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* body {
+  background-color: #f0f0f5;
+  color: #333;
+} */
+
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+/* .course {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+  }
+
+  .button {
+    margin-right: 40px;
+    z-index: 10;
+  }
+}
+ */

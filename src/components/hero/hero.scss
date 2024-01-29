@@ -1,0 +1,89 @@
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background: linear-gradient(180deg, #111132, #0c0c1d, #111132);
+  position: relative;
+
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+
+    .textContainer {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      h2 {
+        font-size: 30px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+      }
+
+      h1 {
+        font-size: 88px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 2rem;
+
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background: transparent;
+          color: white;
+          font-size: 16px;
+          font-weight: normal;
+        }
+        button:hover {
+          cursor: pointer;
+          border: transparent;
+          background: white;
+          color: black;
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .imageContainer {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      width: 880px;
+      object-fit: contain;
+      height: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px; // Adjust the height of the gradient overlay as needed
+      background: linear-gradient(180deg, rgba(17, 17, 50, 0), #0c0c1d);
+      pointer-events: none; // Allows clicking through the pseudo-element to the image
+    }
+  }
+
+  .slidingContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff09;
+    font-weight: bold;
+  }
+}
