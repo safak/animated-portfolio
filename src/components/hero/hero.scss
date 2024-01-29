@@ -72,9 +72,9 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 60px; // Adjust the height of the gradient overlay as needed
+      height: 60px;
       background: linear-gradient(180deg, rgba(17, 17, 50, 0), #0c0c1d);
-      pointer-events: none; // Allows clicking through the pseudo-element to the image
+      pointer-events: none;
     }
   }
 
