@@ -40,7 +40,7 @@ const Services = () => {
         variants={variants}
       >
         <p>
-          focus on helping your brand grow
+          I focus on helping your brand grow
           <br /> and move forward
         </p>
         <hr />
@@ -66,9 +66,11 @@ const Services = () => {
         >
           <h2>Branding</h2>
           <p>
-            lore ipsumdhfjdfhjhfdjhdfjfdjfh dfh kdj djhdfdfh djfhjjdf d dfj dfl
-            ljsañdkñ djfkjdlkjkfjg fgkfjfg jfgkjfgkj fgjkj fgk kf kfjgjfg
-            lñññkdfññfkgkf gfl?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
+
           </p>
           <button>Go</button>
         </motion.div>
@@ -76,11 +78,13 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Design</h2>
           <p>
-            lore ipsumdhfjdfhjhfdjhdfjfdjfh dfh kdj djhdfdfh djfhjjdf d dfj dfl
-            ljsañdkñ djfkjdlkjkfjg fgkfjfg jfgkjfgkj fgjkj fgk kf kfjgjfg
-            lñññkdfññfkgkf gfl?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
+
           </p>
           <button>Go</button>
         </motion.div>
@@ -88,11 +92,13 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Development</h2>
           <p>
-            lore ipsumdhfjdfhjhfdjhdfjfdjfh dfh kdj djhdfdfh djfhjjdf d dfj dfl
-            ljsañdkñ djfkjdlkjkfjg fgkfjfg jfgkjfgkj fgjkj fgk kf kfjgjfg
-            lñññkdfññfkgkf gfl?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
+
           </p>
           <button>Go</button>
         </motion.div>
@@ -100,11 +106,12 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Testing</h2>
           <p>
-            lore ipsumdhfjdfhjhfdjhdfjfdjfh dfh kdj djhdfdfh djfhjjdf d dfj dfl
-            ljsañdkñ djfkjdlkjkfjg fgkfjfg jfgkjfgkj fgjkj fgk kf kfjgjfg
-            lñññkdfññfkgkf gfl?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+
           </p>
           <button>Go</button>
         </motion.div>

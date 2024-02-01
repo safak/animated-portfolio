@@ -9,7 +9,10 @@
     z-index: 999;
 
     @include mobile{
-        display: none;
+        display:none;
+     
+        
+
     }
 
 }

@@ -4,28 +4,27 @@ import { useRef } from "react";
 const items = [
   {
     id: 1,
-
-    title: "React Commerce",
+    title: "Ecommerce App",
     img: "https://images.pexels.com/photos/19642432/pexels-photo-19642432/free-photo-of-resfriado-nieve-montanas-punto-de-referencia.jpeg?auto=compress&cs=tinysrgb&w=400",
-    desc: "lore ipsu kjdkfjlklkljsd tyyuyuiu tu uhy9io899o0 ygun yu878r8ooui9re3fghgyi y887 t7t777g t7yr tyvb56 55",
+    desc: "Morning control cloud fairly captain stronger variety feet excitement matter sent lost hurried closely learn wonder planning poetry ten life national there orbit regular.",
   },
   {
     id: 2,
     title: "Music App",
     img: "https://images.pexels.com/photos/547119/pexels-photo-547119.jpeg?auto=compress&cs=tinysrgb&w=400",
-    desc: "lore ipsu kjdkfjlklkljsd tyyuyuiu tu uhy9io899o0 ygun yu878r8ooui9re3fghgyi y887 t7t777g t7yr tyvb56 55",
+    desc: "Morning control cloud fairly captain stronger variety feet excitement matter sent lost hurried closely learn wonder planning poetry ten life national there orbit regular",
   },
   {
     id: 3,
-    title: "Next.js Blog",
+    title: "Motorcycle Repair App",
     img: "https://images.pexels.com/photos/3996362/pexels-photo-3996362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: "lore ipsu kjdkfjlklkljsd tyyuyuiu tu uhy9io899o0 ygun yu878r8ooui9re3fghgyi y887 t7t777g t7yr tyvb56 55",
+    desc: "Morning control cloud fairly captain stronger variety feet excitement matter sent lost hurried closely learn wonder planning poetry ten life national there orbit regular",
   },
   {
     id: 4,
-    title: "vanilla JS App",
+    title: "Meal Ordering App",
     img: "https://images.pexels.com/photos/238622/pexels-photo-238622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: "lore ipsu kjdkfjlklkljsd tyyuyuiu tu uhy9io899o0 ygun yu878r8ooui9re3fghgyi y887 t7t777g t7yr tyvb56 55",
+    desc: "Morning control cloud fairly captain stronger variety feet excitement matter sent lost hurried closely learn wonder planning poetry ten life national there orbit regular",
   },
 ];
 
@@ -33,7 +32,7 @@ const Single = ({ item }) => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
-   //  offset: ["start start","end start"],
+
   });
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
