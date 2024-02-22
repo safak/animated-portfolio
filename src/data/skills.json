@@ -1,0 +1,58 @@
+[
+    {
+      "title": "HTML",
+      "imageSrc": "skills/html.png"
+    },
+    {
+      "title": "CSS",
+      "imageSrc": "skills/css.png"
+    },
+    {
+        "title": "SASS",
+        "imageSrc": "skills/sass.png"
+    },
+    {
+        "title": "Java Script",
+        "imageSrc": "skills/js.png"
+    },
+    {
+      "title": "React",
+      "imageSrc": "skills/react.png"
+    },
+    {
+        "title": "Python",
+        "imageSrc": "skills/python.png"
+    },
+    {
+        "title": "Django",
+        "imageSrc": "skills/django.png"
+    },
+    {
+        "title": "Node",
+        "imageSrc": "skills/node.png"
+    },
+    {
+      "title": "GraphQL",
+      "imageSrc": "skills/graphql.png"
+    },
+    {
+      "title": "PostgreSQL",
+      "imageSrc": "skills/postgresql.png"
+    },
+    {
+      "title": "Figma",
+      "imageSrc": "skills/figma.png"
+    },
+    {
+      "title": "Azure",
+      "imageSrc": "skills/azure.png"
+    },
+    {
+      "title": "Azure AD",
+      "imageSrc": "skills/azuread.png"
+    },
+    {
+      "title": "Terraform",
+      "imageSrc": "skills/terraform.png"
+    }
+  ]

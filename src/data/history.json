@@ -1,0 +1,31 @@
+[
+  {
+    "role": "Cloud Security Operations Analyst",
+    "organisation": "Tata Consultancy Services",
+    "startDate": "Aug 2022",
+    "endDate": "Dec 2022",
+    "experiences": [
+      "Worked on various IAM Activities",
+      "Identified Non-Compliant resources and remediated accordingly"
+    ],
+    "imageSrc": "history/tcs.png"
+  },  
+  {
+    "role": "Security Developer",
+    "organisation": "Tata Consultancy Services",
+    "startDate": "Nov 2021",
+    "endDate": "Aug 2022",
+    "experiences": ["Developed various Azure policies", "Developed logic Apps, Function Apps"],
+    "imageSrc": "history/tcs.png"
+  },
+  {
+      "role": "Systems Engineer",
+      "organisation": "Tata Consultancy Services",
+      "startDate": "July 2021",
+      "endDate": "Nov 2021",
+      "experiences": ["Deployed Infrastructure using Terraform", "Worked on Azure AD"],
+      "imageSrc": "history/tcs.png"
+    }
+    
+ 
+  ]
