@@ -2,7 +2,7 @@ import React from 'react'
 
 const ToggleButton = ({setOpen}) => {
   return (
-    <button>
+    <button onClick={()=> setOpen((prev) => !prev)}>
         bruh
     </button>
   )
