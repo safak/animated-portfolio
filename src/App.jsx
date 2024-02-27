@@ -7,12 +7,12 @@ import Contact from "./components/contact/Contact";
 import Experience from "./components/experience/Experience";
 const App = () => {
   return <div>
-    <section id="Homepage">
+    <section id="Home">
       <Navbar />
       <Hero />
     </section>
-    <section id="Services"><Parallax/></section>
-    <Experience />
+    <section id="About Me"><Parallax/></section>
+    <section id="Experience & Skills"><Experience /></section>
     <Portfolio />
     <section id="Contact"><Contact /></section>
   </div>;
