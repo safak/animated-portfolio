@@ -1,3 +1,4 @@
+import React from 'react'
 import "./hero.scss";
 import { motion } from "framer-motion";
 const textVariants = {

@@ -1,3 +1,4 @@
+import React from 'react'
 import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";

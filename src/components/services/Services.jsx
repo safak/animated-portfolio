@@ -1,3 +1,4 @@
+import React from 'react'
 import "./services.scss";
 import { animate, motion, useInView } from "framer-motion";
 import { useRef } from "react";

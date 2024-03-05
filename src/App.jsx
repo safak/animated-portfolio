@@ -1,3 +1,5 @@
+
+import React from "react";
 import "./app.scss";
 import Contact from "./components/contact/Contact";
 import Cursor from "./components/cursor/Cursor";

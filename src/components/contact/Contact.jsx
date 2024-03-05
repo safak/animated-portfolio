@@ -1,5 +1,5 @@
 import "./contact.scss";
-
+import React from 'react'
 import {motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
