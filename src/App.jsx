@@ -2,6 +2,7 @@ import "./app.scss"
 import Navbar from "./components/navbar/Navbar"
 import Welcome from "./components/Welcome/Welcome"
 import Parallax from "./components/Parallax/Parallax";
+
 const App = () => {
   return <div>
     <section id="Home">
