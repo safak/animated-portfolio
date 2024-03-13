@@ -1,0 +1,71 @@
+.welcome {
+    height: calc(100vh - 100px);
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+    overflow: hidden;
+    position: relative;
+
+    .wrapper{
+        max-width: 1366px;
+        height: 100%;
+        margin: auto;
+
+        .textContainer{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+
+            h1{
+                font-size: 90px;
+            }
+            h2{
+                font-size: 60px;
+                color: aqua;
+                letter-spacing: 10px;
+            }
+
+            button{
+                font-size: 20px;
+                padding: 10px;
+                border: 1px solid white;
+                background: transparent;
+                border-radius: 10%;
+                color: white;
+                width: 200px;
+                height: 70px;
+                cursor: pointer;
+            }
+
+            img{
+              height: 50px;
+              width: 50px;
+            }
+        }
+    }
+
+    .imageContainer{
+        img{
+            border: 10px solid black;
+            border-radius: 20%;
+            margin-right: 80px;
+            margin-top: 150px;
+            width: 70%;
+        }
+     height: 100%;
+     position: absolute;
+     top: 0;
+     right: 0;
+    }
+
+    .slidingText{
+        position: absolute;
+        font-size: 50vh;
+        bottom: -120px;
+        white-space: nowrap;
+        color: #ffffff09;
+        width: 85%;
+        font-weight: bold;
+    }
+}

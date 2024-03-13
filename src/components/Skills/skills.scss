@@ -1,0 +1,59 @@
+.skills{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .container1{
+     width: 100%;
+     margin: 10px;
+     margin-right: 5px;
+     text-align: center;
+     font-size: 70px;
+     font-weight: bolder;
+     
+      div{
+        margin: 10px;
+        width: 100%;
+        height: 50vh;
+        background-color: gold;
+        color: #0c0c1d;
+        .section1{
+            overflow: hidden;
+            background-color: gold;
+
+            .images{
+                display: flex;
+                
+               img{
+                height: 20px;
+                width: 20px;
+               }
+            }
+        }
+        
+
+    }
+    }
+    .container2{
+        width: 100%;
+        margin: 10px;
+        margin-left: 5px;
+        text-align: center;
+        font-size: 70px;
+        font-weight: bolder;
+        div{
+          margin: 10px;
+          width: 100%;
+          height: 50vh;
+          
+          color: gold;
+          .section4{
+            background-color: gold;
+          }
+         .section3{
+            background-color: #0c0c1d;
+         }
+      }
+      }
+   
+}
