@@ -7,6 +7,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter basename='/animated-portfolio'>
     <App />
+
+      
     </BrowserRouter>
   </React.StrictMode>,
 )
