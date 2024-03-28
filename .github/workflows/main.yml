@@ -1,0 +1,32 @@
+on: 
+  push:
+    branches:
+      - main
+name: 🚀 Deploy website on push
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+
+    - name: Use Node.js 16
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+      
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ftp.05-tech.com
+        username: zainab@05-tech.com
+        password: Almasoodi5
+        protocol: ${{ secrets.GIT_CPANEL_REACT_PROTOCOL }}
+        local-dir: ./dist/
