@@ -1,0 +1,53 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 400px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      .links {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+  
+        a {
+          font-size: 40px; 
+          text-decoration: none; 
+          color: black;
+        }
+      }
+    }
+  
+    button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: fixed;
+      top: 25px;
+      left: 25px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  
