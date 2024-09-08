@@ -1,0 +1,52 @@
+@import "../../app.scss";
+
+.navbar {
+    height: 120px; /* Increased height */
+
+    .wrapper {
+        max-width: 1366px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        @include mobile {
+            justify-content: flex-end;
+            padding: 20px;
+        }
+        @include tablet {
+            justify-content: flex-end;
+            padding: 30px;
+        }
+
+        span {
+            font-weight: bold;
+            padding-left: 50px;
+            font-size: 24px; /* Increased font size */
+
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+        }
+
+        .social {
+            display: flex;
+            gap: 20px;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 40px; 
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

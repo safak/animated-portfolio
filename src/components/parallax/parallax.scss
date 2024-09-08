@@ -1,0 +1,163 @@
+@import "../../app.scss";
+
+.parallax {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        @include tablet {
+            top: 50px;
+        }
+
+        @include mobile {
+            top: 10%;
+            transform: translateY(0);
+            width: 100%;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 40px;
+
+            @include mobile {
+                font-size: 36px;
+                text-align: center;
+            }
+        }
+
+        .sections {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 20px;
+
+                @include mobile {
+                    margin: 20px 0;
+                }
+
+                h2 {
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                    color: white;
+
+                    @include mobile {
+                        font-size: 28px;
+                        text-align: center;
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        img {
+                            width: 80px;
+                            height: 80px;
+
+                            @include mobile {
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+
+                        p {
+                            font-size: 20px;
+                            color: white;
+
+                            @include mobile {
+                                font-size: 16px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .timeline {
+                width: 2px;
+                background-color: white;
+                height: 80%;
+                z-index: 3;
+
+                @include mobile {
+                    height: auto;
+                    width: 2px;
+                    margin: 20px 0;
+                    background-color: white;
+                }
+            }
+        }
+    }
+
+    .mountains {
+        background-image: url("/images/mountains.png");
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+
+        @include mobile {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .planets {
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+
+        @include tablet {
+            top: 20px;
+        }
+    }
+
+    .stars {
+        background-image: url("/images/stars.png");
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+}

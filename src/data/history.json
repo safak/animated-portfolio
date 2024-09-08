@@ -1,0 +1,38 @@
+[
+  {
+    "role": "Full Stack Developer",
+    "organisation": "Virginia Tech",
+    "startDate": "May 2024",
+    "endDate": "Present",
+    "experiences": [
+      "Containerized the AutoGPT application with Docker. Developed a Python plugin for the Materials Database API, increasing response accuracy by 85% and reducing query time."
+    ],
+    "imageSrc": "history/vt.png"
+  },  
+  {
+    "role": "Software Developer",
+    "organisation": "Bright Mind Enrichment (NGO)",
+    "startDate": "May 2024",
+    "endDate": "Present",
+    "experiences": ["Created a User Badges Earned, Visit Log screens in the Street Care App using Kotlin and Firebase, boosting user engagement. Identified and fixed critical bugs, reducing app and managed code versions using Git and Trello."],
+    "imageSrc": "history/bme.png"
+  },
+  {
+      "role": "Software Developer",
+      "organisation": "Tata Consultancy Services",
+      "startDate": "Jan 2021",
+      "endDate": "Dec 2022",
+      "experiences": ["Integrated REST APIs with Python backend, boosting application performance. Redesigned e-commerce platform using React. Automated AWS infrastructure deployment, streamlining development."],
+      "imageSrc": "history/tcs.png"
+    },
+    {
+      "role": "Software Developer Intern",
+      "organisation": "Sparks Foundation",
+      "startDate": "Aug 2020",
+      "endDate": "Jan 2021",
+      "experiences": ["Enhanced the responsiveness of internal website. Effectively managed Agile software workflow"],
+      "imageSrc": "history/sparks.png"
+    }
+    
+ 
+  ]
