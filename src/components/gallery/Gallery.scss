@@ -1,0 +1,219 @@
+@import "../../app.scss";
+.gallery {
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+    position: relative;
+    height: calc(100vh - 50px);
+    
+
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 28%;
+        margin-left: 200px;
+        @include mobile{
+         display: none;
+      }
+    }
+
+    .wrapper{
+        max-width: 1366px;
+        height: 100%;
+        justify-content: space-between; 
+        align-items: end;
+        margin-top: 5%; 
+    
+        .textContainer{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 25px;
+            margin-left: 50px;
+            
+            @include mobile{
+                margin-top: 25%;
+                width: 90%;
+                height: 50%;
+                gap: 20px;
+                text-align: center;
+                margin-left: 20px;
+            }
+    
+            h2{
+                font-size: 40px;
+                color: #fefae0;
+                @include mobile{
+                  margin-top: 80px;
+                  font-size: 2rem;
+              }
+            }
+    
+            h1{
+                font-size: 80px;
+                color: #fa9a2c;
+    
+                @include mobile{
+                    margin-top: 2rem;
+                    font-size: 3.5rem;
+                }
+            }
+
+            h3 {
+                font-size: 25px;
+                @include mobile{
+                  margin-top: 3rem;;
+                  font-size: 1.2rem;
+              }
+
+            }
+    
+            img{
+                margin-top: 20px;
+                width: 50px;
+              //   @include mobile{
+              //     margin-top: 0px;
+              // }
+                
+            }
+    
+            .buttons{
+                a {button{
+                    font-size: 20px;
+                    padding: 20px;
+                    border: 1px solid white;
+                    background-color: transparent;
+                    color: white;
+                    border-radius: 10px;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    position: relative;
+                    z-index:1;
+                }
+            }
+            
+            }
+        }
+    }
+  }
+  
+  .project-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; // Needed for the flip effect
+    margin-bottom: 20px;
+  
+    img, .overlay {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+  
+    img {
+      backface-visibility: hidden;
+      // border-radius: 10px;
+    }
+  
+    .info-tags {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      gap: 5px;
+      
+      .tag {
+        background-color: #dda15e;
+        color: #f2f4f3;
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: 0.8em;
+      }
+    }
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      background: #e9e7e2;
+      // border-radius: 10px;
+      color: black;
+      transform: rotateY(180deg);
+      backface-visibility: hidden; // Hide the back of the back panel
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+      visibility: hidden;
+  
+      .title {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+  
+      .description {
+        font-size: 1em;
+      }
+
+      .project-link{
+        font-size: 0.8em;
+        background-color: #f4af61;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px;
+      }
+    }
+  
+    &:hover img {
+      transform: rotateY(-180deg);
+    }
+  
+    &:hover .overlay {
+      opacity: 1;
+      visibility: visible;
+      transform: rotateY(0deg);
+    }
+  }
+
+  .slidingtextContainer{
+    position: absolute;
+    font-size: 50vh;
+    top: 320px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+    @include mobile{
+      top: 200px;
+      font-size: 30vh;
+  }
+}
+
+// .social{
+//   display: flex;
+//   gap: 5px;
+
+//   img{
+//       width: 50px;
+//       height: 50px;
+//       object-fit: cover;
+//       margin-top: 5px;
+//   }
+
+
+// }

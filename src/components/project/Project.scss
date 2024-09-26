@@ -1,0 +1,261 @@
+@import "../../app.scss";
+.project {
+    display: flex;
+    flex-wrap: row;
+    justify-content:end;
+    align-items: start;
+    overflow: hidden;
+    position: relative;
+    height: calc(100vh + 50px);
+    @include mobile{
+      flex-direction: column;
+      justify-content: start;
+      //align-items: center;
+    }
+    
+
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-right: 100px;
+        @include mobile{
+          margin-left: 80px;
+          margin-right: reset;
+          flex: 1;}
+    }
+
+    .wrapper{
+        display: flex;
+        flex: 3;
+        flex-direction: column;
+        max-width: 1366px;
+        height: 100%;
+        justify-content: space-between; 
+        align-items: start;
+        //margin-top: 5%; 
+    
+        .textContainer{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: end;
+            text-align: right;
+            gap: 25px;
+            padding: 50px;
+            margin-left: 150px;
+            
+            @include mobile{
+                margin-top: 25%;
+                width: 70%;
+                height: 50%;
+                gap: 20px;
+                text-align: center;
+                display: none;
+            }
+    
+            h2{
+                font-size: 40px;
+                color: #fefae0;
+                @include mobile{
+                  margin-top: 50px;
+                  font-size: 30px;
+              }
+            }
+    
+            h1{
+                font-size: 50px;
+                color: #fa9a2c;
+    
+                @include mobile{
+                    font-size:50px;
+                }
+            }
+
+            h3 {
+                font-size: 25px;
+
+            }
+    
+            img{
+                margin-top: 20px;
+                width: 50px;
+              //   @include mobile{
+              //     margin-top: 0px;
+              // }
+                
+            }
+    
+            .buttons{
+                a {button{
+                    position: relative;
+                    font-size: 15px;
+                    padding: 20px;
+                    border: 1px solid white;
+                    background-color: transparent;
+                    color: white;
+                    border-radius: 10px;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    position: relative;
+                    z-index:1;
+                }
+            }
+            
+            }
+        }
+    }
+  }
+  
+  .project-card {
+    position: relative;
+    width: 450px;
+    height: 300px;
+    perspective: 1000px; // Needed for the flip effect
+    margin-bottom: 20px;
+
+    @include mobile{
+      width: 300px;
+      height: 200px;
+  }
+  
+    img, .overlay {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+  
+    img {
+      backface-visibility: hidden;
+      // border-radius: 10px;
+    }
+  
+    .info-tags {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      gap: 5px;
+      
+      .tag {
+        background-color: #dda15e;
+        color: #f2f4f3;
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: 0.8em;
+      }
+    }
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      background: #e9e7e2;
+      // border-radius: 10px;
+      color: black;
+      transform: rotateY(180deg);
+      backface-visibility: hidden; // Hide the back of the back panel
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+      visibility: hidden;
+  
+      .title {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+  
+      .description {
+        font-size: 1em;
+      }
+    }
+  
+    &:hover img {
+      transform: rotateY(-180deg);
+    }
+  
+    &:hover .overlay {
+      opacity: 1;
+      visibility: visible;
+      transform: rotateY(0deg);
+    }
+  }
+
+  .slidingtextContainer{
+    position: absolute;
+    font-size: 50vh;
+    top: 320px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+    @include mobile{
+      top: 200px;
+      font-size: 30vh;
+  }
+}
+
+.dropbtn {
+  position: relative;
+  background-color: #3e8e41;
+  color: white;
+  padding: 16px;
+  font-size: 60px;
+  border: none;
+  z-index: 999;
+  
+  cursor: pointer;
+  @include mobile{
+    //top: -20px;
+    //padding: 0 200px;
+    font-size: 5vh;
+}
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  //float: right;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #04AA6D;}

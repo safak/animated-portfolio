@@ -1,0 +1,177 @@
+@import "../../app.scss";
+.swiper-container{
+    justify-content: center;
+    text-align: center;
+    width: 95%;
+    margin-left: 50px;
+}
+
+.mySwiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72vh;
+  padding: 20px 60px;
+  
+}
+
+.project-header{
+    height: 14vh;
+}
+
+.swiper-head{
+    font-size: 4rem;
+    span{
+        color: #fa9a2c;
+        font-size: 5rem;
+
+
+    }
+    button {
+        padding: 15px 20px;
+        border: none;
+        font-size: 1rem;
+        margin-left: 50px;
+        border-radius: 25px;
+        background-color: orange;
+        color: black;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(10, 120, 237);
+          color: white;
+        }
+      }
+}
+.swiper-slide {
+  padding: 20px;
+  border-radius: 10px;
+  border: #dedede 1px solid;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .swiper-img {
+    padding: 10px 5px;
+    height: 25vh;
+    margin: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .swiper-content {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    overflow: scroll;
+
+    h3{
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      font-weight: 900;
+      color:#e7e7e4;
+      
+    }
+    p {
+      font-size: 0.9rem;
+      color: rgb(197, 197, 197);
+      text-align: justify;
+    }
+  }
+
+  .swiper-footer {
+    text-align: center;
+    //height: 8vh;
+    button {
+      padding: 12px 12px;
+      border: none;
+      font-size: 0.7rem;
+      border-radius: 25px;
+      background-color: orange;
+      color: black;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(10, 120, 237);
+        color: white;
+      }
+    }
+  }
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #fa9a2c;
+  }
+
+.swiper-pagination-bullet {
+    background-color: #fa9a2c;
+}
+
+.features{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .feature{
+    background-color: rgb(69, 125, 52);
+    color: rgb(232, 223, 223);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+
+     }
+
+
+     @media (max-width: 768px) {
+        .swiper-container {
+            margin-left: 20px;
+        }
+    
+        .mySwiper {
+            height: 100%;
+            padding: 1rem;
+        }
+    
+        .project-header {
+            height: 10vh;
+        }
+    
+        .swiper-head {
+            margin-top: 20px;
+            font-size: 3rem;
+            font-weight: 900;
+            span {
+                font-size: 4rem;
+            }
+            button {
+                padding: 0.8rem 1rem;
+                font-size: 0.7rem;
+                margin-left: 20px;
+                border-radius: 1.5rem;
+
+            }
+        }
+    
+        .swiper-slide {
+            margin-top: 20px;
+            height: 70vh;
+            //min-height: 480px;
+            .swiper-img {
+                height: 25vh;
+            }
+            .swiper-content {
+                height: 20vh;
+                h3 {
+                    font-size: 0.9rem;
+                }
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
