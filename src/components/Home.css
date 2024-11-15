@@ -1,0 +1,133 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-image: url('../assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Ensure the background doesn't move */
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 0 50px;
+  position: relative;
+}
+
+.welcome-text {
+  flex: 2;
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.welcome-text.move-right {
+  transform: translateX(300px); /* Move text to the right */
+}
+
+.welcome-text h1 {
+  font-size: 80px;
+  font-weight: bold;
+  margin: 0;
+  color: white; /* Default color for the main heading */
+}
+
+.welcome-text .brand-name {
+  margin-top: 10px;
+  font-size: 70px;
+  font-weight: bold;
+  color: purple;
+}
+
+.sub-heading {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.anovos {
+  font-size: 65px;
+  text-align: center;
+  color: purple;
+  transition: color 0.5s ease;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anovos-image {
+  width: 600px;
+  height: 600px;
+  border-radius: 10px;
+}
+
+/* Image Bar for logos */
+.image-bar {
+  position: absolute;
+  bottom: -50px; /* Position the bar just below the text */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between the images */
+  background-color: #2d1b69; /* Dark Purple background */
+  padding: 20px 0; /* Add some padding for spacing */
+  border-radius: 10px; /* Optional: rounded corners */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Class that moves the image bar and text to the right */
+.image-bar.move-right,
+.welcome-text.move-right {
+  transform: translateX(300px); /* Move the elements to the right */
+}
+
+.image-bar img {
+  width: 80px; /* Adjust the size of the logos */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-bar img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Rainbow Color Animation */
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.welcome-text.move-right h1,
+.welcome-text.move-right .brand-name,
+.welcome-text.move-right .sub-heading,
+.welcome-text.move-right .anovos {
+  animation: rainbow 3s linear infinite; /* Apply rainbow animation specifically */
+}

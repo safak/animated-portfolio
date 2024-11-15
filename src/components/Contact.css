@@ -1,0 +1,93 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../assets/bg.png'); /* Ensure the bg.png is in the correct folder */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .contact-heading h1 {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-100px); /* Move up out of view */
+    animation: fadeInUp 1s forwards ease-out, rainbowGlowText 5s linear infinite; /* Apply both animations */
+  }
+  
+  /* Fade-in and slide-up animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Rainbow color effect for text */
+  @keyframes rainbowGlowText {
+    0% {
+      color: red;
+    }
+    25% {
+      color: orange;
+    }
+    50% {
+      color: yellow;
+    }
+    75% {
+      color: green;
+    }
+    100% {
+      color: blue;
+    }
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 30px; /* Increased gap between icons */
+    margin-top: 20px;
+  }
+  
+  .icon {
+    font-size: 60px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer; /* Add pointer cursor for better interactivity */
+  }
+  
+  .icon:hover {
+    transform: scale(1.2); /* Zoom in effect on hover */
+    animation: rainbowGlow 1s ease-in-out infinite; /* Rainbow color effect */
+  }
+  
+  /* Rainbow color effect for icons */
+  @keyframes rainbowGlow {
+    0% {
+      color: red;
+    }
+    25% {
+      color: orange;
+    }
+    50% {
+      color: yellow;
+    }
+    75% {
+      color: green;
+    }
+    100% {
+      color: blue;
+    }
+  }
+  
