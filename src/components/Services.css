@@ -1,0 +1,120 @@
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../assets/bg.png');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .services-container.visible {
+    opacity: 1; /* Fade in when it becomes visible */
+  }
+  
+  .services-container.coming-from-right {
+    transform: translateX(100%); /* Move off-screen to the right */
+    transition: transform 1s ease-in-out; /* Smooth transition for coming from right */
+  }
+  
+  .services-container.visible.coming-from-right {
+    transform: translateX(0); /* Bring the container into view from the right */
+  }
+  
+  .services-heading {
+    font-size: 65px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.5);
+    animation: glowEffect 1.5s infinite alternate;
+  }
+  
+  @keyframes glowEffect {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 255, 0.8), 0 0 15px rgba(0, 0, 255, 1);
+    }
+    50% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 0, 255, 0.8), 0 0 30px rgba(255, 0, 255, 1);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 255, 0.8), 0 0 15px rgba(0, 0, 255, 1);
+    }
+  }
+  
+  .services-boxes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    transform: translateX(-100%); /* Initially off-screen */
+    transition: transform 1s ease-out; /* Smooth transition when entering */
+  }
+  
+  .services-boxes.visible {
+    transform: translateX(0); /* Move into view when it becomes visible */
+  }
+  
+  .service-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 255, 0.6), rgba(75, 0, 130, 0.5));
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 5px solid #808080;
+    box-shadow: 0 0 5px rgba(0, 0, 139, 0.7), 0 0 10px rgba(0, 0, 139, 0.6), 0 0 15px rgba(0, 0, 139, 0.5);
+    transition: transform 0.3s ease, border 2s linear;
+    position: relative;
+  }
+  
+  .service-box:hover {
+    transform: scale(1.05);
+    animation: rainbowBorder 2s infinite;
+  }
+  
+  /* Rainbow border animation */
+  @keyframes rainbowBorder {
+    0% {
+      border-color: red;
+    }
+    14% {
+      border-color: orange;
+    }
+    28% {
+      border-color: yellow;
+    }
+    42% {
+      border-color: green;
+    }
+    57% {
+      border-color: blue;
+    }
+    71% {
+      border-color: indigo;
+    }
+    85% {
+      border-color: violet;
+    }
+    100% {
+      border-color: red;
+    }
+  }
+  
+  .service-text {
+    text-align: center;
+    z-index: 2;
+  }
+  
