@@ -1,0 +1,154 @@
+@import "../../app.scss";
+
+.portfolio {
+  position: relative;
+
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 36px;
+
+    @include mobile {
+      padding-top: calc(100vh - 100px);
+      font-size: 24px;
+    }
+
+    @media (min-width: 600px) and (max-width: 1024px) {
+      font-size: 30px;
+      padding-top: 70px;
+    }
+
+    .progressBar {
+      height: 10px;
+      background-color: white;
+    }
+
+    h1{
+      font-size: 45px;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wrapper {
+      max-width: 1366px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      @media (min-width: 600px) and (max-width: 1024px) {
+        flex-direction: column;
+        gap: 20%;
+      }
+
+      .imageContainer {
+        flex: 1;
+        height: 50%;
+
+        @include mobile {
+          width: 100%;
+          max-height: 300px;
+        }
+
+        @media (min-width: 600px) and (max-width: 1024px) {
+          height: 40%;
+          width: 80%;
+          margin-top: 20%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          @include mobile {
+            object-fit: contain;
+          }
+
+          @media (min-width: 600px) and (max-width: 1024px) {
+            object-fit: contain;
+          }
+        }
+      }
+
+      .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include mobile {
+          transform: none !important;
+          padding: 10px;
+          align-items: center;
+          text-align: center;
+        }
+
+        @media (min-width: 600px) and (max-width: 1024px) {
+          padding: 40px;
+          align-items: center;
+          text-align: center;
+        }
+
+        
+
+        h2 {
+          font-size: 72px;
+
+          @include mobile {
+            font-size: 36px;
+          }
+
+          @media (min-width: 600px) and (max-width: 1024px) {
+            font-size: 48px;
+          }
+        }
+
+        p {
+          color: gray;
+          font-size: 20px;
+
+          @include mobile {
+            font-size: 16px;
+          }
+
+          @media (min-width: 600px) and (max-width: 1024px) {
+            font-size: 30px;
+          }
+        }
+
+        button {
+          background-color: orange;
+          border: none;
+          border-radius: 10px;
+          padding: 10px;
+          width: 200px;
+          cursor: pointer;
+
+          @media (min-width: 600px) and (max-width: 1024px) {
+            width: 300px;
+            font-size: 30px;
+
+          }
+        }
+      }
+    }
+  }
+}

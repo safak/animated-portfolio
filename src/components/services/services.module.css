@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+  overflow: visible;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  img {
+    width: 20px;
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    margin-top: 100px;
+  }
+
+}
+
+.skillList {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  max-width: 26ch;
+}
+
+hr {
+  width: 100px;
+  height: 1px;
+  border: none;
+  background-color: var(--text-color);
+  margin: 30px auto;
+}
+
+@media (width >=800px) {
+  .skillList {
+    max-width: fit-content;
+    gap: 30px;
+
+    p {
+      font-size: 15px;
+
+      @media (min-width: 600px) and (max-width: 1024px) {
+        font-size: 30px;
+      }
+    }
+
+
+  }
+
+  hr {
+    width: 300px;
+  }
+
+}
+
+h1 {
+  font-size: 40px;
+  color: aliceblue;
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    font-size: 50px;
+  }
+}
+
+b {
+  color: rgb(177, 68, 177);
+}
+
+.lead {
+  margin: 30px auto;
+  padding: 10px;
+  max-width: 800px;
+  /* Prevent text from being too wide on large screens */
+  font-size: 0.8rem;
+  /* Default font size */
+  line-height: 1.6;
+  /* Improve readability */
+  color: var(--text-color, #fff);
+  /* Use a variable or fallback color */
+  text-align: center;
+  overflow-wrap: break-word;
+  /* Ensures words break properly */
+
+  @media (min-width: 600px) {
+    font-size: 18px;
+    line-height: 1.8;
+    /* Adjust line spacing for better readability */
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lead {
+    font-size: 0.9rem;
+    /* Reduce font size */
+    line-height: 1.4;
+    /* Adjust line spacing */
+    max-width: 95%;
+    /* Allow more width for text */
+    margin-top: 0;
+  }
+
+  .container {
+    margin-bottom: 20px;
+  }
+}
