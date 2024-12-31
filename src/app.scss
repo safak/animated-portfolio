@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"DM Sans",sans-serif;
+}
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #0c0c1d;
+    color:lightgray;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}

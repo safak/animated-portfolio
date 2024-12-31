@@ -1,0 +1,91 @@
+
+.hero {
+  position: relative; /* Establish relative positioning for child elements */
+  height: calc(100vh - 100px);
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  overflow: hidden; /* Hide any overflowing content */
+
+  h2 {
+    z-index: 2;
+    max-width: 1366px;
+    color: rebeccapurple;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: normal;
+    letter-spacing: 4px;
+  }
+
+  h1 {
+    max-width: 1366px;
+    color: #dbd3d3;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 70px;
+    z-index: 2;
+  }
+
+  .container1 {
+    margin: auto;
+    height: 100%;
+    max-width: 1366px;
+    z-index: 2;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      height: calc(100vh - 100px);
+      overflow-y: hidden;
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+
+        button {
+          width: auto;
+          margin: auto;
+          padding: 10px 20px;
+          z-index: 1;
+        }
+      }
+
+      img {
+        position: absolute;
+        bottom: 100px;
+        height: 50px;
+        z-index: 2;
+      }
+    }
+
+    .image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      img {
+        z-index: 4;
+        mix-blend-mode: luminosity; /* Options: screen, overlay, lighten, darken, etc. */
+        opacity: 1;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+.motion{
+    z-index: 0;
+}
+  .SlidingTextContainer {
+    position: absolute;
+    width: 50%;
+    font-weight: bold;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: rgba(77, 74, 74, 0.123);
+    z-index: 0; /* Place behind other content but above the background */
+    pointer-events: none; /* Disable interactions to ensure buttons remain functional */
+  }
+}

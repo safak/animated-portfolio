@@ -1,0 +1,51 @@
+.parallax {
+  position: relative;
+  height: 100vh; /* Ensure full-screen height */
+  width: 100%; /* Ensure full width */
+  display: flex;
+  flex-direction: column; /* Arrange child elements vertically */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  h1 {
+    position: relative; /* Ensure the header is layered correctly */
+    z-index: 2; /* Place it above other elements */
+    font-size: 100px;
+  }
+
+  .mountains {
+    position: absolute; /* Ensure it layers below the text */
+    bottom: 0; /* Align to the bottom of the container */
+    width: 100%;
+    height: 100%; /* Give it a visible height */
+    z-index: 3; /* Ensure it appears below the h1 */
+    background-image: url("/mountains.png"); /* Ensure the path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  .planets {
+    position: absolute; /* Ensure it layers below the text */
+    bottom: 0; /* Align to the bottom of the container */
+    width: 100%;
+    height: 100%; /* Give it a visible height */
+    z-index: 2; /* Ensure it appears below the h1 */
+    background-image: url("/planets.png"); /* Ensure the path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .stars {
+    position: absolute; /* Ensure it layers below the text */
+    bottom: 0; /* Align to the bottom of the container */
+    width: 100%;
+    height: 100%; /* Give it a visible height */
+    z-index: 1; /* Ensure it appears below the h1 */
+    background-image: url("/stars.png"); /* Ensure the path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
