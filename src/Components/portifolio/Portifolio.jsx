@@ -1,86 +1,57 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import "./portifolio.scss";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useRef } from "react";
 
-const items = [
-    {
-        id: 1,
-        title: "React Commerce",
-        img: "/Pombocorp.jpg",
-        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ipsa necessitatibus nulla minima sapiente cupiditate voluptatem saepe eius nemo quam! Delectus voluptatem, totam reprehenderit vel atque ipsa architecto commodi enim.",
-    },
-    {
-        id: 2,
-        title: "React Commerce",
-        img: "/public/PomboCorp.jpg",
-        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ipsa necessitatibus nulla minima sapiente cupiditate voluptatem saepe eius nemo quam! Delectus voluptatem, totam reprehenderit vel atque ipsa architecto commodi enim.",
-    },
-    {
-        id: 3,
-        title: "React Commerce",
-        img: "/Pombocorp.jpg",
-        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ipsa necessitatibus nulla minima sapiente cupiditate voluptatem saepe eius nemo quam! Delectus voluptatem, totam reprehenderit vel atque ipsa architecto commodi enim.",
-    },
-    {
-        id: 4,
-        title: "React Commerce",
-        img: "/Pombocorp.jpg",
-        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ipsa necessitatibus nulla minima sapiente cupiditate voluptatem saepe eius nemo quam! Delectus voluptatem, totam reprehenderit vel atque ipsa architecto commodi enim.",
-    },
+const projects = [
+  {
+    img: "/Img/Projeto RodianStore.png",
+    alt: "Projeto Carros de Luxo",
+    title: "Rodian Store",
+    description: "Loja virtual moderna com React + Firebase",
+  },
+  {
+    img: "/Img/Projeto Vox Elements.png",
+    alt: "Checkout Greenn",
+    title: "Vox Elements",
+    description: "Interface interativa para e-commerce sustentável",
+  },
+  {
+    img: "/Img/slide3.png",
+    alt: "Dashboard Workday",
+    title: "Workday Dashboard",
+    description: "Painel administrativo com gráficos dinâmicos",
+  },
 ];
 
-const Single = ({ item }) => {
-    const ref = useRef();
-
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        //* offset: ["end end", "start start"],
-    });
-
-    const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
-
-    return (
-        <section>
-            <div className="container">
-                <div className="wrapper">
-                    <div className="imageContainer" ref={ref}>
-                        <img src={item.img} alt="" />
-                    </div>
-                    <motion.div className="textContainer" style={{ y }}>
-                        <h2>{item.title}</h2>
-                        <p>{item.desc}</p>
-                        <button>Veja mais</button>
-                    </motion.div>
-                </div>
+export default function SlidePortfolio() {
+  return (
+    <section className="slide-portfolio">
+      <h2 className="title">Projetos Recentes</h2>
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        spaceBetween={30}
+        slidesPerView={1}
+        navigation
+        autoplay={{ delay: 4000 }}
+        loop={true}
+        breakpoints={{
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="swiper-container"
+      >
+        {projects.map((project, index) => (
+          <SwiperSlide key={index} className="slide-item">
+            <img src={project.img} alt={project.alt} />
+            <div className="preview-info">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
             </div>
-        </section>
-    );
-};
-
-const Portifolio = () => {
-    const ref = useRef();
-
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["end end", "start start"],
-    });
-
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 10,
-    });
-
-    return (
-        <div className="portifolio" ref={ref}>
-            <div className="progress">
-                <h1>Projetos em Destaque</h1>
-                <motion.div style={{ scaleX }} className="progressBar"></motion.div>
-            </div>
-            {items.map((item) => (
-                <Single item={item} key={item.id} />
-            ))}
-        </div>
-    );
-};
-
-export default Portifolio;
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+}

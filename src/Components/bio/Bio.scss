@@ -1,132 +1,131 @@
-.bio {
-  background: linear-gradient(90deg, #0F2027, #203A43, #2C5364);
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+@import "../../app.scss";
 
-.slidingText {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 110px;
-  font-weight: bold;
-  color: #f5f5f534;
-}
+.bio-modern {
+    min-height: 100vh;
+    background: linear-gradient(to top right, #0f111a, #191d2b);
+    color: #f2f2f2;
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .bio-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      width: 100%;
+      gap: 5rem;
+      justify-content: center;
+      align-items: flex-start;
 
-.informationContainer {
-  text-align: left;
-  position: relative;
-  left: 10%;
-}
-
-.button-container {
-  display: flex;
-  gap: 1rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.button {
-  background: transparent;
-  border: none;
-  width: auto;
-  height: 50px;
-  margin: auto;
-  padding: 10px;
-  margin: 0 1rem 0;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 4px;
-  position: relative;
-  color: #f5f5f5;
-  transition: 1s;
-}
-
-.button:hover {
-  background-color: #00FFFF;
-  transition: 0.5s;
-}
-
-.frame {
-  width: 80%;
-  height: 200px;
-  display: inline-block;
-  text-align: justify;
-  font-size: 18px;
-  padding: 2rem 0px 0px;
-  overflow: hidden;
-}
-
-.info-container {
-  display: flex;
-  max-width: 650px;
-  flex-wrap: wrap;
-  padding: 1rem 0 0;
-
-  .info-column {
-    flex: 1;
-    min-width: 300px;
-
-    p {
-      margin: 5px 0;
-      font-size: 16px;
-      color: #f5f5f5;
-
-      strong {
-        color: #00FFFF;
+      @include mobile{
+        gap: 10px;
       }
     }
-  }
-}
+  
+    .bio-photo {
+      border-radius: 20px;
+      padding: 1.5rem;
+      text-align: center;
+      max-width: 750px;
+      height: 100%;
+  
+      img {
+        width: 750px;
+        height: 500px;
+        border-radius: 16px;
+        margin-bottom: 0.1rem;
 
-.imagemContainer {
-  position: relative;
+        @include mobile{
+          width: 500px;
+          height: auto;
+          justify-content: center;
+          margin-top: 0.2rem;
+        }
+      }
+  
+      .bio-tag {
+        background: rgba(0, 255, 255, 0.1);
+        color: #00ffff;
+        padding: 0.3rem 0.8rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+  
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+      }
+  
+      span {
+        font-size: 0.9rem;
+        color: #aaa;
+      }
+    }
+  
+    .bio-text {
+      flex: 1;
+      max-width: 600px;
+  
+      .bio-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #272a35;
+        color: #ccc;
+        border: 1px solid #444;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+        cursor: default;
+        font-size: 0.85rem;
+      }
+  
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
 
-  img {
-    width: 500px;
-    height: 600px;
-    object-fit: cover;
-    position: absolute;
-    z-index: 2;
-    border-radius: 10px;
-  }
+        @include mobile{
+          font-size: 1.5rem;
+        }
+      }
+  
+      p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
 
-  .moldura {
-    width: 500px;
-    height: 600px;
-    position: relative;
-    border: 3px dashed #00FFFF;
-    z-index: 1;
-    right: 20%;
-    top: 50px;
-    border-radius: 10px;
-  }
-}
+        @include mobile{
+          font-size: 0.8rem;
+        }
+      }
+  
+      .bio-icons {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+  
+        svg {
+          color: #00ffff;
+        }
+      }
+  
+      .bio-extra {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1rem;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        color: #ccc;
+      
+        @include mobile{
+          padding: 0.5rem;
+          font-size: 10px;
+        }
+      }
+    }
 
-.action-button {
-  .contato {
-    border: 1px solid #00FFFF;
-    background: transparent;
-    color: #f5f5f5;
   }
-
-  .contratar {
-    background: #0f8f8f;
-    color: #f5f5f5;
-    border: none;
-  }
-
-  button {
-    width: 150px;
-    height: 50px;
-    border-radius: 5px;
-    margin: 2rem 3rem 0 0;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-  }
-}
+  
+  

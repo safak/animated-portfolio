@@ -1,0 +1,116 @@
+@import "../../app.scss";
+
+.contato {
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include mobile {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .textoContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 40px;
+        
+        @include mobile {
+            gap: 20px;
+            text-align: center;
+            align-items: center;
+            margin-top: 70px;
+        }
+
+        h1 {    
+            font-size: 80px;
+            line-height: 80px;
+            text-shadow: black;
+
+            @include mobile {
+                font-size: 36px;
+            }
+        }
+        
+        h2 {
+            color: #f5f5f5;
+            
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+
+        .item {
+            span {
+                font-weight: 200;
+                font-size: 20px;
+                color: #f5f5f5;
+
+                @include mobile {
+                    font-size: 18px;
+                    color: #f5f5f5; // reforça no mobile também
+                    display: inline; // garante que não seja escondido
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .formContainer {
+        flex: 1;
+        position: relative;
+        
+        @include mobile {
+            width: 100%;
+            padding: 50px;
+        }
+
+        .phoneSVG {
+            stroke: aqua;
+            position: absolute;
+            margin: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input,
+        textarea {
+            padding: 20px;
+            background-color: transparent;
+            border: 1px solid #f5f5f5;
+            color: #f5f5f5;
+            border-radius: 5px;
+            z-index: 999;
+            outline: none;
+
+            @include mobile {
+                padding: 10px;
+            }
+        }
+
+        button {
+            padding: 20px;
+            border: none;
+            background-color: #00FFF0;
+            cursor: pointer;
+            font-weight: 500;
+            border-radius: 10px;
+            font-size: 18px;
+            z-index: 999;
+
+            @include mobile {
+                padding: 10px;
+            }
+        }
+    }
+}

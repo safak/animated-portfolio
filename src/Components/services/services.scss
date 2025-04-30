@@ -1,9 +1,15 @@
+@import "../../app.scss";
+
 .Services {
-    background: linear-gradient(90deg, #0F2027, #203A43,#2C5364) ;
+    background: #191d2b;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include mobile {
+        height: 30vh;
+    }
 }
 
 .textContainer{
@@ -12,18 +18,30 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    
+
+    @include mobile{
+        display: none;
+    }
+
     p {
         font-weight: 200;
         font-size: 20px;
         color: #f5f5f5;
         text-align: right;
-    }
 
+        @include mobile{
+            font-size: 15px;
+        }
+    }
+    
     hr {
         width: 300px;
         border: none;
         border-top: 0.5px solid #f5f5f5;
+        
+        @include mobile{
+            width: 100%;
+        }
     }
 
 }
@@ -35,22 +53,42 @@
     align-items: center;
     gap: 50px;
     
+    @include mobile{
+        gap: 10px;
+        margin-top: 5%;
+    }
+    
     .title{
         display: flex;
         gap: 50px;
         align-items: center;
         line-height: 5px;
+
+        @include mobile{
+            gap: 20px;
+            justify-content: center;
+            
+        }
         
         img{
             width: 300px;
             height: 100px;
             border-radius: 50px;
             object-fit: cover;
+
+            @include mobile{
+                width: 120px;
+                height: 100%;
+            }
         }
         
         h1{
             font-size: 96px;
             font-weight: 100;
+
+            @include mobile{
+                font-size: 35px;
+            }
         }
         
         button{
@@ -62,7 +100,17 @@
             background-color: #00FFFF;
             cursor: pointer;
             font-weight: 500;
+
+            @include mobile{
+                width: 150px;
+                height: 100%;
+                font-size: 15px;
+            }
     
+        }
+
+        @include mobile{
+            width: 100%;
         }
     }
 }
@@ -72,18 +120,36 @@
     max-width: 1366px;
     margin: auto;
 
-    .box{
+    .box {
         padding: 50px;
         border: 0.5px solid #f5f5f5;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        button{
+        button {
             padding: 10px;
             background-color: #00FFFF;
             border: none;
             cursor: pointer;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column; // muda para coluna no mobile
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+
+        .box {
+            padding: 1rem; // reduz padding interno da box
+
+            button {
+                width: 50%; // botão ocupa 100% da largura
+                font-size: 16px; // aumenta fonte
+                margin-left: 6rem;
+                text-align: center;
+            }
         }
     }
 }

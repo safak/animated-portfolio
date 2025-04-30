@@ -1,40 +1,66 @@
-.hero{
+@import "../../app.scss";
+
+.hero {
     height: calc(100vh - 100px);
     overflow: hidden;
-    background: linear-gradient(90deg, #0F2027, #203A43, #2C5364);
+    background: #191d2b;
     position: relative;
 
-    .wrapper{
+    .wrapper {
         max-width: 1366px;
         height: 100%;
         margin: auto;
 
-        .textContainer{
+        @include mobile{
+          height: 50%;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .textContainer {
             width: 50%;
             height: 100%;
             position: absolute;
-            left: 17%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 40px;
-            z-index: 3; /* Garante que os botões fiquem acima do texto deslizante */
-        
-            h2{
+            gap: 20px;
+            z-index: 3;
+            
+            @include mobile{
+              justify-content: center;
+              height: 40%;
+              top: 0;
+            }
+
+            h2 {
                 font-size: 35px;
-                color: #18bda1;
+                color: #4d01ff;
                 letter-spacing: 5px;
-            }
-
-            h1{
-                font-size: 100px;
-            }
-
-            .buttons{
-                display: flex; 
-                gap: 20px; 
                 
-                button{
+                @include mobile{
+                  font-size: 25px;
+                }
+              }
+                
+    
+            }
+
+            h1 {
+                font-size: 90px;
+                
+                @include mobile{
+                  font-size: 33px;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                gap: 20px;
+                align-self: flex-start;
+
+
+                button {
                     padding: 20px;
                     border: 1px solid white;
                     border-radius: 10px;
@@ -42,32 +68,82 @@
                     color: #f5f5f5;
                     cursor: pointer;
                     font-weight: 300;
-                    z-index: 10; /* Botão fica acima do texto deslizante */
+                    font-size: 15px;
+                    z-index: 10;
+                    transition: 1s;
+
+                    @include mobile{
+                      padding: 12px;
+                      margin-top: 10px;
+                     }
+
+                  }
+                  
+                  button:hover {
+                      background-color: #f5f5f5;
+                      color: #191d2b;
+                      transition: 0.5;
+
+                      @include mobile{
+                        padding: 12px;
+                        margin-top: 10px;
+                       }
+
+                
                 }
+
             }
 
-            img{
+            img {
                 width: 50px;
+
+                @include mobile{
+                  width: 20px;
+                
+                }
             }
         }
     }
 
-    .imageContainer{
+    .imageContainer {
         height: 100%;
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 2; /* Garante que a imagem fique acima de tudo */
+        z-index: 2;
+
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          @include mobile{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        @include mobile{
+          height: 65%;
+          width: 100%;
+          top: 40%;
+          bottom: 0;
+        }
     }
-    
-    .slidingTextContainer{
+
+    .slidingTextContainer {
         position: absolute;
         font-size: 50vh;
-        bottom:-120px;
+        bottom: -120px;
         white-space: nowrap;
         color: #f5f5f518;
         width: 50%;
         font-weight: bold;
-        z-index: 0; /* Move o texto deslizante para trás dos botões e da imagem */
+        z-index: 0;
+
+        @include mobile{
+          font-size: 60vh;
+          
+        }
     }
-}

@@ -1,22 +1,24 @@
 import "./app.scss"
 import Navbar from "./Components/navbar/navbar"
 import Hero from "./Components/hero/Hero"
-import Parallax from "./Components/parallax/Parallax"
 import Services from "./Components/services/Services"
-import Bio from "./Components/bio/Bio"
 import Portifolio from "./Components/portifolio/Portifolio"
+import Bio from "./Components/bio/Bio"
+import Contato from "./Components/contato/Contato"
+import Cursor from "./Components/cursor/Cursor"
+
 
 const App = () => {
-  return (
-    <div>
-      <section id="Inicio"><Navbar /><Hero /></section>
-      <section id="Serviços"><Parallax type="Services" /></section>
-      <section><Services /></section>
-      <section id="Portifolio"> <Parallax type="portifolio" /></section>
-      <section><Portifolio/></section>
-      <section id="Sobre"><Bio /></section>
-    </div>
-  )
+    return (
+        <div>
+            <Cursor/>
+            <section id="Inicio"><Navbar /> <Hero/></section>
+            <section id="Sobre"><Bio /></section>
+            <section id="Serviços"><Services /></section>
+            <section id="Portifólio"><Portifolio /></section>
+            <section id="Contato"> <Contato/> </section>
+        </div>
+    );
 };
 
 export default App;

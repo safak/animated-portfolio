@@ -1,78 +1,113 @@
-$primary-color: #f5f5f5;
+@import "../../app.scss";
 
-.portifolio {
-    position: relative;
+.slide-portfolio {
+  background: #191d2b;
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
 
-    .progress {
-        position: sticky;
-        top: 0;
-        left: 0;
-        padding-top: 50px;
-        text-align: center;
-        color: $primary-color;
-        font-size: 36px;
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 
-        .progressBar {
-            height: 10px;
-            background-color: $primary-color;
-                }
-            }
-        }
+    @include mobile {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
 
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  .swiper-container {
+    height: 100%;
+    padding-bottom: 2rem;
+
+    @include mobile {
+      padding-bottom: 1rem;
+    }
+
+    .slide-item {
+      height: 100%;
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 0 transparent;
+
+      img {
         width: 100%;
         height: 100%;
-        overflow: hidden;
+        display: block;
+        border-radius: 1rem;
+        object-fit: cover;
 
-        .wrapper {
-            max-width: 1366px;
-            height: 100%;
-            margin: auto;
-            display: flex;
-            gap: 50px;
-            align-items: center;
-            justify-content: center;
+        @include mobile {
+          height: auto;
+        }
+      }
 
-            .imageContainer {
-                flex: 1;
-                height: 50%;
+      .preview-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background: rgba(25, 29, 43, 0.9);
+        color: #fff;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        border-top: 2px solid #00FFF0;
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-
-            .textContainer {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
-
-                h2 {
-                    font-size: 72px;
-                }
-                
-                P{
-                    color: aliceblue;
-                    font-size: 20PX;
-                }
-                
-                button{
-                    background-color: aqua;
-                    border: none;
-                    border-radius: 10px;
-                    padding: 10px;
-                    width: 200px;
-                    cursor: pointer;
-
-                }
-            }
-
+        h3 {
+          margin: 0;
+          font-size: 1.2rem;
+          color: #00FFF0;
         }
 
+        p {
+          font-size: 0.9rem;
+          color: #f5f5f5;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.1);
+      }
+
+      &:hover .preview-info {
+        transform: translateY(0);
+      }
     }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: white;
+
+      &:hover {
+        color: #00ffc3;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 2rem 1rem;
+
+    .swiper-container {
+      .slide-item {
+        .preview-info {
+          font-size: 0.8rem;
+          padding: 0.8rem;
+        }
+
+        img {
+          object-fit: cover;
+          height: auto;
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,6 @@ const variants = {
         y: 100,
         opacity: 0,
     },
-
     animate: {
         x: 0,
         opacity: 1,
@@ -17,15 +16,13 @@ const variants = {
             duration: 1,
             staggerChildren: 0.1,
         }
-
     },
 }
 
 const Services = () => {
-    
-    const ref = useRef ();
-    const isInView = useInView(ref,{margin:"-100px"})
-    
+    const ref = useRef();
+    const isInView = useInView(ref, { margin: "-100px" });
+
     return (
         <motion.div className="Services" variants={variants} initial="initial" ref={ref} animate={isInView ? "animate" : ""} whileInView="animate">
             <motion.div className="textContainer" variants={variants}>
@@ -35,7 +32,7 @@ const Services = () => {
 
             <motion.div className="titleContainer" variants={variants}>
                 <div className="title">
-                    <img src="/codigo.webp" alt="Service Image" />
+                    <img src="Img/codigo.webp" alt="Service Image" />
                     <h1>
                         <motion.b whileHover={{ color: "#00FFFF" }}>Design</motion.b> Sofisticados 
                     </h1>
@@ -45,7 +42,7 @@ const Services = () => {
                     <h1>
                         e <motion.b whileHover={{ color: "#00FFFF" }}>Funcionais</motion.b> Para O Seu Site
                         </h1>
-                    <button>O que nós fazemos</button>
+                    <button>O que eu faço</button>
                 </div>
 
 
