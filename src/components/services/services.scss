@@ -1,0 +1,248 @@
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: end;
+    }
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      img {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: black;
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1336px;
+    margin: auto;
+    gap: 20px;
+    .box {
+      flex: 1;
+      padding: 50px;
+      border: 0.5px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 28px;
+        text-transform: capitalize;
+      }
+      .tagline {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #ffb84d;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+      }
+
+      button {
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+        color: black;
+      }
+    }
+  }
+
+  /* mobile styles */
+  @media (max-width: 1024px) {
+    .listContainer {
+      display: none;
+    }
+
+    .mobileContainer {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+
+      .buttonRow {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        button {
+          background: transparent;
+          border: 1px solid gray;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 20px;
+          cursor: pointer;
+          text-transform: capitalize;
+          transition: all 0.3s ease;
+
+          &.active {
+            background-color: orange;
+            color: black;
+            border-color: orange;
+          }
+        }
+      }
+
+      .box {
+        width: 100%;
+        max-width: 600px;
+        border: 0.5px solid gray;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // background: rgba(255, 255, 255, 0.05);
+
+        h2 {
+          font-size: 24px;
+          text-transform: capitalize;
+        }
+
+        p {
+          margin: 10px 0;
+        }
+
+        button {
+          padding: 10px;
+          background-color: orange;
+          border: none;
+          cursor: pointer;
+          color: black;
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}
+
+/* ------------------- RESPONSIVE for top section ------------------- */
+@media (max-width: 1024px) {
+  .services {
+    .textContainer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+
+      p {
+        font-size: 18px;
+      }
+
+      hr {
+        width: 80%;
+      }
+    }
+
+    .titleContainer {
+      flex-direction: column;
+      gap: 20px;
+
+      .title {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        img {
+          width: 200px;
+          height: 80px;
+        }
+
+        h1 {
+          font-size: 48px;
+        }
+
+        button {
+          width: 200px;
+          height: 60px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .services {
+    .textContainer {
+      p {
+        font-size: 16px;
+      }
+
+      hr {
+        width: 90%;
+      }
+    }
+
+    .titleContainer {
+      .title {
+        img {
+          width: 150px;
+          height: 60px;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        button {
+          width: 150px;
+          height: 50px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

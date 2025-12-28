@@ -1,0 +1,39 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px; // add this line (equal to navbar height)
+}
+
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  background-color: #0c0c1d;
+  color: lightgray;
+}
+section {
+  scroll-snap-align: unset;
+  height: auto; 
+  min-height: 100vh; 
+}
+
+
+@media (min-width: 1024px) {
+  section {
+    height: 100vh;
+  }
+}
+
+.course {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .box {
+    height: 200px;
+    width: 200px;
+    background: white;
+  }
+}

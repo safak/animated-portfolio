@@ -1,0 +1,153 @@
+.portfolio {
+  position: relative;
+  .progress {
+    position: sticky;
+    top: 0%;
+    left: 0%;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 36px;
+    z-index: 10;
+    h1 {
+      color: orange !important;
+    }
+
+    .progressBar {
+      height: 10px;
+      background-color: white;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .wrapper {
+    max-width: 1336px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    opacity: 1;
+
+    .imageContainer {
+      flex: 1;
+      height: 70%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .textContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h2 {
+        font-size: 52px;
+      }
+
+      p {
+        color: gray;
+        font-size: 20px;
+      }
+
+      button {
+        background-color: orange;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        width: 200px;
+        cursor: pointer;
+        color: black;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+  }
+
+  /* ------------------- RESPONSIVE ------------------- */
+  @media (max-width: 1024px) {
+    .wrapper {
+      flex-direction: column;
+      gap: 30px;
+
+      .imageContainer {
+        width: 100%;
+        height: 200px;
+        margin-top: 200px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .textContainer {
+        width: 90%;
+        text-align: center;
+
+        h2 {
+          font-size: 48px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        button {
+          width: 150px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      .imageContainer {
+        height: 200px;
+      }
+
+      .textContainer {
+        h2 {
+          font-size: 36px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        button {
+          width: 120px;
+          padding: 8px;
+          margin: 0% auto;
+        }
+      }
+    }
+
+    .progress {
+      h1 {
+        font-size: 28px;
+      }
+
+      .progressBar {
+        height: 6px;
+      }
+    }
+  }
+}

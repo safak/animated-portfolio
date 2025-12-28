@@ -1,0 +1,109 @@
+.project-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Top hero image */
+.project-hero {
+  //   width: 100%;
+  max-width: 1200px;
+  min-width: 600px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Content */
+.project-content {
+  max-width: 900px;
+  text-align: left;
+  margin-top: 10px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .project-desc {
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+    font-weight: 500;
+    line-height: 35px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+}
+
+/* Section blocks */
+.project-section {
+  margin-top: 40px;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.9;
+    white-space: pre-line;
+  }
+}
+
+/* Tools section */
+.project-tools {
+  margin-top: 40px;
+
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .tool-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tool-chip {
+    background: #ffffff;
+    color: #1f1f1f;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+  }
+}
+.live-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 18px;
+  background: #ffb400;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-bottom: 100px;
+
+  &:hover {
+    background: #ff9a00;
+    transform: translateY(-2px);
+  }
+}

@@ -1,0 +1,158 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+
+  .wrapper {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px;
+
+    .textContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+      background: transparent;
+
+      h2 {
+        font-size: 2.5rem;
+        color: rebeccapurple;
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+
+      h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        line-height: 1.1;
+      }
+
+      .buttonGroup {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        background: transparent;
+
+        button {
+          padding: 15px 25px;
+          border: 2px solid white;
+          border-radius: 10px;
+          background: transparent;
+          color: white;
+          cursor: pointer;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: white;
+            color: #111;
+          }
+        }
+
+        img {
+          width: 40px;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .imageContainer {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      background-color: transparent;
+      
+
+      img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        object-fit: contain;
+        background-color: transparent;
+      }
+    }
+  }
+
+  /* Sliding Background Text */
+  .slidingText {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 18rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.05);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .wrapper {
+      .textContainer {
+        h1 { font-size: 4rem; }
+        h2 { font-size: 1.8rem; }
+      }
+      .imageContainer img { max-width: 400px; }
+    }
+    .slidingText { font-size: 14rem; }
+  }
+
+  @media (max-width: 992px) {
+    .wrapper {
+      flex-direction: column-reverse;
+      text-align: center;
+      justify-content: center;
+      gap: 30px;
+
+      .textContainer {
+        h1 { font-size: 3rem; background-color: transparent; }
+        h2 { font-size: 1.5rem; background-color: transparent;}
+
+        .buttonGroup {
+          flex-direction: column;
+          button { width: 80%; }
+          img { width: 30px; }
+        }
+      }
+
+      .imageContainer { width: 70%; }
+    }
+    .slidingText { font-size: 10rem; }
+  }
+
+  @media (max-width: 576px) {
+    .wrapper {
+      flex-direction: column-reverse;
+      padding: 50px 20px;
+
+      .textContainer {
+        h1 { font-size: 2.2rem;  background-color: transparent; }
+        h2 { font-size: 1.2rem; letter-spacing: 0.4rem; background-color: transparent; }
+
+        .buttonGroup {
+          button { width: 100%; padding: 12px; font-size: 14px; }
+          img { width: 40px; }
+        }
+      }
+
+      .imageContainer { width: 70%; }
+    }
+    .slidingText { font-size: 6rem; }
+  }
+}
